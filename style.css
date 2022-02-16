@@ -1,6 +1,8 @@
 :root{
-     --bg-1: #57b6a349;
-     --bg-2: #e4af87;
+     --bg-1:#57b6a349;
+     --bg-2:#e4af87;
+     --hover:blue;
+     --special-lettre:red;
 }
 @font-face {
      font-family: "font-1";
@@ -42,7 +44,7 @@ header h1::before{
      content: "";
      width: 20px;
      height: 20px;
-     background: blue;
+     background: var(--hover);
      position: absolute;
      top: 6px;
      left: 0;
@@ -53,9 +55,6 @@ header h1::before{
      cursor: pointer;
      font-size: 1.1rem;
      
-}
-.menu-bare ul li:hover{
-     color: blue;
 }
 main{
      height: 100vh;
@@ -90,7 +89,7 @@ main{
      width: 9rem;
      height: 2px;
      position: absolute;
-     background: blue;
+     background: var(--hover);
      border-radius: 2rem;
      transform: translateX(-50%);
 }
@@ -103,7 +102,7 @@ main{
 .contact p{
      padding: 1.6rem;
      font-size: 2rem;
-     color: red;
+     color: var(--special-lettre);
      letter-spacing: 9px;
 } 
 footer{
@@ -119,9 +118,9 @@ footer i{
      font-size: 1.8rem;
      transition: 0.1s ease-in-out;
 }
-footer i:hover{
+footer i:hover , .menu-bare ul li:hover{
      transform: scale(1.2);
-     color:blue;
+     color:var(--hover);
 }
 footer i:active{
      animation: icone 0.5s;
@@ -156,8 +155,8 @@ input[type="checkbox"]{
 .btm{
      width: 5rem;
      text-align: center;
-     border: 3px solid blue;
-     color: blue;
+     border: 3px solid var(--hover);
+     color: var(--hover);
      padding: 5px 3rem;
      font-size: 1.2rem;
      margin-right: 10px;
@@ -167,7 +166,7 @@ input[type="checkbox"]{
 }
 .btm:hover{
      color: #fff;
-     background: blue;
+     background: var(--hover);
      font-weight: bold;
      transform:scale(1.1);
 }
@@ -191,5 +190,15 @@ input[type="checkbox"]{
 .nom{
      font-size: 1.7rem;
      font-weight: bold;
-     color:red;
+     color:var(--special-lettre);
+}
+.box:hover{
+     animation: anime-box 2s linear 1;
+}
+@keyframes anime-box {
+     0%{transform: translateX(0);}
+     25%{transform: translateX(2px);}
+     50%{transform: translateX(0);}
+     75%{transform: translateX(2px);}
+     100%{transform: translateX(0px);}
 }
