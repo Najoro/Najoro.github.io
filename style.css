@@ -57,11 +57,10 @@ header h1::before{
      
 }
 main{
-     height: 100vh;
      display: grid;
-     margin: 2px 2rem 2rem;
+     margin: 2px 2rem 2px 2rem;
      grid-template-columns: 40% 60%;
-     background: linear-gradient( to left,var(--bg-1) 70%, #fff 30%);
+     background: linear-gradient( to left,var(--bg-1) 70%, #fffeef 30%);
 }
 .gauche{
      width: 25rem;
@@ -183,22 +182,30 @@ input[type="checkbox"]{
 }
 .droit p{
      padding-top:1.2rem ;
+     padding-bottom: 20px;
      letter-spacing: 2px;
      word-spacing: 3px;
-     font-size: 1.3rem;
+     font-size:1.5rem;
 }
 .nom{
      font-size: 1.7rem;
      font-weight: bold;
      color:var(--special-lettre);
 }
-.box:hover{
-     animation: anime-box 2s linear 1;
-}
-@keyframes anime-box {
-     0%{transform: translateX(0);}
-     25%{transform: translateX(2px);}
-     50%{transform: translateX(0);}
-     75%{transform: translateX(2px);}
-     100%{transform: translateX(0px);}
+@media screen and (max-width : 1000px){
+     main{
+          margin:0;
+     }
+     .droit{
+          padding-top: 10px;
+          padding-right: 2px;
+          padding-bottom: 0;
+
+     }
+     .droit p{
+          font-size:1.2rem;
+     }
+     .gauche{
+          width: 20rem;
+     }
 }
