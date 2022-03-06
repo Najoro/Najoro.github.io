@@ -1,8 +1,8 @@
 :root{
-     --bg-1:#57b6a349;
-     --bg-2:#e4af87;
-     --hover:blue;
-     --special-lettre:red;
+     --bg-1:#57b6a39c;
+     --bg-2:#57b6a3;
+     --hover:rgba(0, 0, 255, 0.775);
+     --special-lettre:rgba(255, 0, 0, 0.596);
 }
 @font-face {
      font-family: "font-1";
@@ -12,6 +12,7 @@
      padding: 0;
      margin: 0;
      font-family:"font-1", serif;
+     transition: 0.1s linear;
 }
 ul li{
      list-style: none;
@@ -21,14 +22,15 @@ a{
      color: #000;
 }
 body{
-     min-width: 100vh;
 }
+/*---------------------------------------------------------------------------------------*/
+/*HEADER*/
 header{
      display: flex;
      justify-content: space-between;
      align-items: center;
      margin-bottom: 10px;
-     background: var(--bg-2);
+     background: var(--bg-1);
      padding: 1rem;
 }
 header h1{
@@ -38,7 +40,7 @@ header h1{
      width: auto;
      padding-left: 1.6rem;
      cursor: not-allowed;
-     margin-left: 5rem;
+
 }
 header h1::before{
      content: "";
@@ -49,21 +51,65 @@ header h1::before{
      top: 6px;
      left: 0;
 }
+.menu-bare{
+     font-size: 1.1rem;
+     width: auto;
+}
+.menu-bare ul{
+     display: flex;
+     flex-direction: row;
+}
 .menu-bare ul li{
-     display: inline;
      margin: 0 1rem;
      cursor: pointer;
-     font-size: 1.1rem;
-     
+
 }
+.beurgeur-menu{
+     background:transparent;
+     width: 3rem;
+     height: 3rem;
+     position: absolute;
+     top: 2rem;
+     right: 2rem;
+     cursor: pointer;
+     z-index: 1000;
+     visibility: hidden;
+}
+.beurgeur-menu span{
+     width: 100%;
+     height: 5px;
+     margin-top: 10px;
+     display: block;
+     border-radius: 5px;
+     background-color:var(--hover);
+     transition: 0.7s ease-in-out;
+     position: relative;
+}
+.beurgeur-menu span:nth-child(1){
+     width: 50%;
+}
+.beurgeur-menu span:nth-child(3){
+     width: 50%;
+     position: absolute;
+     right: 0;
+}
+.beurgeur-menu:hover{
+     transform: scale(1.2);
+}.beurgeur-menu:active{
+     transform: scale(1);
+}
+/*---------------------------------------------------------------------------------------*/
+/*Main*/
 main{
      display: grid;
      margin: 2px 2rem 2px 2rem;
      grid-template-columns: 40% 60%;
      background: linear-gradient( to left,var(--bg-1) 70%, #fffeef 30%);
 }
+/*---------------------------------------------------------------------------------------*/
+/*GAUCHE*/
 .gauche{
-     width: 25rem;
+     min-width: 25rem;
      background: var(--bg-2);
      margin: 2rem auto;
      text-align: center;
@@ -71,6 +117,7 @@ main{
      top: -0.6rem;
      left: 1rem;
      box-shadow: -2px 3px 20px 0px rgba(0, 0, 0, 0.5);
+     height: auto;
 }
 .image{
      width: inherit;
@@ -94,14 +141,13 @@ main{
 }
 .contact {
      display: block;
-     width: inherit;
      letter-spacing: 1px;
      font-size: 1.2rem;
 }
 .contact p{
-     padding: 1.6rem;
      font-size: 2rem;
      color: var(--special-lettre);
+     margin: 0 auto;
      letter-spacing: 9px;
 } 
 footer{
@@ -130,8 +176,10 @@ footer i:active{
           transform: scale(0.8);
      }
 }
+/*---------------------------------------------------------------------------------------*/
+/*DROIT*/
 .droit{
-     padding: 5rem 5rem 0 5rem;
+     padding: 2rem 5rem 0 5rem;
 }
 .droit h1{
      font-size: 5rem;
@@ -155,13 +203,13 @@ input[type="checkbox"]{
      width: 5rem;
      text-align: center;
      border: 3px solid var(--hover);
+     border-radius:20px;
+     cursor: pointer;
      color: var(--hover);
      padding: 5px 3rem;
      font-size: 1.2rem;
      margin-right: 10px;
-     border-radius:20px;
      transition: 0.2s linear;
-     cursor: pointer;
 }
 .btm:hover{
      color: #fff;
@@ -192,6 +240,7 @@ input[type="checkbox"]{
      font-weight: bold;
      color:var(--special-lettre);
 }
+/*---------------------------------------------------------------------------------------*/
 @media screen and (max-width : 1000px){
      main{
           margin:0;
@@ -200,12 +249,73 @@ input[type="checkbox"]{
           padding-top: 10px;
           padding-right: 2px;
           padding-bottom: 0;
-
      }
      .droit p{
           font-size:1.2rem;
      }
      .gauche{
           width: 20rem;
+     }
+}
+@media screen and (max-width : 870px){
+     /*HEADER*/
+     header{
+          height: 80px;
+          position: relative;
+     }
+     .menu-bare{
+          background:#464141bd;
+          color: #fff;
+          backdrop-filter: blur(10px);
+          width: 100%;
+          height: 90vh;
+          text-align: center;
+          line-height: 4rem;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          z-index: 10;
+          top: 6rem;
+          right: 0;
+          transform: translateY(-50rem);
+     }
+     .menu-bare ul{
+          flex-direction: column;
+          font-size: 2rem;
+          margin-top: 8rem;
+     }
+     .menu-bare ul li:hover{
+          background: rgba(0, 0, 0, 0.452);
+          backdrop-filter: blur(20rem);
+     }
+     .menu-bare ul li:active{
+          transform: scale(1);
+     }
+     .beurgeur-menu{
+          visibility: visible;
+     }
+     /*MAIN*/
+     main{
+          background: none;
+          display: flex;
+          flex-direction: column;
+     }
+     .gauche{
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 0 0 2rem;
+          top: 0;
+          left: 0;
+     }
+     /*DROIT*/
+     .droit{
+          background: var(--bg-1);
+          padding: 2rem;
+          margin-top: 1rem;
+          text-align: center;
+     }
+     .contenaire-btm{
+          justify-content: center;
      }
 }
