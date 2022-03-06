@@ -277,7 +277,9 @@ input[type="checkbox"]{
           z-index: 10;
           top: 6rem;
           right: 0;
-          transform: translateY(-50rem);
+          transform: translateY(-500rem);
+          visibility: hidden;
+          
      }
      .menu-bare ul{
           flex-direction: column;
