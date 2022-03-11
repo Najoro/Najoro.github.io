@@ -9,9 +9,3 @@ beurgeur.addEventListener("click", () => {
   
 })
 
-document.addEventListener('scroll', () => {
-     if(window.scrollY > 0){
-          menu.style.position ="fixed"
-          menu.style.top = "85px";
-     }
-})

@@ -1,6 +1,6 @@
 :root{
-     --bg-1:#57b6a39c;
-     --bg-2:#57b6a3;
+     --bg-1:#4eebcb9c;
+     --bg-2:#259982;
      --hover:rgba(0, 0, 255, 0.775);
      --special-lettre:rgba(255, 0, 0, 0.596);
 }
@@ -12,10 +12,12 @@
      padding: 0;
      margin: 0;
      font-family:"font-1", serif;
-     transition: 0.1s linear;
 }
 ul li{
      list-style: none;
+}
+body{
+     background-color: rgba(0, 0, 0, 0.247);
 }
 a{
      text-decoration: none;
@@ -47,6 +49,7 @@ header h1::before{
      height: 20px;
      background: var(--hover);
      position: absolute;
+     border-radius: 50%;
      top: 6px;
      left: 0;
 }
@@ -61,15 +64,18 @@ header h1::before{
 .menu-bare ul li{
      margin: 0 1rem;
      cursor: pointer;
-
+}
+.menu-bare ul li:hover{
+     color: var(--bg-2);
+     transform: scale(1.2);
 }
 #beurgeur-menu{
      background:transparent;
      width: 3rem;
      height: 3rem;
      position: absolute;
-     top: 3rem;
-     right: 3rem;
+     top: 1rem;
+     right: 1rem;
      cursor: pointer;
      z-index: 1000;
      visibility: hidden;
@@ -79,7 +85,7 @@ header h1::before{
      display: block;
      border-radius: 5px;
      background-color:var(--hover);
-     transition: 0.7s ease-in-out;
+     transition: 0.3s ease-in-out;
      position: absolute;
 }
 #beurgeur-menu span:nth-child(1){
@@ -106,7 +112,7 @@ main{
      display: grid;
      margin: 2px 2rem 2px 2rem;
      grid-template-columns: 40% 60%;
-     background: linear-gradient( to left,var(--bg-1) 70%, #fffeef 30%);
+     background: linear-gradient( to left,var(--bg-1) 70%, #fffeef2a 30%);
 }
 /*---------------------------------------------------------------------------------------*/
 /*GAUCHE*/
@@ -165,7 +171,7 @@ footer i{
      font-size: 1.8rem;
      transition: 0.1s ease-in-out;
 }
-footer i:hover , .menu-bare ul li:hover{
+footer i:hover {
      transform: scale(1.2);
      color:var(--hover);
 }
@@ -263,40 +269,56 @@ input[type="checkbox"]{
 @media screen and (max-width : 870px){
      /*HEADER*/
      header{
-          height: 80px;
-          position: relative;
+          min-height: 50px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding-top: 1rem;
+          grid-auto-rows: 10% 90%;
+          grid-template-areas: 
+          "portfolio beurgeur"
+          "menu menu";
           top: 0;
      }
+     header h1{
+          margin-top: 2rem;
+          grid-area: portfolio;
+     }
+     #beurgeur-menu{
+          grid-area: beurgeur;
+          visibility: visible;
+     }
      .menu-bare{
-          background:#464141e8;
-          color: #fff;
-          backdrop-filter: blur(10px);
-          width: 100%;
-          height:auto;
+          grid-area: menu;
           text-align: center;
-          line-height: 4rem;
-          margin: 0;
-          padding: 0;
-          position: absolute;
-          z-index: 10;
-          top: 6rem;
-          right: 0;
+          width: 100%;
+          margin-top: 2rem;
+          border: 1px dashed var(--bg-2);
           visibility: hidden;
-          transition: 1s ease;
-          transform: translateY(-25rem);
-          
+          position: absolute;
+          z-index: -2;
+          overflow: hidden;
      }
      .menu-bare ul{
           flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: inherit;
           font-size: 2rem;
-          margin: 1rem 0;
+          padding: 0 0 1rem;
+     }
+     .menu-bare ul li{
+          margin: 1rem 0 0;
+          width: 100%;
+          height: auto;
      }
      .menu-bare ul li:hover{
-          background: rgba(0, 0, 0, 0.452);
-          backdrop-filter: blur(20rem);
+          background: var(--bg-2);
+          transition: 0.5s ease;
+          color: var(--special-lettre);
+          font-weight: bold;
+          letter-spacing: 3px;
      }
-     .menu-bare ul li:active{transform: scale(1);}
-     #beurgeur-menu{visibility: visible;}
+
      /*MAIN*/
      main{
           background: none;
@@ -326,7 +348,10 @@ input[type="checkbox"]{
      /*JS*/
      .visible{
           visibility: visible;
-          transform: translateY(0);
+          height: auto;
+          position: relative;
+          z-index: 1;
+          transition: 1s linear;
      }
      #beurgeur-menu.active span{
           top: 12px;
