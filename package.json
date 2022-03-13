@@ -1,0 +1,24 @@
+{
+  "name": "najoro.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./BASE/style.scss:./BASE/style2.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Najoro/Najoro.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Najoro/Najoro.github.io/issues"
+  },
+  "homepage": "https://github.com/Najoro/Najoro.github.io#readme"
+}
