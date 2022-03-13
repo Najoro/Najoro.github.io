@@ -6,7 +6,7 @@
 }
 @font-face {
      font-family: "font-1";
-     src: url(../inserer/Akaya_Telivigala/AkayaTelivigala-Regular.ttf);
+     src: url(./inserer/Akaya_Telivigala/AkayaTelivigala-Regular.ttf);
 }
 *{
      padding: 0;
