@@ -1,0 +1,386 @@
+:root{
+     --bg-1:#0e175f;
+     --bg-2:#0e175ff8;
+     --bg-3:#0b61a3;
+     --hover:#00FFDD;
+     --special-lettre:#a0e2e2;
+     --text: #E8FFC2;
+}
+@font-face {
+     font-family: "font-1";
+     src: url(./inserer/Akaya_Telivigala/AkayaTelivigala-Regular.ttf);
+}
+*{
+     padding: 0;
+     margin: 0;
+     font-family:"font-1", serif;
+     color:var(--text) ;
+}
+ul li{
+     list-style: none;
+}
+body{
+     background-color: var(--text);
+     padding: 5px 2rem 0;
+}
+a{
+     text-decoration: none;
+}
+/*---------------------------------------------------------------------------------------*/
+/*HEADER*/
+header{
+     height: 6.4rem;
+     display: flex;
+     align-items: center;
+     margin-bottom: 2px;
+     background: var(--bg-1);
+     position: relative;
+     border-radius: 20px/19px;
+}
+header h1{
+     font-size: 20px;
+     height: inherit;
+     font-weight: bold;
+     position: relative;
+     top: 0;
+     left: 1%;
+     width: auto;
+     padding-left: 1.6rem;
+     cursor: not-allowed;
+     display: flex;
+     transform: rotate(-90deg);
+}
+header h1::before{
+     content: "";
+     width: 10px;
+     height: 10px;
+     background: var(--hover);
+     position: absolute;
+     border-radius: 50%;
+     top: 6px;
+     left: 10px;
+}
+.menu-bare{
+     width: 100%;
+     height: inherit;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: row;
+}
+.menu-bare ul{
+     height: 80%;
+     display: flex;
+     font-size: 1.3rem;
+}
+.menu-bare ul li{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0 1rem;
+     letter-spacing: 3px;
+     cursor: pointer;
+     position: relative;
+     border: 1px dashed var(--bg-3);
+}
+.menu-bare ul li:hover{
+     color: var(--bg-1);
+     background: var(--hover);
+     transition: 0.5s ease-in-out;
+}
+.menu-bare ul li:active{
+     transform: scale(0.9);
+}
+#beurgeur{
+     background:transparent;
+     width: 3rem;
+     height: 3rem;
+     position: absolute;
+     top: 1px;
+     right: 1rem;
+     cursor: pointer;
+     z-index: 1000;
+     visibility: hidden;
+}
+#beurgeur span{
+     height: 5px;
+     display: block;
+     border-radius: 5px;
+     background-color:var(--hover);
+     transition: 0.3s ease-in-out;
+     position: absolute;
+}
+#beurgeur span:nth-child(1){
+     width: 50%;
+     top: 0;
+}
+#beurgeur span:nth-child(2){
+     width: 100%;
+     top: 12px;
+}
+#beurgeur span:nth-child(3){
+     width: 50%;
+     right: 0;
+     top: 24px;
+}
+#beurgeur:hover{
+     transform: scale(1.2);
+}#beurgeur:active{
+     transform: scale(1);
+}
+/*---------------------------------------------------------------------------------------*/
+/*Main*/
+main{
+     display: grid;
+     grid-template-columns: 40% 60%;
+     background: linear-gradient( to left,var(--bg-1) 70%, var(--bg-3) 30%);
+     border-radius: 20px/19px;
+}
+/*---------------------------------------------------------------------------------------*/
+/*GAUCHE*/
+.gauche{
+     background: var(--bg-2);
+     margin: 2rem auto;
+     padding: 0 20%;
+     text-align: center;
+     position: relative;
+     top: -0.6rem;
+     left: 1rem;
+     box-shadow: -2px 3px 20px 0px rgba(0, 0, 0, 0.5);
+     height: auto;
+     border: 1px dashed var(--bg-3) ;
+}
+.image{
+     width: inherit;
+     margin: 1rem auto 2rem;
+     position: relative;
+}
+.image h1{
+     font-size: 2.4rem;
+     margin-bottom: 1.6rem;
+     letter-spacing: 2px;
+     color: var(--special-lettre);
+}
+.image::after{
+     content: "";
+     width: 9rem;
+     height: 2px;
+     position: absolute;
+     background: var(--hover);
+     border-radius: 2rem;
+     transform: translateX(-50%);
+}
+.contact {
+     display: block;
+     letter-spacing: 1px;
+     font-size: 1.2rem;
+}
+.contact p{
+     font-size: 2rem;
+     color: var(--special-lettre);
+     margin: 0 auto;
+     letter-spacing: 9px;
+} 
+footer{
+     height:auto;
+     width: inherit;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 1.2rem auto;
+}
+footer i{
+     margin-left: 2rem;
+     font-size: 1.8rem;
+     transition: 0.1s ease-in-out;
+}
+footer i:hover {
+     transform: scale(1.2);
+     color:var(--hover);
+}
+footer i:active{
+     animation: icone 0.5s;
+     transform: scale(1);
+}
+@keyframes icone {
+     to{
+          transform: scale(0.8);
+     }
+}
+/*---------------------------------------------------------------------------------------*/
+/*DROIT*/
+.droit{
+     padding: 2rem 5% 0 5rem;
+}
+.droit h1{
+     font-size: 5rem;
+     margin-bottom: 1.2rem;
+     letter-spacing: 5px;
+}
+.droit h2{
+     font-size: 2.5rem;
+     letter-spacing: 1px;
+     word-spacing: 2px;
+     font-weight: normal;
+}
+input[type="checkbox"]{
+     display: none;
+}
+.btm{
+     width: auto;
+     height: 20%;
+     display: flex;
+     align-items: center;
+     font-size: 1rme;
+}
+.btm-click{
+     border-radius: 20px;
+     border: 2px solid var(--hover);
+     letter-spacing: 2px;
+     word-spacing: 6px;
+     width: 40%;
+     height: 35%;
+     background: var(--bg-3);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-left: 10px;
+     transition: 0.5s ease-in-out;
+}
+.btm-click:hover{
+     background: var(--hover);
+     color: var(--bg-1);
+     font-weight: bold;
+    
+}
+.btm-click:active{
+     animation: icone 0.5s infinite;
+}
+.droit p{
+     padding-top:1.2rem ;
+     padding-bottom: 20px;
+     letter-spacing: 2px;
+     word-spacing: 3px;
+     font-size:1.5rem;
+}
+.nom{
+     font-size: 1.7rem;
+     font-weight: bold;
+     color:var(--special-lettre);
+}
+/*---------------------------------------------------------------------------------------*/
+@media screen and (max-width : 1000px){
+     body{
+          padding: 0;
+     }
+}
+@media screen and (max-width : 870px){
+    
+     /*HEADER*/
+     header{
+          width: auto;
+          height: 20px;
+          border-radius: 0;
+          padding: 2rem;
+          margin-top: 3px;
+          display: grid;
+          grid-template-columns:30% auto;
+          grid-template-rows: 20% 70%;
+          grid-template-areas: 
+          "po beurgeur"
+          "menu menu";
+          transition: 1s linear;
+     }
+     header h1{
+          grid-area: po;
+          transform: rotate(0);
+          position: absolute;
+          top: 1px;
+          left: 1rem;
+     }
+     .menu-bare{
+          margin-top: 10px;
+          grid-area: menu;
+          transform: translateY(-30rem);
+          transition: 0.5s linear;
+     }
+     .menu-bare ul{
+          border: 1px var(--bg-3) dashed;
+          flex-direction: column;
+          overflow: hidden;
+          width: inherit;
+     }
+     .menu-bare ul li{
+          border: none;
+          width: inherit;
+          height: inherit;
+          transition: 0.2s ease-in-out;
+     }
+     .menu ul li:hover{
+          background: var(--hover);
+          color: var(--bg-1);
+          font-weight: bold;
+     }
+     #beurgeur{
+          grid-area: beurgeur;
+          visibility: visible;
+     }
+    
+     /*MAIN*/
+     main{
+          background: none;
+          display: flex;
+          flex-direction: column;
+          transition: 0.5s ease-in-out;
+     }
+     .gauche{
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 0 0 2rem;
+          top: 0;
+          left: 0;
+     }
+     /*DROIT*/
+     .droit{
+          background: var(--bg-1);
+          padding: 2rem;
+          margin-top: 1rem;
+          text-align: center;
+     }
+     .droit p{
+          padding: 0;
+     }
+     .btm{
+          height: 100px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 1rem 0;
+     }
+     .btm-click{
+          height: 35%;
+          margin-top: 5px;
+     }
+     /*JS*/
+     #beurgeur.active span:nth-child(1){
+          width: 100%;
+          top: 12px;
+          transform: rotate(45deg);
+     }
+     #beurgeur.active span:nth-child(2){
+          visibility: hidden;
+     }
+     #beurgeur.active span:nth-child(3){
+          width: 100%;
+          top: 12px;
+          transform: rotate(-45deg);
+     }
+     .visible{
+          visibility: visible;
+          transform: translateY(0);
+     }
+     .scale{
+          height: 200px;
+     }
+}
