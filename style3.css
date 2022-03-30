@@ -2,9 +2,10 @@
      --bg-1:#0e175f;
      --bg-2:#0e175ff8;
      --bg-3:#0b61a3;
-     --hover:#00FFDD;
-     --special-lettre:#a0e2e2;
+     --hover:#a0e2e2;
+     --special-lettre:#00FFDD;
      --text: #E8FFC2;
+
 }
 @font-face {
      font-family: "font-1";
@@ -20,7 +21,8 @@ ul li{
      list-style: none;
 }
 body{
-     background-color: var(--text);
+     background-color: var(--hover);
+     opacity: color 0.6;
      padding: 5px 2rem 0;
 }
 a{
