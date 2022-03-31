@@ -24,6 +24,7 @@ body{
      background-color: var(--hover);
      opacity: color 0.6;
      padding: 5px 2rem 0;
+     height: 100vh;
 }
 a{
      text-decoration: none;
@@ -383,6 +384,6 @@ input[type="checkbox"]{
           transform: translateY(0);
      }
      .scale{
-          height: 200px;
+          height: 300px;
      }
 }

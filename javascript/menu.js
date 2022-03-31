@@ -10,4 +10,3 @@ beurgeur.addEventListener("click", () => {
      header.classList.toggle('scale')
   
 })
-

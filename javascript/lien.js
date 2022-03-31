@@ -1,5 +1,4 @@
 var liens = document.querySelectorAll('footer a#external');
-
 for(var i=0 ; i < liens.length ; i++){
 
      var lien = liens[i];
