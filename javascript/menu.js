@@ -8,5 +8,4 @@ beurgeur.addEventListener("click", () => {
      beurgeur.classList.toggle('active')
      menu.classList.toggle('visible')
      header.classList.toggle('scale')
-  
 })
