@@ -5,7 +5,6 @@
      --hover:#a0e2e2;
      --special-lettre:#00FFDD;
      --text: #E8FFC2;
-
 }
 @font-face {
      font-family: "font-1";
@@ -21,7 +20,7 @@ ul li{
      list-style: none;
 }
 body{
-     background-color: var(--hover);
+     background-color: var(--bg-3);
      opacity: color 0.6;
 }
 a{
@@ -45,7 +44,7 @@ header{
      cursor: not-allowed;
      display: flex;
      justify-content: center;
-     align-items: top;
+     align-items: center;
 }
 /*MENU*/
 .menu-bare {
@@ -62,7 +61,7 @@ header{
      align-items: center;
 }
 .menu-bare ul{
-     border: 1px dashed var(--special-lettre);
+     border: 1px dashed var(--bg-3);
 }
 .menu-bare ul li a{
      padding: 0 10px;
@@ -122,14 +121,15 @@ main{
      margin: 0 auto 10px;
      grid-template-columns: 40% 60%;
      background:var(--bg-1);
+     border: 1px dashed var(--bg-3);
      border-radius: 10px;
+     
 }
 /*---------------------------------------------------------------------------------------*/
 /*GAUCHE*/
 .gauche{
      width: inherit;
      text-align: center;
-     height: auto;
      font-size: 2.4rem;
      position: relative;
 }
@@ -145,16 +145,15 @@ main{
      height: 2px;
      position: absolute;
      top: 0;
-     background: var(--text);
+     background: var(--bg-3);
      border-radius: 2rem;
      transform: translateX(-50%);
 }
 .gauche::before{
-     top: 2rem;
+     top: 5%;
      left: 100%;
      width: 2px;
      height: 90%;
-     
 }
 .contact {
      display: block;
@@ -199,51 +198,53 @@ footer i:active{
 
 /*---------------------------------------------------------------------------------------*/
 /* DROIT*/
- .droit{
-     padding-top: 2rem;
+.droit{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     font-size: 1.7 rem;
+     letter-spacing:2px;
 }
-.droit h1{
+ .droit h1{
      font-size: 5rem;
      margin-bottom: 1.2rem;
      letter-spacing: 5px;
 }
+
 .droit h2{
      font-size: 2.5rem;
      letter-spacing: 1px;
      word-spacing: 2px;
      font-weight: normal;
-}
-input[type="checkbox"]{
-     display: none;
-}
-.btm{
+} 
+.btm-contenaire{
      width: auto;
-     height: 25%;
+     height: 125px;
      display: flex;
      align-items: center;
-     font-size: 1rme;
+     font-size: 1rem
 }
-.btm-click{
-     border-radius: 20px;
-     border: 2px solid var(--hover);
-     letter-spacing: 2px;
-     word-spacing: 6px;
+.btm{
      width: 40%;
      height: 35%;
      background: var(--bg-3);
+     border: 2px solid var(--hover);
+     border-radius: 20px;
+     letter-spacing: 2px;
+     word-spacing: 6px;
      display: flex;
      justify-content: center;
      align-items: center;
      margin-left: 10px;
      transition: 0.5s ease-in-out;
+     text-align: center;
 }
-.btm-click:hover{
+.btm:hover{
      background: var(--hover);
      color: var(--bg-1);
      font-weight: bold;
-    
 }
-.btm-click:active{
+.btm:active{
      animation: icone 0.5s infinite;
 }
 .droit p{
@@ -312,19 +313,21 @@ input[type="checkbox"]{
           background: var(--bg-1);
           padding: 2rem;
           margin-top: 1rem;
-          text-align: center;
+     }
+     .droit h2{
+          margin-bottom: 2rem;
      }
      .droit p{
           padding: 0;
      }
-     .btm{
+     .btm-contenaire{
           height: 100px;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           margin: 1rem 0;
      }
-     .btm-click{
+     .btm {
           height: 35%;
           margin-top: 5px;
      }
