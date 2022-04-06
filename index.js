@@ -1,5 +1,5 @@
 const beurgeur = document.getElementById("beurgeur");
-const menu = document.querySelector('.menu-bare');
+const menu = document.querySelector('.menu');
 const header = document.querySelector('header');
 let liens = document.querySelectorAll('a#external'); 
 
