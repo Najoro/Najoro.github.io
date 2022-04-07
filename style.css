@@ -34,19 +34,19 @@ a{
      letter-spacing: 5px;
      margin-left: 1rem;
 } 
-footer i:hover,
-.menu:hover,
-.btm:hover
+.flex-evenly{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+}
+.HOVER:hover
 {
+     transform: scale(1.1);
      transition: 0.1s ease-in-out;
      color:var(--hover);
 }    
-.btm:hover,
-.menu a:hover{
-     background: var(--hover);
-     color:var(--bg-1);
-}
-.btm:active,.menu-bare ul li a:active{
+
+.ACTIVE:active{
      animation: anim 0.5s infinite;
 }
 @keyframes anim{
@@ -54,6 +54,7 @@ footer i:hover,
           transform: scale(0.8);
      }
 }
+
 /*---------------------------------------------------------------------------------------*/
 /*HEADER*/
 header{
@@ -67,16 +68,12 @@ header{
 /*MENU*/
 .menu{
      width: 60%;
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
      margin: 0 auto;
      border: 1px dashed var(--bg-3);
-}
-/*BEURGEUR MENU*/
+}/*flex-evenly*/
 #beurgeur{
      width: 3rem;
-     height: 3rem;
+     height: 2rem;
      cursor: pointer;
      position: absolute;
      top: 1rem;
@@ -107,7 +104,6 @@ header{
      top: 24px;
 }
 /*---------------------------------------------------------------------------------------*/
-/*Main*/
 main{
      width: 95%;
      height: auto;
@@ -118,15 +114,8 @@ main{
      background:var(--bg-1);
      border: 1px dashed var(--bg-3);
      border-radius: 10px;
-     
 }
 /*---------------------------------------------------------------------------------------*/
-/*GAUCHE*/
-footer, .gauche, .btm ,.btm-contenaire{
-     display: flex;
-     justify-content: space-evenly;
-     align-items: center;
-}
 .gauche{
      width: inherit;
      text-align: center;
@@ -156,9 +145,9 @@ footer, .gauche, .btm ,.btm-contenaire{
 footer{
      width: 60%;
      font-size: 1.6rem;
+     margin-top: 1rem;
 }
 /*---------------------------------------------------------------------------------------*/
-/* DROIT*/
 .droit{
      display: flex;
      flex-direction: column;
@@ -177,18 +166,16 @@ footer{
      width: auto;
      height: 125px;
      font-size: 1rem
-}
+}/*flex-evenly*/
 .btm{
      width: 40%;
      height: 3rem;
      border-radius: 20px;
      background: var(--bg-3);
      border: 1px solid var(--hover);
-}
+}/*HOVER ACTIVE  flex-evenly*/
 /*---------------------------------------------------------------------------------------*/
 @media screen and (max-width : 870px){
-    
-     /*HEADER*/
      header{
           grid-template-columns: 50% 50%;
           grid-template-rows: 20% 80%;
@@ -201,10 +188,8 @@ footer{
      }
      .menu{
           grid-area: menu;
-          width: 100%;
-          height: auto;
           flex-direction: column;
-          transform: translateY(-300px);
+          visibility: hidden;
      }
 
      #beurgeur{
@@ -227,48 +212,39 @@ footer{
           top: 0;
           left: 0;
      }
-     /*DROIT*/
      .droit{
           background: var(--bg-1);
           padding: 2rem;
           margin-top: 1rem;
      }
-     .droit h2{
-          margin-bottom: 2rem;
-     }
-     .droit p{
-          padding: 0;
-     }
      .btm-contenaire{
-          height: 100px;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin: 1rem 0;
      }
-     .btm {
-          height: 35%;
-          margin-top: 5px;
-     }
-     /*JS*/
-     #beurgeur.active span:nth-child(1){
+     /*JS------------------------------------------------------------------------------------------*/
+     #beurgeur.activeJS span:nth-child(1){
           width: 100%;
           top: 12px;
           transform: rotate(45deg);
      }
-     #beurgeur.active span:nth-child(2){
+     #beurgeur.activeJS span:nth-child(2){
           visibility: hidden;
      }
-     #beurgeur.active span:nth-child(3){
+     #beurgeur.activeJS span:nth-child(3){
           width: 100%;
           top: 12px;
           transform: rotate(-45deg);
      }
-     .visible{
+     .visibleJS{
           visibility: visible;
           transform: translateY(0);
      }
-     .scale{
+     .scaleJS{
           height: 300px;
+     }
+     .fixed{
+          top: 0;
+          position: fixed;
+          width: 100%;
+          z-index: 1;
      }
 }
