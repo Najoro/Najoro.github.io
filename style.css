@@ -67,7 +67,7 @@ header{
 }
 /*MENU*/
 .menu{
-     width: 60%;
+     width: 80%;
      margin: 0 auto;
      border: 1px dashed var(--bg-3);
 }/*flex-evenly*/
@@ -241,10 +241,12 @@ footer{
      .scaleJS{
           height: 300px;
      }
-     .fixed{
-          top: 0;
-          position: fixed;
-          width: 100%;
-          z-index: 1;
-     }
+     
+}
+/*js*/
+.fixed{
+     top: 0;
+     position: fixed;
+     width: 100%;
+     z-index: 1;
 }
