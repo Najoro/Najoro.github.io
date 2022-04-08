@@ -236,7 +236,6 @@ footer{
      }
      .visibleJS{
           visibility: visible;
-          transform: translateY(0);
      }
      .scaleJS{
           height: 300px;
