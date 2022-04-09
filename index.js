@@ -47,10 +47,11 @@ let headerFixed = function (){
      if(scrollY() > haut && !hasScroll){
           header.classList.add('fixed');
           header.parentNode.insertBefore(newElement, header.nextElementSibling );
+          
      }
      else if(scrollY() <= haut && hasScroll){
           header.classList.remove('fixed');
           header.parentNode.removeChild(newElement)
      }
 }
-window.addEventListener('scroll', headerFixed)
+window.addEventListener('scroll', headerFixed) 
