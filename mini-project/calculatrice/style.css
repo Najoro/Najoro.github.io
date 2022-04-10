@@ -1,105 +1,67 @@
 *{
-     color: #fff;
-     background: rgba(0, 0, 0, 0.925);
      margin: 0;
      padding: 0;
+     text-decoration: none;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 body{
-     width:100%;
+     width: 100vw;
      height: 100vh;
      overflow: hidden;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     background: rgba(0, 0, 0, 0.354);
-}
-h1{
-     margin: 0;
-     padding: 0;
-}
-button{
-     height: 4rem;
-     font-size: 1rem;
-     font-weight: normal;
-     border:0.5px solid rgba(255, 255, 255, 0.24);
-     border-radius: 10px;
-     margin: 3px;
-     cursor:pointer;
-    
-}
-button:hover{
-     transform: scale(1.1);
-}
-button:active{
-     transform: scale(0.5);
-     transition:0.4s linear;
 }
 .contenaire{
-     width: 50vh;
-     justify-content: center;
-     border: 1px solid #fff;
-     border-radius: 10px;
-     padding:10px;
-     display: grid;
-     grid-template-columns:1fr 1fr 1fr 1fr;
-     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-     grid-template-areas:     
-     "them them them them"
-     "in in in in"
-     "clear clear modulo division"
-     "sept huit neuf multiplication"
-     "quatre cinq six soustraction"
-     "un deux trois addition"
-     "point zeero egale  egale";
+     width: 20rem;
+     height: 35rem;
+     border: 1px solid #000;
+     margin: 1rem auto;
+     padding: 9px;
+     position: relative;
 }
-#resultat {
-     margin: 0;
-     width: 100%;
-     height: 2em;
-     border: 1px solid #fff;
-     font-weight: bold;
-     font-size: 2em;
-     text-align: right;
-     overflow: hidden;
-     margin-bottom: 0;
-     grid-area: in;
-     cursor: not-allowed;
+h3 {
+     font-weight: normal;
+     font-size: 2rem;
+     text-align: center;
+     margin: 1rem 0;
+}
+.contenaire-resultat{
+     height: 100px;
+     border: 1px solid blue;
      display: flex;
+     justify-content: center;
      align-items: center;
-     justify-content: end;
+     overflow: auto;
 }
-.zero{grid-area: zeero;}
-.un{grid-area: un;}
-.deux{grid-area: deux;}
-.trois{grid-area: trois;}
-.quatre{grid-area: quatre;}
-.cinq{grid-area: cinq;}
-.six{grid-area: six;}
-.sept{grid-area: sept;}
-.huit{grid-area: huit;}
-.neuf{grid-area: neuf;}
-.egale{grid-area: egale;  color:red;}
-.fois{grid-area: multiplication; color:red;}
-.plus{grid-area: addition ; color:red;}
-.division{grid-area: division; color:red;}
-.moin{grid-area: soustraction; color:red;}
-.modulo{grid-area: modulo; color:red;}
-.point{grid-area: point; color:red;}
-.clear{grid-area: clear; color:red;}
-
-.them{
-     height: auto;
+#resultat{
+     width: auto;
+     height: 1.2rem;
+     font-size: 1.2rem;
+     position: relative;
 }
-.color{
-     width: 15px;
-     height: 15px;
-     background-color: #fff;
-     margin-right: 5px;
-     border-radius: 15px;
-     border: none;
+#resultat::after{
+     content: "";
+     position: absolute;
+     top: 0;
+     right: -1;
+     width: 2px;
+     height:100%;
+     background: #000;
+     animation: anim 0.6s linear infinite;
 }
-
+@keyframes anim{
+     to{
+          opacity: 0;
+     }
+}
+.contenaire-button{
+     display: grid;
+     grid-template-columns: 30% 30% 30%;
+     grid-template-rows:  15% 15% 15% 15% 15% 15%;
+     grid-template-areas: 
+     "b7 b8 b9"
+     "b4 b5 b6"
+     "b1 b2 b3"
+     "b+ b0 b-"
+     "b/ b* b="
+     "bC b. b=";
+}
+.b0{grid-area: b0;}
