@@ -80,7 +80,6 @@ header{
      right: 2rem;
      z-index: 1000;
      visibility: hidden;
-
 }
 #beurgeur span{
      height: 5px;
@@ -106,7 +105,6 @@ header{
 /*---------------------------------------------------------------------------------------*/
 main{
      width: 95%;
-     height: auto;
      min-height: 80vh;
      display: grid;
      margin: 0 auto 10px;
@@ -116,7 +114,7 @@ main{
      border-radius: 10px;
 }
 /*---------------------------------------------------------------------------------------*/
-.gauche{
+.identiter{
      width: inherit;
      text-align: center;
      position: relative;
@@ -126,7 +124,7 @@ main{
      position: relative;
      font-size: 1.2rem;
 }
-.contact::after , .gauche::before{
+.contact::after , .identiter::before{
      content: "";
      width: 9rem;
      height: 2px;
@@ -136,7 +134,7 @@ main{
      background: var(--bg-3);
      transform: translateX(-50%);
 }
-.gauche::before{
+.identiter::before{
      top: 5%;
      left: 100%;
      width: 2px;
@@ -148,17 +146,17 @@ footer{
      margin-top: 1rem;
 }
 /*---------------------------------------------------------------------------------------*/
-.droit{
+.hello{
      display: flex;
      flex-direction: column;
      justify-content: space-evenly;
      font-size: 1.5rem;
      letter-spacing:2px;
 }
- .droit h1{
+ .hello h1{
      font-size: 5rem !important;
 }
-.droit h1, .droit h2 u{
+.hello h1, .hello h2 u{
      color: var(--text);
 }
 
@@ -198,13 +196,12 @@ footer{
      }
      /*MAIN*/
      main{
-          width: 100%;
           background: none;
           display: flex;
           flex-direction: column;
           transition: 0.5s ease-in-out;
      }
-     .gauche{
+     .identiter{
           width: 100%;
           background: var(--bg-1);
           margin: 0;
@@ -212,7 +209,7 @@ footer{
           top: 0;
           left: 0;
      }
-     .droit{
+     .hello{
           background: var(--bg-1);
           padding: 2rem;
           margin-top: 1rem;
