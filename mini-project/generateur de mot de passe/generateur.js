@@ -64,7 +64,7 @@ let generatePassword = function(){
 
      yourPassword.value = password;
      yourPassword.select();
-
+     // yourPassword.execCommad('copy');
 //      mdpConfirm.textContent = "copie !"
 
 //     setTimeout(()=> {
