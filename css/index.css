@@ -8,24 +8,21 @@
 }
 @font-face {
      font-family: "font-1";
-     src: url(./inserer/Akaya_Telivigala/AkayaTelivigala-Regular.ttf);
+     src: url(../inserer/font/AkayaTelivigala-Regular.ttf);
 }
 *{
      padding: 0;
      margin: 0;
      letter-spacing: 2px;
-     font-family:"font-1", serif;
+     font-family: "font-1";
      color:var(--text) ;
-}
-ul li{
      list-style: none;
+     text-decoration: none;
 }
+
 body{
      background-color: var(--bg-3);
      opacity: color 0.6;
-}
-a{
-     text-decoration: none;
 }
 .special{
      font-size: 2rem;
@@ -60,7 +57,6 @@ a{
 header{
      height: 4rem;
      margin-bottom: 1rem;
-     padding: 5px;
      background: var(--bg-1);
      display: grid;
      grid-template-columns: 10% 80% 10%;
@@ -106,8 +102,8 @@ header{
 main{
      width: 95%;
      min-height: 80vh;
-     display: grid;
      margin: 0 auto 10px;
+     display: grid;
      grid-template-columns: 40% 60%;
      background:var(--bg-1);
      border: 1px dashed var(--bg-3);
@@ -244,5 +240,11 @@ footer{
      top: 0;
      position: fixed;
      width: 100%;
+     margin: 0;
      z-index: 1;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+.newProject{
+     width: auto;
+     height: 200px;
 }

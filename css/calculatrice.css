@@ -14,7 +14,7 @@
 }
 body{
      width: 100vw;
-     background: var(--bg1);
+     background:url(../media/bac-calculatrice.jpg) center;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -64,7 +64,7 @@ h3 {
      right: -1;
      width: 2px;
      height:100%;
-     background: #000;
+     background: var(--hover);
      animation: anim 0.6s linear infinite;
 }
 @keyframes anim{
