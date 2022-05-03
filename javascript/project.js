@@ -1,23 +1,43 @@
+/*
+une projet est constituer par :
+     *son nom
+     *son techno
+     *son lien vers le code source
+     *son image de font d'image
+     
+FONCTIONALITER
+-si on creer une nouvelle project on creera une balise span
+-Si on clique l'image on part vers le project indiquer
+-si on passe on hover son identiter(nom,tecno,code-source) est reveler
+ */
+
 const project = document.getElementById('project');
-let newProject = document.createElement('span');
-project.appendChild(newProject)
-newProject.classList.add('newProject');
 
-
-let newObject = function(name,tecno,bg,source){
-     return `<h4> ${name}</h4>          
-             <h4> ${tecno}</h4>          
-             <a href = '${source}' >${source}<a>
-          `
+let newSpan = function(){
+     let span = document.createElement('span');
+     project.appendChild(span);
 }
-let objectProject = [
-     newObject("calculatrice", "HTML, CSS , JAVASCRIPT", "../media/bg-generateur.png center/cover" , "github.io"),
-     newObject("calculatrice", "HTML, CSS , JAVASCRIPT", "../media/bg-generateur.png center/cover" , "github.io"),
-     newObject("calculatrice", "HTML, CSS , JAVASCRIPT", "../media/bg-generateur.png center/cover" , "github.io"),
-] 
-
-for (let i = 0; i < objectProject.length; i++) {
-     newProject.innerHTML += objectProject[i];
+let projectContenue = function(nom,tecno,source, background) {
+     var span = document.createElement('span');
+     span.classList.add('newProject');
+     project.appendChild(span);
+     let newProject = {
+          nom    : nom,
+          tecno  : tecno,
+          source : source,
+     }
+     return span.innerHTML = `<h3>${newProject.nom}</h3>
+                              <h3>${tecno}</h3>
+                              <a href= "${source}">code source</a>
+                              `
 }
 
-console.log(objectProject.length);
+let listProjects = [
+     projectContenue("Calculatrice", "Javascript", "calc.com"),
+     projectContenue("Calculatrice", "Javascript", "calc.io"),
+     projectContenue("cc", "ss", "ca"),
+     projectContenue("cc", "ss", "ca"),
+     projectContenue("cc", "ss", "ca"),
+     projectContenue("cc", "ss", "ca"),
+     projectContenue("cc", "ss", "ca"),
+]
