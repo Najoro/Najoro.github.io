@@ -1,0 +1,41 @@
+
+@mixin special-Letter{
+     font-size: 2rem;
+     color: $special-lettre;
+     padding-top: 1rem;
+     letter-spacing: 5px;
+     margin-left: 1rem;
+}
+@mixin flex-evenly{
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+}
+@mixin hover-active{
+     &:hover{
+          transform: scale(1.1);
+          transition: 0.1s ease-in-out;
+          color:$hover;
+          background: $bg-3;
+     }
+     &:active{
+          animation: anim 0.5s infinite;
+     }
+     @keyframes anim{
+          to{
+               transform: scale(0.8);
+          }
+     }
+}
+
+
+@mixin ligne($width, $height, $top, $left, $bottom, $right){
+     content: "";
+     background: $bg-3;
+     transform: translateX(-55%);
+     position: absolute;
+     width: $width;
+     height: $height;
+     top: $top;
+     left: $left;
+}

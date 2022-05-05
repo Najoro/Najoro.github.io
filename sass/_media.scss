@@ -1,0 +1,61 @@
+@media screen and (max-width : 870px){
+     header{
+          height: auto;
+          width: 100%;
+          grid-template-columns: 50% 50%;
+          grid-template-rows: 50% 50%;
+          grid-template-areas: 
+          "portfolio beurgeur"
+          "menu menu";
+
+          h1{
+               grid-area: portfolio;
+          }
+          .menu{
+               width: 90%;
+               height:220px;
+               grid-area: menu;
+               text-align: center;
+               z-index: 1;
+               display: none;
+               transition: 0.8s ease-in-out;
+               
+               a{
+                    @include hover-active;
+                    display: block;
+                    width: 100%;
+               }
+          }
+          #beurgeur{
+               grid-area: beurgeur;
+               visibility: visible;
+          }
+     }
+     main{
+          margin: 0;
+          width: 100%;
+          height: auto;
+          border-radius: none;
+          grid-template-columns: 1fr;
+          grid-template-rows: 50% 50%;
+          grid-template-areas: 
+          "contenary"
+          "identiter";
+          transition: 0.5s ease-in-out;
+
+          .identiter{
+               grid-area: identiter;
+               border-radius: 0px;
+               display: flex;
+               padding-bottom:1rem ;
+               margin-bottom: 10px;
+          }
+          .acceuil{
+               grid-area: contenary;
+               border-radius: 0px;
+               margin-bottom: 10px;
+               padding-bottom: 5rem;
+          }
+     }
+
+}

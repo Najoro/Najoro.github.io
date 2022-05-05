@@ -1,0 +1,57 @@
+header{
+     height: 4rem;
+     margin-bottom: 1rem;
+     background: $bg-1;
+     display: grid;
+     grid-template-columns: 10% 80% 10%;
+
+     h1{
+          @include special-Letter;
+          color: $black;
+     }
+     .menu{
+          width: 80%;
+          margin: 0 auto;
+          @include flex-evenly;
+
+          a{
+               padding: 10px;
+               width: auto;
+               @include hover-active;
+          }
+     }
+}
+//beurgeur menu
+#beurgeur{
+     width: 3rem;
+     height: 2rem;
+     cursor: pointer;
+     position: absolute;
+     top: 1rem;
+     right: 2rem;
+     z-index: 1000;
+     visibility: hidden;
+     
+     span{
+          height: 5px;
+          border-radius: 5px;
+          display: block;
+          background-color:$hover;
+          transition: 0.3s ease-in-out;
+          position: absolute;
+          
+          &:nth-child(1){
+               width: 50%;
+               top: 0;
+          }
+          &:nth-child(2){
+               width: 100%;
+               top: 12px;
+          }
+          &:nth-child(3){
+               width: 50%;
+               right: 0;
+               top: 24px;
+          }
+     }
+}

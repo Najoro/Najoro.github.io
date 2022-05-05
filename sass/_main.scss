@@ -1,0 +1,128 @@
+main{
+     width: 95%;
+     min-height: 80vh;
+     margin: 0 auto 10px;
+     display: grid;
+     grid-template-columns: 20% 80%;
+     grid-template-areas: 
+          "identity contenary";
+     border-radius: 10px;
+}
+//----------------------------------------------------------------------------
+.identiter{
+     grid-area: identity;
+     width: inherit;
+     text-align: center;
+     position: relative;
+     flex-direction: column;
+     margin-right: 10px;
+     border-radius: $radius;
+     background: $bg-1;
+     @include flex-evenly;
+
+     .image{
+          img{
+               height: 150px;
+               width:150px;
+               border-radius:50%;
+               border: 5px solid $hover;
+          }
+          h1{
+               font-family: "font-4";
+               font-size: 1.3rem;
+               font-weight: bold;
+               letter-spacing: 4px;
+               color: $white;
+          }
+     }
+     .symbol{
+          transform: scale(2) rotate(0);
+          cursor: not-allowed;
+          user-select: none;
+          color: $bg-3;
+     }
+     .status{
+          position: relative;
+          font-size: 1.2rem;
+          padding: 2rem 0 0;
+          @include special-Letter;
+          &::after{ @include ligne(7rem, 2px, 0, 50%, none, none );}
+          
+     }
+     footer{
+          width: 100%;
+          font-size: 1.6rem;
+          margin-top: 1rem;
+          @include flex-evenly;
+
+          a{
+               width: 3rem;
+               height: 3rem;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               box-shadow: 0px 0px 3px 3px $black;
+               background: $bg-1;
+               border-radius: 50%;
+               @include hover-active;
+               i{
+                    color:$white;
+               }
+          }
+     }
+}
+//----------------------------------------------------------------------------
+.acceuil{
+     grid-area: contenary;
+     background: linear-gradient(115deg, $bg-1 50%, transparent 100%);
+     border-radius: $radius;
+     padding: 4rem 0 0 4rem;
+     position: relative;
+     overflow: hidden;
+     &::after{
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          background: url(../media/njr3.jpg) no-repeat center/cover;
+          z-index: -12;
+          filter: brightness(70%);
+          transform: translateX(37%);
+     }
+
+     h1{
+          @include special-Letter;
+          font-family: "font-4";
+          font-weight: normal;
+          font-size: 3.5rem;
+     }
+     h2{
+          font-size: 1.5rem;
+          margin: 2rem 0;
+          color: $white;
+     }
+     .btm{
+          width: 200px;
+          display: block;
+          text-align: center;
+          background: $bg-3;
+          color: $black;
+          box-shadow: 1px 1px 5px 3px $black;
+          padding: 10px 1rem;
+          border-radius: $radius;
+          font-size: 1.3rem ;
+          letter-spacing: 2px;
+          margin-top: 5rem;
+          transition: 0.5s ease-in-out;
+          @include hover-active;
+          &:hover{
+               transform: translateX(10px);
+               box-shadow: -1px -1px 5px 3px $black;
+               text-transform: uppercase;
+
+          }
+     
+     }
+}

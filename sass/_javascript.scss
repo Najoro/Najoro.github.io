@@ -1,0 +1,36 @@
+
+ #beurgeur.activeJS{
+     span:nth-child(1){
+          width: 100%;
+          top: 12px;
+          transform: rotate(45deg);
+     }
+     span:nth-child(2){
+          visibility: hidden;
+     }
+     span:nth-child(3){
+          width: 100%;
+          top: 12px;
+          transform: rotate(-45deg);
+     }
+}
+.showMenu{
+     display: grid !important;
+}
+.fixed{
+     top: 0;
+     position: fixed;
+     width: 100%;
+     margin: 0;
+     z-index: 1;
+}
+.rotate{
+     transform: scale(2) rotate(0);
+     animation: rotate 0.5s linear;
+
+}
+@keyframes rotate {
+     to{
+          transform: scale(2) rotate(720deg);
+     }
+}

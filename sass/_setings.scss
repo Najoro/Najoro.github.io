@@ -1,0 +1,41 @@
+
+
+$bg-1:#0e175f;
+$bg-2:#0e175ff8;
+$bg-3:#0b61a3;
+$hover:#a0e2e2;
+$special-lettre:#00FFDD;
+$text: #E8FFC2;
+$white:#ddd;
+$black:#333;
+
+$radius: 20px;
+@font-face {
+     font-family: "font-1";
+     src: url(../inserer/font/AkayaTelivigala-Regular.ttf);
+}
+@font-face {
+     font-family: "font-2";
+     src: url(../inserer/font/NovaRound-Regular.ttf);
+}
+@font-face {
+     font-family: "font-3";
+     src: url(../inserer/font/dois/Dosis-VariableFont_wght.ttf);
+}
+@font-face {
+     font-family: "font-4";
+     src: url(../inserer/font/NovaRound-Regular.ttf);
+}
+*{
+     padding: 0;
+     margin: 0;
+     letter-spacing: 2px;
+     font-family: "font-1", sans-serif;
+     font-weight: normal;
+     color:$text;
+     list-style: none;
+     text-decoration: none;
+}
+body{
+     background-color: $bg-3;
+}
