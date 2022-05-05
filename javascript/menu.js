@@ -17,8 +17,8 @@ newElement.style.height = hauteur + "px";
 
 let showMenu = function(){
      beurgeur.classList.toggle('activeJS');
-     menu.classList.toggle('visibleJS');
-     header.classList.toggle('scaleJS');
+     menu.classList.toggle('showMenu');
+    
 }
 
 let scrollY = function(){

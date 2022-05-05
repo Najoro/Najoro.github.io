@@ -1,0 +1,376 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../inserer/font/AkayaTelivigala-Regular.ttf);
+}
+@font-face {
+  font-family: "font-2";
+  src: url(../inserer/font/NovaRound-Regular.ttf);
+}
+@font-face {
+  font-family: "font-3";
+  src: url(../inserer/font/dois/Dosis-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "font-4";
+  src: url(../inserer/font/NovaRound-Regular.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2px;
+  font-family: "font-1", sans-serif;
+  font-weight: normal;
+  color: #E8FFC2;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #0b61a3;
+}
+
+header {
+  height: 4rem;
+  margin-bottom: 1rem;
+  background: #0e175f;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+header h1 {
+  font-size: 2rem;
+  color: #00FFDD;
+  padding-top: 1rem;
+  letter-spacing: 5px;
+  margin-left: 1rem;
+  color: #333;
+}
+header .menu {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .menu a {
+  padding: 10px;
+  width: auto;
+}
+header .menu a:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+  color: #a0e2e2;
+  background: #0b61a3;
+}
+header .menu a:active {
+  animation: anim 0.5s infinite;
+}
+@keyframes anim {
+  to {
+    transform: scale(0.8);
+  }
+}
+
+#beurgeur {
+  width: 3rem;
+  height: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 1000;
+  visibility: hidden;
+}
+#beurgeur span {
+  height: 5px;
+  border-radius: 5px;
+  display: block;
+  background-color: #a0e2e2;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+}
+#beurgeur span:nth-child(1) {
+  width: 50%;
+  top: 0;
+}
+#beurgeur span:nth-child(2) {
+  width: 100%;
+  top: 12px;
+}
+#beurgeur span:nth-child(3) {
+  width: 50%;
+  right: 0;
+  top: 24px;
+}
+
+main {
+  width: 95%;
+  min-height: 80vh;
+  margin: 0 auto 10px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "identity contenary";
+  border-radius: 10px;
+}
+
+.identiter {
+  grid-area: identity;
+  width: inherit;
+  text-align: center;
+  position: relative;
+  flex-direction: column;
+  margin-right: 10px;
+  border-radius: 20px;
+  background: #0e175f;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.identiter .image img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid #a0e2e2;
+}
+.identiter .image h1 {
+  font-family: "font-4";
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #ddd;
+}
+.identiter .symbol {
+  transform: scale(2) rotate(0);
+  cursor: not-allowed;
+  user-select: none;
+  color: #0b61a3;
+}
+.identiter .status {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 2rem 0 0;
+  font-size: 2rem;
+  color: #00FFDD;
+  padding-top: 1rem;
+  letter-spacing: 5px;
+  margin-left: 1rem;
+}
+.identiter .status::after {
+  content: "";
+  background: #0b61a3;
+  transform: translateX(-55%);
+  position: absolute;
+  width: 7rem;
+  height: 2px;
+  top: 0;
+  left: 50%;
+}
+.identiter footer {
+  width: 100%;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.identiter footer a {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 3px 3px #333;
+  background: #0e175f;
+  border-radius: 50%;
+}
+.identiter footer a:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+  color: #a0e2e2;
+  background: #0b61a3;
+}
+.identiter footer a:active {
+  animation: anim 0.5s infinite;
+}
+@keyframes anim {
+  to {
+    transform: scale(0.8);
+  }
+}
+.identiter footer a i {
+  color: #ddd;
+}
+
+.acceuil {
+  grid-area: contenary;
+  background: linear-gradient(115deg, #0e175f 50%, transparent 100%);
+  border-radius: 20px;
+  padding: 4rem 0 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.acceuil::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../media/njr3.jpg) no-repeat center/cover;
+  z-index: -12;
+  filter: brightness(70%);
+  transform: translateX(37%);
+}
+.acceuil h1 {
+  font-size: 2rem;
+  color: #00FFDD;
+  padding-top: 1rem;
+  letter-spacing: 5px;
+  margin-left: 1rem;
+  font-family: "font-4";
+  font-weight: normal;
+  font-size: 3.5rem;
+}
+.acceuil h2 {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  color: #ddd;
+}
+.acceuil .btm {
+  width: 200px;
+  display: block;
+  text-align: center;
+  background: #0b61a3;
+  color: #333;
+  box-shadow: 1px 1px 5px 3px #333;
+  padding: 10px 1rem;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-top: 5rem;
+  transition: 0.5s ease-in-out;
+}
+.acceuil .btm:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+  color: #a0e2e2;
+  background: #0b61a3;
+}
+.acceuil .btm:active {
+  animation: anim 0.5s infinite;
+}
+@keyframes anim {
+  to {
+    transform: scale(0.8);
+  }
+}
+.acceuil .btm:hover {
+  transform: translateX(10px);
+  box-shadow: -1px -1px 5px 3px #333;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 870px) {
+  header {
+    height: auto;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "portfolio beurgeur" "menu menu";
+  }
+  header h1 {
+    grid-area: portfolio;
+  }
+  header .menu {
+    width: 90%;
+    height: 220px;
+    grid-area: menu;
+    text-align: center;
+    z-index: 1;
+    display: none;
+    transition: 0.8s ease-in-out;
+  }
+  header .menu a {
+    display: block;
+    width: 100%;
+  }
+  header .menu a:hover {
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+    color: #a0e2e2;
+    background: #0b61a3;
+  }
+  header .menu a:active {
+    animation: anim 0.5s infinite;
+  }
+  @keyframes anim {
+    to {
+      transform: scale(0.8);
+    }
+  }
+  header #beurgeur {
+    grid-area: beurgeur;
+    visibility: visible;
+  }
+
+  main {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    border-radius: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "contenary" "identiter";
+    transition: 0.5s ease-in-out;
+  }
+  main .identiter {
+    grid-area: identiter;
+    border-radius: 0px;
+    display: flex;
+    padding-bottom: 1rem;
+    margin-bottom: 10px;
+  }
+  main .acceuil {
+    grid-area: contenary;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    padding-bottom: 5rem;
+  }
+}
+#beurgeur.activeJS span:nth-child(1) {
+  width: 100%;
+  top: 12px;
+  transform: rotate(45deg);
+}
+#beurgeur.activeJS span:nth-child(2) {
+  visibility: hidden;
+}
+#beurgeur.activeJS span:nth-child(3) {
+  width: 100%;
+  top: 12px;
+  transform: rotate(-45deg);
+}
+
+.showMenu {
+  display: grid !important;
+}
+
+.fixed {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  z-index: 1;
+}
+
+.rotate {
+  transform: scale(2) rotate(0);
+  animation: rotate 0.5s linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: scale(2) rotate(720deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
