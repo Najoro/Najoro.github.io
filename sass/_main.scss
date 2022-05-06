@@ -1,9 +1,8 @@
 main{
      width: 95%;
-     min-height: 80vh;
      margin: 0 auto 10px;
      display: grid;
-     grid-template-columns: 20% 80%;
+     grid-template-columns: 250px 1fr;
      grid-template-areas: 
           "identity contenary";
      border-radius: 10px;
@@ -12,10 +11,12 @@ main{
 .identiter{
      grid-area: identity;
      width: inherit;
+     height: 80vh;
      text-align: center;
      position: relative;
      flex-direction: column;
      margin-right: 10px;
+     margin-bottom: 2rem;
      border-radius: $radius;
      background: $bg-1;
      @include flex-evenly;
@@ -26,6 +27,8 @@ main{
                width:150px;
                border-radius:50%;
                border: 5px solid $hover;
+               user-select: none;
+               cursor: not-allowed;
           }
           h1{
                font-family: "font-4";
@@ -33,6 +36,8 @@ main{
                font-weight: bold;
                letter-spacing: 4px;
                color: $white;
+               user-select: none;
+               cursor: not-allowed;
           }
      }
      .symbol{
@@ -45,14 +50,16 @@ main{
           position: relative;
           font-size: 1.2rem;
           padding: 2rem 0 0;
+          user-select: none;
+          cursor: not-allowed;
           @include special-Letter;
           &::after{ @include ligne(7rem, 2px, 0, 50%, none, none );}
-          
      }
      footer{
+          min-width: 200px;
           width: 100%;
-          font-size: 1.6rem;
-          margin-top: 1rem;
+          font-size: 1.3rem;
+          margin: 2rem 0;
           @include flex-evenly;
 
           a{
@@ -64,6 +71,7 @@ main{
                box-shadow: 0px 0px 3px 3px $black;
                background: $bg-1;
                border-radius: 50%;
+
                @include hover-active;
                i{
                     color:$white;
@@ -72,57 +80,8 @@ main{
      }
 }
 //----------------------------------------------------------------------------
-.acceuil{
+.contenaire{
      grid-area: contenary;
-     background: linear-gradient(115deg, $bg-1 50%, transparent 100%);
-     border-radius: $radius;
-     padding: 4rem 0 0 4rem;
-     position: relative;
-     overflow: hidden;
-     &::after{
-          content: "";
-          position: absolute;
-          top: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          background: url(../media/njr3.jpg) no-repeat center/cover;
-          z-index: -12;
-          filter: brightness(70%);
-          transform: translateX(37%);
-     }
-
-     h1{
-          @include special-Letter;
-          font-family: "font-4";
-          font-weight: normal;
-          font-size: 3.5rem;
-     }
-     h2{
-          font-size: 1.5rem;
-          margin: 2rem 0;
-          color: $white;
-     }
-     .btm{
-          width: 200px;
-          display: block;
-          text-align: center;
-          background: $bg-3;
-          color: $black;
-          box-shadow: 1px 1px 5px 3px $black;
-          padding: 10px 1rem;
-          border-radius: $radius;
-          font-size: 1.3rem ;
-          letter-spacing: 2px;
-          margin-top: 5rem;
-          transition: 0.5s ease-in-out;
-          @include hover-active;
-          &:hover{
-               transform: translateX(10px);
-               box-shadow: -1px -1px 5px 3px $black;
-               text-transform: uppercase;
-
-          }
-     
-     }
+     background: transparent;
+     height: auto;
 }

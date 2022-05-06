@@ -1,0 +1,65 @@
+.acceuil{
+     height: 70vh;
+     padding: 10vh 0 0 4rem;
+     background: linear-gradient(115deg, $bg-1 50%, transparent 100%) !important;
+     border-radius: $radius;
+     position: relative;
+     overflow: hidden;
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: 100px 1fr 1fr;
+     grid-template-areas: 
+          "h1"
+          "h2"
+          "btm";
+     &::after{
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          background: url(../media/njr3.jpg) no-repeat center/cover;
+          z-index: -12;
+          filter: brightness(70%);
+          transform: translateX(37%);
+     }
+     h1{
+          min-height: inherit;
+          grid-area: h1;
+          font-family: "font-4", sans-serif;
+          @include special-Letter;
+          font-size: 3.5rem;
+     }
+     h2{
+          grid-area: h2;
+          font-weight: normal;
+
+     }
+     .btm{
+          grid-area: btm;
+          background: $bg-3;
+          color: $black;
+          font-size: 1.3rem;
+          border-bottom: 1px solid $white;
+          border-right: 1px solid $hover;
+          box-shadow: -2px -3px 2px 1px $black;
+          width: 230px;
+          height: 50px;
+          border-radius: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.5s ease-in-out;
+          @include hover-active;
+          &:hover{
+               border-bottom: none;
+               border-right:none;
+               border-top: 1px solid $white;
+               border-left: 1px solid $hover;
+               box-shadow: 2px 3px 2px 1px $black;
+               color: $white;
+               transform: translateX(10px);
+          }
+     }
+}

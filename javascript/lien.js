@@ -2,7 +2,6 @@
 let liens = document.querySelectorAll('a#external');
 let symbol = document.querySelector('.symbol');
 
-console.log(symbol);
 
 for(var i=0 ; i < liens.length ; i++){
 

@@ -18,7 +18,6 @@ newElement.style.height = hauteur + "px";
 let showMenu = function(){
      beurgeur.classList.toggle('activeJS');
      menu.classList.toggle('showMenu');
-    
 }
 
 let scrollY = function(){
@@ -43,7 +42,7 @@ let headerFixed = function (){
 // APPEL
 
 //  voir le menu si on click sur l'icone beurgeur responsive
-beurgeur.addEventListener("click", showMenu);
+beurgeur.addEventListener("click", showMenu,true);
 
 // le menu est fixer sur le top de la page si on scrolle 
 window.addEventListener('scroll', headerFixed) 
