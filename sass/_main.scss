@@ -85,3 +85,12 @@ main{
      background: transparent;
      height: auto;
 }
+.box-contenaire{
+     height: 70vh;
+     background: $bg-1;
+     border-radius: $radius;
+     margin-bottom: 1rem;
+}
+.desactive{
+     display: none !important;
+}

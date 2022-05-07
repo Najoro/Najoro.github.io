@@ -35,6 +35,7 @@ header {
   background: #0e175f;
   display: grid;
   grid-template-columns: 10% 80% 10%;
+  border-bottom: 2px solid #0b61a3;
 }
 header h1 {
   font-size: 2rem;
@@ -53,21 +54,16 @@ header .menu {
 }
 header .menu a {
   padding: 10px;
-  width: auto;
+  min-width: 100px;
+  text-align: center;
+  letter-spacing: 3px;
+  transition: 0.3s ease-in-out;
+  text-transform: lowercase;
+  font-style: 2rem;
 }
 header .menu a:hover {
-  transform: scale(1.1);
-  transition: 0.1s ease-in-out;
-  color: #a0e2e2;
   background: #0b61a3;
-}
-header .menu a:active {
-  animation: anim 0.5s infinite;
-}
-@keyframes anim {
-  to {
-    transform: scale(0.8);
-  }
+  opacity: 0.6;
 }
 
 #beurgeur {
@@ -214,11 +210,20 @@ main {
   height: auto;
 }
 
-.acceuil {
+.box-contenaire {
   height: 70vh;
+  background: #0e175f;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.desactive {
+  display: none !important;
+}
+
+#acceuil {
   padding: 10vh 0 0 4rem;
   background: linear-gradient(115deg, #0e175f 50%, transparent 100%) !important;
-  border-radius: 20px;
   position: relative;
   overflow: hidden;
   display: grid;
@@ -226,7 +231,7 @@ main {
   grid-template-rows: 100px 1fr 1fr;
   grid-template-areas: "h1" "h2" "btm";
 }
-.acceuil::after {
+#acceuil::after {
   content: "";
   position: absolute;
   top: 0;
@@ -235,10 +240,10 @@ main {
   width: 100%;
   background: url(../media/njr3.jpg) no-repeat center/cover;
   z-index: -12;
-  filter: brightness(70%);
+  filter: brightness(60%);
   transform: translateX(37%);
 }
-.acceuil h1 {
+#acceuil h1 {
   min-height: inherit;
   grid-area: h1;
   font-family: "font-4", sans-serif;
@@ -249,11 +254,11 @@ main {
   margin-left: 1rem;
   font-size: 3.5rem;
 }
-.acceuil h2 {
+#acceuil h2 {
   grid-area: h2;
   font-weight: normal;
 }
-.acceuil .btm {
+#acceuil .btm {
   grid-area: btm;
   background: #0b61a3;
   color: #333;
@@ -269,13 +274,13 @@ main {
   align-items: center;
   transition: 0.5s ease-in-out;
 }
-.acceuil .btm:hover {
+#acceuil .btm:hover {
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
   color: #a0e2e2;
   background: #0b61a3;
 }
-.acceuil .btm:active {
+#acceuil .btm:active {
   animation: anim 0.5s infinite;
 }
 @keyframes anim {
@@ -283,7 +288,7 @@ main {
     transform: scale(0.8);
   }
 }
-.acceuil .btm:hover {
+#acceuil .btm:hover {
   border-bottom: none;
   border-right: none;
   border-top: 1px solid #ddd;
@@ -318,20 +323,6 @@ main {
     display: block;
     width: 100%;
   }
-  header .menu a:hover {
-    transform: scale(1.1);
-    transition: 0.1s ease-in-out;
-    color: #a0e2e2;
-    background: #0b61a3;
-  }
-  header .menu a:active {
-    animation: anim 0.5s infinite;
-  }
-  @keyframes anim {
-    to {
-      transform: scale(0.8);
-    }
-  }
   header #beurgeur {
     grid-area: beurgeur;
     visibility: visible;
@@ -357,14 +348,15 @@ main {
     margin: 10px 0;
     height: auto;
   }
-  main .contenaire .acceuil {
+  main .contenaire #acceuil {
     padding: 10px 0 0 10px;
     border-radius: 0px;
+    height: 300px;
   }
-  main .contenaire .acceuil h1 {
+  main .contenaire #acceuil h1 {
     font-size: 2.3rem !important;
   }
-  main .contenaire .acceuil h2 {
+  main .contenaire #acceuil h2 {
     font-size: 1.3rem;
     margin-top: 0;
   }
@@ -404,6 +396,13 @@ main {
   to {
     transform: scale(2) rotate(720deg);
   }
+}
+.active {
+  background: #0b61a3;
+  border-radius: 10px;
+  color: #ddd;
+  padding: 0 2rem;
+  text-transform: uppercase !important;
 }
 
 /*# sourceMappingURL=style.css.map */

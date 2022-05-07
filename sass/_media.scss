@@ -22,7 +22,6 @@
                transition: 0.8s ease-in-out;
                
                a{
-                    @include hover-active;
                     display: block;
                     width: 100%;
                }
@@ -53,9 +52,10 @@
                grid-area: acceuil;
                margin: 10px 0 ;
                height: auto;
-               .acceuil{
+               #acceuil{
                     padding: 10px 0 0 10px;
                     border-radius: 0px;
+                    height: 300px;
                     h1{
                          font-size: 2.3rem !important;
                     }

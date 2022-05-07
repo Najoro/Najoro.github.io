@@ -4,7 +4,7 @@ header{
      background: $bg-1;
      display: grid;
      grid-template-columns: 10% 80% 10%;
-
+     border-bottom: 2px solid $bg-3;
      h1{
           @include special-Letter;
           color: $black;
@@ -16,8 +16,16 @@ header{
 
           a{
                padding: 10px;
-               width: auto;
-               @include hover-active;
+               min-width: 100px;
+               text-align: center;
+               letter-spacing: 3px;
+               transition: 0.3s ease-in-out;
+               text-transform: lowercase;
+               font-style: 2rem;
+               &:hover{
+                    background: $bg-3;
+                    opacity: 0.6;
+               }
           }
      }
 }

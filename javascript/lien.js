@@ -1,17 +1,12 @@
 // block alert si on click
 let liens = document.querySelectorAll('a#external');
+let links = document.querySelectorAll('a');
 let symbol = document.querySelector('.symbol');
 
 
 for(var i=0 ; i < liens.length ; i++){
-
      var lien = liens[i];
-     lien.addEventListener("mouseenter", ()=> {
-          symbol.classList.add('rotate');
-          setTimeout(() => {
-               symbol.classList.remove('rotate');
-          }, 500);
-     })
+
      lien.addEventListener('click', (e)=> {
 
           e.stopPropagation();
@@ -21,5 +16,12 @@ for(var i=0 ; i < liens.length ; i++){
           }
          
      })
-   
 }
+links.forEach((link)=> {
+     link.addEventListener("mouseenter", ()=> {
+          symbol.classList.add('rotate');
+          setTimeout(() => {
+               symbol.classList.remove('rotate');
+          }, 500);
+     })
+})

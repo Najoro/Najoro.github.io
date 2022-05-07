@@ -34,3 +34,11 @@
           transform: scale(2) rotate(720deg);
      }
 }
+.active{
+     background: $bg-3;
+     border-radius: 10px;
+     color: $white;
+     padding: 0 2rem;
+     text-transform: uppercase !important;
+     
+}

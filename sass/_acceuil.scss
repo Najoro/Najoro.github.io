@@ -1,8 +1,6 @@
-.acceuil{
-     height: 70vh;
+#acceuil{
      padding: 10vh 0 0 4rem;
      background: linear-gradient(115deg, $bg-1 50%, transparent 100%) !important;
-     border-radius: $radius;
      position: relative;
      overflow: hidden;
      display: grid;
@@ -21,7 +19,7 @@
           width: 100%;
           background: url(../media/njr3.jpg) no-repeat center/cover;
           z-index: -12;
-          filter: brightness(70%);
+          filter: brightness(60%);
           transform: translateX(37%);
      }
      h1{
