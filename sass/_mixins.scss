@@ -32,10 +32,12 @@
 @mixin ligne($width, $height, $top, $left, $bottom, $right){
      content: "";
      background: $bg-3;
-     transform: translateX(-55%);
+     transform: translateX(-50%);
      position: absolute;
      width: $width;
      height: $height;
      top: $top;
      left: $left;
+     bottom: $bottom;
+     right: $right;
 }

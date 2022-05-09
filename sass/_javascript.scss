@@ -40,5 +40,8 @@
      color: $white;
      padding: 0 2rem;
      text-transform: uppercase !important;
+     &:hover{
+          opacity: 1 !important;
+     }
      
 }

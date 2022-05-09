@@ -38,31 +38,48 @@
           grid-template-columns: 1fr;
           grid-template-rows: 1fr auto 2px;
           grid-template-areas: 
-          "acceuil"
-          "identity";
+          "identity"
+          "acceuil";
 
           .identiter{
-               height: 100%;
                grid-area: identity;
+               display: none;
+               height: 100%;
                margin:10px 0;
                margin-bottom: 10rem;
                border-radius: 0px;
+               *{
+                    padding: 0;
+                    margin: 0;
+               }
           }
           .contenaire{
                grid-area: acceuil;
-               margin: 10px 0 ;
                height: auto;
-               #acceuil{
-                    padding: 10px 0 0 10px;
+               .box-contenaire{
+                    margin: 1.5rem 0;
                     border-radius: 0px;
-                    height: 300px;
+                    min-height: 250px;               }
+               #acceuil{
+                    display: grid !important;
+                    padding: 2rem 10px;
+                    font-size: 0.8rem;
+                    height: inherit;
                     h1{
-                         font-size: 2.3rem !important;
+                         font-size: 2.5rem;
+                         padding: 0;
+                         margin: 0;
+                         height: 20px;
                     }
-                    h2{
-                         font-size: 1.3rem;
-                         margin-top: 0;
-                    }
+               }
+               #identiter{
+                    display: block !important;
+               }
+               #projects{
+                    display: block !important;
+               }
+               #contact{
+                    display: block !important;
                }
           }
      }

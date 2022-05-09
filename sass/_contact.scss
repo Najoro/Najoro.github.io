@@ -1,0 +1,98 @@
+$shap-height : 20%;
+
+#contact{
+     height: 80vh;
+     display: grid;
+     justify-content: center;
+     background: linear-gradient(to top, $bg-1 $shap-height, transparent $shap-height) !important;
+     position: relative;
+     align-items: flex-end;
+     grid-template-columns:1fr;
+     grid-template-rows: 70% 1fr;
+     overflow: hidden;
+     &::after{
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          background: url(../media/rova.webp) no-repeat center/cover;
+          z-index: -2;
+          filter: brightness(30%) blur(2px);
+     }
+     &::before{
+          content: "";
+          position: absolute;
+          bottom: $shap-height;
+          left: 0;
+          height: 50%;
+          width: 100%;
+          background: url(../media/shaps.svg) no-repeat center/cover;
+          z-index: -1;
+ 
+     }
+     i{
+          transform: scale(1.1);
+          color: $special-lettre;
+     }
+     .contacte-moi{
+          min-width:400px;
+          width: auto;
+          height: auto;
+          margin: 0 auto;
+          border-radius: 10px;
+          background: $hover;
+          box-shadow: 0px 0px 20px  $black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          h1{
+               text-align: center;
+               padding: 10px 10px 1rem;
+               color: $special-lettre;
+               position: relative;
+               &::after{
+                    @include ligne(10rem,2px, none, 50%,0,none);
+                    background: $special-lettre !important;
+               }
+          }
+          .contenue-contact{
+               display: grid;
+               line-height: 3rem;
+               font-size: 1rem;
+               letter-spacing: 2px;
+               margin: 1rem;
+               a i{
+                    margin-right: 3rem;
+               }
+          }
+     }
+     .reseaux{
+          height: 100%;
+          @include flex-evenly;
+          a{
+           width: 150px;
+           height: 60px;
+           font-size: 1rem;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+           background: $hover;
+           border-radius: 20px;
+           color: $black;
+           line-height: 1rem;
+           box-shadow: 0px 0px 5px  $black;
+           font-weight: bold;
+           @include hover-active;
+           &:hover{
+                color: $white;
+           }
+           i{
+                transform: scale(1.5);
+           }
+          }
+     }
+}

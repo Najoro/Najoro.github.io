@@ -1,35 +1,43 @@
 
-/**
- si on click su le lien
-     on retire la class active de n'import quelle element
-     ajouter la class active de l'element a click
-
-     on retire l'elment qui a la class contenaire-active
-     on ajouter le contenue correspondant au menu
- */
+const childsContainer = document.querySelector(".contenaire").childNodes;
+const Menu = document.querySelector(".menu");
+const as = document.querySelectorAll('.menu a');
 
 
-(function () {
-     const as = document.querySelectorAll('.menu a');
-     const boxs = document.querySelectorAll('.box-contenaire');
+as.forEach((a)=> {
+  a.addEventListener('click', (e) => {
+       const active = a.parentElement.querySelector('.active')
+  
+       //on retire la class active de n'import quelle element
+       active.classList.remove('active');
 
-     boxs.forEach((box)=> {
-          box.classList.add('desactive')
-     })
-     as.forEach((a)=> {
-          a.addEventListener('click', (e) => {
-               const active = a.parentElement.querySelector('.active');
-               let attribute = document.querySelector( a.getAttribute('href'));
-          
-               //on retire la class active de n'import quelle element
-               active.classList.remove('active');
+       // ajouter la class active de l'element a click
+       if(!a.classList.contains('click')){
+            a.classList.add('active');
+       }
+  })
+})
 
-               // ajouter la class active de l'element a click
-               if(!a.classList.contains('click')){
-                    a.classList.add('active');
-               }
-               // attribute.parentElement.children.add('desactive')
-               // attribute.classList.remove('desactive');
-          })
-     })
-})();
+Menu.childNodes.forEach((child) => {
+
+  let handleActive = (childs, C, cur) => {
+    childs.forEach((element) => {
+      if (element.nodeType != 3) {
+       if (element.id == cur || element==cur) {
+            element.classList.remove(C) 
+            console.log(element);
+       }
+        else {
+          if (!element.classList.contains(C)) {
+            element.classList.add(C);
+          }
+        }
+      }
+    });
+  };
+  
+  child.addEventListener("click", (e) => {
+    let curentElement = e.target.innerText.toLowerCase();
+    handleActive(childsContainer, "desactive", curentElement);
+  });
+});
