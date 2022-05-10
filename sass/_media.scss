@@ -1,4 +1,8 @@
 @media screen and (max-width : 870px){
+     body{
+          overflow: scroll;
+          height: auto;
+     }
      header{
           height: auto;
           width: 100%;
@@ -72,14 +76,23 @@
                          height: 20px;
                     }
                }
-               #identiter{
-                    display: block !important;
-               }
-               #projects{
-                    display: block !important;
-               }
+               // #identiter{
+               //      display: block !important;
+               // }
+               // #projects{
+               //      display: block !important;
+               // }
                #contact{
-                    display: block !important;
+                    width: auto;
+                    display: grid !important;
+                    .contacte-moi{
+                         transform: translateY(-20%);
+                    }
+                    .reseaux{
+                         grid-template-rows: 1fr 1fr;
+                         grid-template-columns:1fr 1fr;
+                         align-items: center;
+                    }
                }
           }
      }

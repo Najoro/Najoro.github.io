@@ -1,5 +1,6 @@
 #acceuil{
-     padding: 10vh 0 0 4rem;
+     padding: 2rem 0 0 4rem;
+     height: 74vh;
      background: linear-gradient(115deg, $bg-1 50%, transparent 100%) !important;
      position: relative;
      overflow: hidden;
@@ -19,7 +20,7 @@
           width: 100%;
           background: url(../media/njr3.jpg) no-repeat center/cover;
           z-index: -12;
-          filter: brightness(60%);
+          filter: brightness(100%) ;
           transform: translateX(37%);
      }
      h1{
@@ -32,6 +33,7 @@
      h2{
           grid-area: h2;
           font-weight: normal;
+          font-size: 1.2rem;
 
      }
      .btm{

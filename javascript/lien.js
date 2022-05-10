@@ -2,6 +2,8 @@
 let liens = document.querySelectorAll('a#external');
 let links = document.querySelectorAll('a');
 let symbol = document.querySelector('.symbol');
+const numero = document.querySelector('.phone');
+const num = document.querySelector('.num');
 
 
 for(var i=0 ; i < liens.length ; i++){
@@ -24,4 +26,11 @@ links.forEach((link)=> {
                symbol.classList.remove('rotate');
           }, 500);
      })
+})
+
+numero.addEventListener('click', ()=> {
+     num.textContent = "034 31 058 82"
+     setTimeout(() => {
+          num.textContent = "*** ** *** **"
+     }, 4000);
 })

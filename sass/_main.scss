@@ -11,7 +11,7 @@ main{
 .identiter{
      grid-area: identity;
      width: inherit;
-     height: 80vh;
+     min-height: 80vh;
      text-align: center;
      position: relative;
      flex-direction: column;
@@ -86,10 +86,10 @@ main{
      height: auto;
 }
 .box-contenaire{
-     height: 70vh;
      background: $bg-1;
      border-radius: $radius;
      margin-bottom: 1rem;
+     border: 3px solid $black;
 }
 .desactive{
      display: none !important;
