@@ -66,6 +66,7 @@
                     min-height: 250px;               }
                #acceuil{
                     display: grid !important;
+                    height: 500px;
                     padding: 2rem 10px;
                     font-size: 0.8rem;
                     height: inherit;
@@ -84,6 +85,7 @@
                // }
                #contact{
                     width: auto;
+                    height: 440px;
                     display: grid !important;
                     .contacte-moi{
                          transform: translateY(-20%);
