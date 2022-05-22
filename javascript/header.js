@@ -25,7 +25,6 @@ Menu.childNodes.forEach((child) => {
       if (element.nodeType != 3) {
        if (element.id == cur || element==cur) {
             element.classList.remove(C) 
-            console.log(element);
        }
         else {
           if (!element.classList.contains(C)) {

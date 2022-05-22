@@ -41,3 +41,27 @@
      bottom: $bottom;
      right: $right;
 }
+@mixin btm($size,$width,$height,$translate){
+     background: $bg-3;
+     color: $black;
+     font-size: $size;
+     border-bottom: 1px solid $white;
+     border-right: 1px solid $hover;
+     width: $width;
+     height: $height;
+     border-radius: 25px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: 0.5s ease-in-out;
+     @include hover-active;
+     &:hover{
+          border-bottom: none;
+          border-right:none;
+          border-top: 1px solid $white;
+          border-left: 1px solid $hover;
+          box-shadow: 2px 3px 2px 1px $black;
+          color: $white;
+          transform: translateX($translate);
+     }
+}
