@@ -1,34 +1,34 @@
-const projects = document.getElementById('projects');
+const projects = document.getElementById("projects");
+let bds = [];
 
-
-let add = function(projectName,image) {
-  let span = document.createElement('span');
+let newProject = function (projectName, image,source,project) {
+  let span = document.createElement("span");
   span.classList.add("composante");
-  span.style.background = `${image} no-repeat center/cover`
-  span.innerHTML =`
-    <div class="language-contenaire"></div>
+  projects.appendChild(span);
+  span.style.background = `${image} no-repeat center/cover`;
+  span.innerHTML = `
+    <div class="language-contenaire">nananan</div>
     <p> ${projectName}</p>
     <div class="btm-contenaire">
-      <a href="#" id="external" class="btm-contenue">Source</a>
-      <a href="#" id="external" class="btm-contenue">project</a>
+      <a href="${source}" id="external" class="btm-contenue">Source</a>
+      <a href="${project}" id="external" class="btm-contenue">afficher</a>
     </div>
-  `
-  projects.appendChild(span);
+  `;
+  span.addEventListener("mouseenter", () => {
+    span.childNodes[3].style.visibility ="visible";
+  })
+  span.addEventListener("mouseleave", () => {
+    span.childNodes[3].style.visibility ="hidden";
+  })
+};
+
+async function reclame_bd(){
+  await fetch("bd.json")
+  .then((rep1) => rep1.json())
+  .then((rep2) => bds = rep2.all);
+
+  bds.map((bd)=> {
+    newProject(bd.name, bd.image,bd.source, bd.project);
+  })
 }
-
-
-add("Calculatrice","url(../media/calculatrice.png)");
-add("Calculatrice","url(../media/calculatrice.png)");
-add("Calculatrice","url(../media/calculatrice.png)");
-add("Calculatrice","url(../media/calculatrice.png)");
-add("Calculatrice","url(../media/calculatrice.png)");
-add("Calculatrice","url(../media/calculatrice.png)");
-add("Calculatrice","url(../media/calculatrice.png)");
-add("Calculatrice","url(../media/calculatrice.png)");
-add("Calculatrice","url(../media/calculatrice.png)");
-// const composantes = document.querySelectorAll('.composante');
-// composantes.forEach((composante)=> {
-//   composante.addEventListener("", ()=> {
-//     console.log("click");
-//   })
-// })
+reclame_bd();

@@ -26,7 +26,7 @@
 }
 
 body {
-  background-color: #0b61a3;
+  background-color: #1a8ae1;
   height: 100vh;
 }
 
@@ -36,7 +36,7 @@ header {
   background: #0e175f;
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  border-bottom: 2px solid #0b61a3;
+  border-bottom: 2px solid #1a8ae1;
 }
 header h1 {
   font-size: 2rem;
@@ -63,7 +63,7 @@ header .menu a {
   font-style: 2rem;
 }
 header .menu a:hover {
-  background: #0b61a3;
+  background: #1a8ae1;
   opacity: 0.6;
 }
 header .menu a i {
@@ -148,7 +148,7 @@ main {
   transform: scale(2) rotate(0);
   cursor: not-allowed;
   user-select: none;
-  color: #0b61a3;
+  color: #1a8ae1;
 }
 .identiter .status {
   position: relative;
@@ -164,7 +164,7 @@ main {
 }
 .identiter .status::after {
   content: "";
-  background: #0b61a3;
+  background: #1a8ae1;
   transform: translateX(-50%);
   position: absolute;
   width: 7rem;
@@ -197,7 +197,7 @@ main {
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
   color: #2967a1;
-  background: #0b61a3;
+  background: #1a8ae1;
 }
 .identiter footer a:active {
   animation: anim 0.5s infinite;
@@ -269,7 +269,7 @@ main {
 }
 #acceuil .btm {
   grid-area: btm;
-  background: #0b61a3;
+  background: #1a8ae1;
   color: #333;
   font-size: 1.3rem;
   border-bottom: 1px solid #ddd;
@@ -287,7 +287,7 @@ main {
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
   color: #2967a1;
-  background: #0b61a3;
+  background: #1a8ae1;
 }
 #acceuil .btm:active {
   animation: anim 0.5s infinite;
@@ -369,7 +369,7 @@ main {
 }
 #contact .contacte-moi h1::after {
   content: "";
-  background: #0b61a3;
+  background: #1a8ae1;
   transform: translateX(-50%);
   position: absolute;
   width: 10rem;
@@ -420,7 +420,7 @@ main {
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
   color: #2967a1;
-  background: #0b61a3;
+  background: #1a8ae1;
 }
 #contact .reseaux a:active {
   animation: anim 0.5s infinite;
@@ -461,11 +461,13 @@ main {
   body {
     overflow: scroll;
     height: auto;
+    background: #ddd;
+    width: 100% !important;
   }
 
   header {
     height: auto;
-    width: 100%;
+    min-width: 100% !important;
     margin-bottom: 0;
     grid-template-columns: 50% 50%;
     grid-template-rows: 60px 1fr;
@@ -475,7 +477,6 @@ main {
     grid-area: portfolio;
   }
   header .menu {
-    width: 90%;
     height: 220px;
     grid-area: menu;
     text-align: center;
@@ -493,7 +494,7 @@ main {
   }
 
   main {
-    width: 100%;
+    width: inherit;
     padding: 0;
     margin: 0;
     grid-template-columns: 1fr;
@@ -547,6 +548,12 @@ main {
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
+  main .contenaire #projects {
+    display: grid !important;
+    height: 420px !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
 }
 #beurgeur.activeJS span:nth-child(1) {
   width: 100%;
@@ -585,7 +592,7 @@ main {
   }
 }
 .active {
-  background: #0b61a3;
+  background: #1a8ae1;
   border-radius: 10px;
   color: #ddd;
   padding: 0 2rem;
@@ -614,19 +621,36 @@ main {
   display: flex;
   align-items: flex-end;
   position: relative;
+  text-align: center;
 }
 #projects .composante p {
-  color: #0e175f;
+  color: #2967a1;
+  text-shadow: 2px 2px 0px #ddd, 3px 3px 0px #2967a1, -1px 1px 0px #333;
   width: 100%;
   height: 100%;
+  letter-spacing: 3px;
   position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(5px);
   visibility: hidden;
-  transition: 0.5s ease;
+}
+#projects .composante .language-contenaire {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2rem;
+  background: #ddd;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  color: black;
 }
 #projects .composante .btm-contenaire {
   width: 100%;
@@ -634,7 +658,9 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  backdrop-filter: blur(2px);
+  background: #ddd;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 #projects .composante .btm-contenaire .btm-contenue {
   color: #333 !important;
@@ -643,7 +669,7 @@ main {
   background: transparent !important;
   border: none !important;
   padding: 1px 1rem;
-  background: #0b61a3;
+  background: #1a8ae1;
   color: #333;
   font-size: 1rem;
   border-bottom: 1px solid #ddd;
@@ -660,7 +686,7 @@ main {
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
   color: #2967a1;
-  background: #0b61a3;
+  background: #1a8ae1;
 }
 #projects .composante .btm-contenaire .btm-contenue:active {
   animation: anim 0.5s infinite;

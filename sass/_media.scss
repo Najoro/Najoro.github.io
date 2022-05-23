@@ -2,22 +2,22 @@
      body{
           overflow: scroll;
           height: auto;
+          background: $white;
+          width: 100% !important;
      }
      header{
           height: auto;
-          width: 100%;
+          min-width: 100% !important;
           margin-bottom: 0;
           grid-template-columns: 50% 50%;
           grid-template-rows: 60px 1fr;
           grid-template-areas: 
           "portfolio beurgeur"
           "menu menu";
-
           h1{
                grid-area: portfolio;
           }
           .menu{
-               width: 90%;
                height:220px;
                grid-area: menu;
                text-align: center;
@@ -36,7 +36,7 @@
           }
      }
      main{
-          width: 100%;
+          width: inherit;
           padding: 0;
           margin: 0;
           grid-template-columns: 1fr;
@@ -63,7 +63,8 @@
                .box-contenaire{
                     margin: 1.5rem 0;
                     border-radius: 0px;
-                    min-height: 250px;               }
+                    min-height: 250px;               
+               }
                #acceuil{
                     display: grid !important;
                     height: 500px;
@@ -77,12 +78,6 @@
                          height: 20px;
                     }
                }
-               // #identiter{
-               //      display: block !important;
-               // }
-               // #projects{
-               //      display: block !important;
-               // }
                #contact{
                     width: auto;
                     height: 440px;
@@ -96,8 +91,15 @@
                          align-items: center;
                     }
                }
+               #projects{
+                    display: grid !important;
+                    height: 420px !important;
+                    grid-template-columns: 1fr!important;
+                    grid-template-rows: auto !important;
+               }
           }
      }
+
 
 }
 // @media screen and(min-width : 1400px) {
