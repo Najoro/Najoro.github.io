@@ -1,12 +1,12 @@
 #acceuil{
-     padding: 2rem 0 0 4rem;
+     padding: 5vh 0 0 5vh;
      height: 74vh;
      background: linear-gradient(115deg, $bg-1 50%, transparent 100%) !important;
      position: relative;
      overflow: hidden;
      display: grid;
      grid-template-columns: 1fr;
-     grid-template-rows: 100px 1fr 1fr;
+     grid-template-rows: 19vh 1fr 1fr;
      grid-template-areas: 
           "h1"
           "h2"
@@ -28,17 +28,17 @@
           grid-area: h1;
           font-family: "font-4", sans-serif;
           @include special-Letter;
-          font-size: 3.5rem;
+          font-size: 10vh;
      }
      h2{
           grid-area: h2;
           font-weight: normal;
-          font-size: 1.2rem;
+          font-size:1.2vw;
 
      }
      .btm{
           grid-area: btm;
-          @include btm(1.3rem, 230px, 50px, 10px);
+          @include btm(3vh, 20vw, 5vh, 2vh);
           box-shadow: -2px -3px 2px 1px $black;
      }
 }

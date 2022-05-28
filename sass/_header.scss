@@ -1,68 +1,137 @@
 header{
-     height: 4rem;
-     margin-bottom: 1rem;
+     height: 10vh;
+     margin-bottom: 1vh;
      background: $bg-1;
      display: grid;
      grid-template-columns: 10% 80% 10%;
      border-bottom: 2px solid $bg-3;
+     font-size: 2vh;
+     img{
+          display: none;
+     }
      h1{
           @include special-Letter;
-          color: $black;
+          color: $special-lettre;
      }
      .menu{
           width: 80%;
           margin: 0 auto;
           @include flex-evenly;
           a{
-               padding: 10px;
-               min-width: 100px;
+               padding: 2vh;
                text-align: center;
-               letter-spacing: 3px;
-               transition: 0.3s ease-in-out;
                text-transform: lowercase;
-               font-style: 2rem;
+               letter-spacing: 0.2vh;
+               opacity: 0.5;
                &:hover{
                     background: $bg-3;
                     opacity: 0.6;
                }
                i{
                     color: $special-lettre;
-                    margin-right: 1rem;
+                    margin-right: 1.2vw;
                }
           }
      }
 }
 //beurgeur menu
-#beurgeur{
-     width: 3rem;
-     height: 2rem;
-     cursor: pointer;
+.beurgeur-contenaire{
+     width: 5vw;
+     height: 3vh;
      position: absolute;
-     top: 1rem;
-     right: 2rem;
+     top: 2rem;
+     right: 10%;
+     cursor: pointer;
+     transform: translate(-10%,-50%);
+}
+#beurgeur{
+     width: inherit;
+     height: inherit;
+     position: relative;
+     top: 0;
+     left: 0;
      z-index: 1000;
-     visibility: hidden;
-     
+     visibility: hidden; 
      span{
-          height: 5px;
-          border-radius: 5px;
+          height: 4px;
           display: block;
-          background-color:$hover;
           transition: 0.3s ease-in-out;
           position: absolute;
-          
+          background:$white;
+          border-radius: $radius;
           &:nth-child(1){
                width: 50%;
                top: 0;
           }
           &:nth-child(2){
                width: 100%;
-               top: 12px;
+               top:50%;
+               transform: translateY(-50%);
           }
           &:nth-child(3){
                width: 50%;
                right: 0;
-               top: 24px;
+               bottom: 0;
+          }
+     }
+}
+@media screen and (max-width : 870px){
+     header{
+          height: auto;
+
+          margin-bottom: 0;
+          grid-template-columns: 20% 1fr;
+          grid-template-rows: 70px 1fr;
+          grid-template-areas:
+          "image beurgeur"
+          "image menu";
+          justify-content: center;
+          align-items: center;
+          position: sticky;
+          z-index: 1;
+          top: 0;
+          overflow: hidden;
+          img{
+               display: block;
+               grid-area: image;
+               height:20vw;
+               width:20vw;
+               border-radius:50%;
+               border: 0.1vh solid $special-lettre;
+               user-select: none;
+               cursor: not-allowed;
+               margin: 0 auto;
+               position: absolute;
+               top: 10px;
+               left: 10px;
+          }
+          h1{
+               display: none;
+          }
+          .menu{
+               height:6vh;
+               grid-area: menu;
+               text-align: center;
+               z-index: 1;
+               display: none;
+               transition: 0.8s ease-in-out;
+               transform: translateY(-10%);
+               a{
+                    display: block;
+                    width: 100%;
+                    i{
+                         transform: scale(1.2);
+                         position: absolute;
+                         z-index: 1;
+                    }
+                    span{
+                         display: none;
+                    }
+               }
+          }
+          #beurgeur{
+               grid-area: beurgeur;
+               visibility: visible;
           }
      }
 }

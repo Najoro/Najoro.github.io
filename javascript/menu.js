@@ -4,6 +4,13 @@ const beurgeur = document.getElementById("beurgeur");
 const menu = document.querySelector('.menu');
 const header = document.querySelector('header');
 
+(function(){
+     let showMenu = function(){
+          beurgeur.classList.toggle('activeJS');
+          menu.classList.toggle('showMenu');
+     }
+     beurgeur.addEventListener("click", showMenu,true);
+})();
 
 // let rectBoun = header.getBoundingClientRect()
 // var largeur = rectBoun.width;
@@ -15,11 +22,6 @@ const header = document.querySelector('header');
 
 // //FONCTIONS
 
-let showMenu = function(){
-     beurgeur.classList.toggle('activeJS');
-     menu.classList.toggle('showMenu');
-}
-beurgeur.addEventListener("click", showMenu,true);
 // let scrollY = function(){
 //      var supportPageOffset = window.pageXOffset !== undefined;
 //      var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");

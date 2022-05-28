@@ -2,20 +2,20 @@
  #beurgeur.activeJS{
      span:nth-child(1){
           width: 100%;
-          top: 12px;
-          transform: rotate(45deg);
+          top:50%;
+          transform:rotate(45deg);
      }
      span:nth-child(2){
           visibility: hidden;
      }
      span:nth-child(3){
           width: 100%;
-          top: 12px;
+          top: 50%;
           transform: rotate(-45deg);
      }
 }
 .showMenu{
-     display: grid !important;
+     display: flex !important;
 }
 .fixed{
      top: 0;
@@ -25,23 +25,27 @@
      z-index: 1;
 }
 .rotate{
-     transform: scale(2) rotate(0);
+     transform:rotate(0);
      animation: rotate 0.5s linear;
 
 }
 @keyframes rotate {
      to{
-          transform: scale(2) rotate(720deg);
+          transform:rotate(720deg);
      }
 }
 .active{
-     background: $bg-3;
+     // background: $bg-3;
      border-radius: 10px;
-     color: $white;
+     color: #fff;
      padding: 0 2rem;
+     transform: scale(1.2);
+     cursor: no-drop;
+     opacity: 1 !important;
      text-transform: uppercase !important;
      &:hover{
           opacity: 1 !important;
+          background: transparent !important;
      }
      
 }

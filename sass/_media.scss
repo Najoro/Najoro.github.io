@@ -2,41 +2,12 @@
      body{
           overflow: scroll;
           height: auto;
-          background: $white;
+          background: $hover;
           width: 100% !important;
-     }
-     header{
-          height: auto;
-          min-width: 100% !important;
-          margin-bottom: 0;
-          grid-template-columns: 50% 50%;
-          grid-template-rows: 60px 1fr;
-          grid-template-areas: 
-          "portfolio beurgeur"
-          "menu menu";
-          h1{
-               grid-area: portfolio;
-          }
-          .menu{
-               height:220px;
-               grid-area: menu;
-               text-align: center;
-               z-index: 1;
-               display: none;
-               transition: 0.8s ease-in-out;
-               
-               a{
-                    display: block;
-                    width: 100%;
-               }
-          }
-          #beurgeur{
-               grid-area: beurgeur;
-               visibility: visible;
-          }
+          position: relative;
      }
      main{
-          width: inherit;
+          width: 100%;
           padding: 0;
           margin: 0;
           grid-template-columns: 1fr;
@@ -44,66 +15,94 @@
           grid-template-areas: 
           "identity"
           "acceuil";
-
-          .identiter{
-               grid-area: identity;
-               display: none;
-               height: 100%;
-               margin:10px 0;
-               margin-bottom: 10rem;
-               border-radius: 0px;
-               *{
-                    padding: 0;
-                    margin: 0;
-               }
-          }
           .contenaire{
                grid-area: acceuil;
                height: auto;
                .box-contenaire{
-                    margin: 1.5rem 0;
+                    width: inherit !important;
+                    margin: 2px 5px;
+                    border: none;
                     border-radius: 0px;
-                    min-height: 250px;               
+                    min-height: 150px;  
+                    max-height: 500px;             
                }
                #acceuil{
-                    display: grid !important;
-                    height: 500px;
                     padding: 2rem 10px;
-                    font-size: 0.8rem;
                     height: inherit;
+                    display: grid !important;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 8vh 1fr 1fr;
+                    grid-template-areas: 
+                         "h1"
+                         "h2"
+                         "btm";
+
                     h1{
-                         font-size: 2.5rem;
+                         grid-area: "h1";
+                         font-size: 5vh;
                          padding: 0;
                          margin: 0;
                          height: 20px;
                     }
+                    h2{
+                         grid-area: "h2";
+                         font-size: 2vh;
+                    }
+                    .btm{
+                         grid-area: "btm";
+                         width: 40vw;
+                    }
                }
                #contact{
-                    width: auto;
-                    height: 440px;
+                    width: inherit;
+                    height: 400px;
                     display: grid !important;
                     .contacte-moi{
-                         transform: translateY(-20%);
+                         width: 70%;
+                         height: 30vh;
+                         display: grid;
+                         grid-template-rows: 1fr 1fr 1fr;
+                         h1{
+                              font-size:4vw;
+                         }
+                         .contenue-contact{
+                              line-height:6vh;
+                              font-size: 2vh;
+                         }
                     }
                     .reseaux{
                          grid-template-rows: 1fr 1fr;
                          grid-template-columns:1fr 1fr;
                          align-items: center;
+                         a{
+                              width: 20vw;
+                              height: 7vh;
+                              font-size: 2vh;
+                         }
                     }
                }
                #projects{
+                    max-width:420px !important;
+                    min-height: 200px;
+                    height: 40vh;
                     display: grid !important;
-                    height: 420px !important;
-                    grid-template-columns: 1fr!important;
-                    grid-template-rows: auto !important;
+                    grid-template-rows:1fr;
+                    grid-template-columns:auto auto auto auto auto;
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    .composante{
+                         width: 350px;
+                         margin: 10px;
+                         p{
+                              font-size: 7vw;
+                         }
+                         .btm-contenue{
+                              @include btm(2vh,auto,3vw, 10px);
+                         }
+                    }
                }
           }
      }
 
 
 }
-// @media screen and(min-width : 1400px) {
-//      *{
-//           font-size: 2vh;
-//      }
-// }

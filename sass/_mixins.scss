@@ -1,10 +1,8 @@
-
 @mixin special-Letter{
-     font-size: 2rem;
+     font-size: 2vw;
      color: $special-lettre;
-     padding-top: 1rem;
-     letter-spacing: 5px;
-     margin-left: 1rem;
+     padding-top: 1vh;
+     margin-left: 1vw;
 }
 @mixin flex-evenly{
      display: flex;
@@ -27,8 +25,6 @@
           }
      }
 }
-
-
 @mixin ligne($width, $height, $top, $left, $bottom, $right){
      content: "";
      background: $bg-3;
@@ -45,11 +41,11 @@
      background: $bg-3;
      color: $black;
      font-size: $size;
-     border-bottom: 1px solid $white;
-     border-right: 1px solid $hover;
+     border-bottom: 0.2vh solid $white;
+     border-right: 0.1vh solid $hover;
      width: $width;
      height: $height;
-     border-radius: 25px;
+     border-radius: $radius;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -60,7 +56,7 @@
           border-right:none;
           border-top: 1px solid $white;
           border-left: 1px solid $hover;
-          box-shadow: 2px 3px 2px 1px $black;
+          box-shadow: 0.2vh 0.3vh 0.2vh 0.1vh $black;
           color: $white;
           transform: translateX($translate);
      }
