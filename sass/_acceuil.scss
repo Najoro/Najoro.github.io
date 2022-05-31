@@ -38,7 +38,7 @@
      }
      .btm{
           grid-area: btm;
-          @include btm(3vh, 20vw, 5vh, 2vh);
+          @include btm(3vh, 20vw, 6vh, 2vh);
           box-shadow: -2px -3px 2px 1px $black;
      }
 }

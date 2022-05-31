@@ -28,7 +28,7 @@
                }
                #acceuil{
                     padding: 2rem 10px;
-                    height: inherit;
+                    height: 40vh;
                     display: grid !important;
                     grid-template-columns: 1fr;
                     grid-template-rows: 8vh 1fr 1fr;
@@ -39,65 +39,83 @@
 
                     h1{
                          grid-area: "h1";
-                         font-size: 5vh;
+                         font-size: 7vw;
                          padding: 0;
                          margin: 0;
                          height: 20px;
                     }
                     h2{
                          grid-area: "h2";
-                         font-size: 2vh;
+                         font-size: 3vw;
                     }
                     .btm{
                          grid-area: "btm";
-                         width: 40vw;
+                         width: 50vw;
                     }
                }
                #contact{
                     width: inherit;
                     height: 400px;
                     display: grid !important;
+                    align-items: flex-start;
                     .contacte-moi{
-                         width: 70%;
+                         width:100%;
                          height: 30vh;
+                         border-radius: 0px;
                          display: grid;
                          grid-template-rows: 1fr 1fr 1fr;
+                         background: transparent;
+                         backdrop-filter: blur(2px);
                          h1{
                               font-size:4vw;
+                              text-shadow: 1px 1px 2px $black,
+                              -1px -1px 2px $hover;
+                              &::after{
+                                   @include ligne(20vw,0.1vh, none, 50%,0,none);
+                              }
                          }
                          .contenue-contact{
                               line-height:6vh;
-                              font-size: 2vh;
+                              font-size: 3vw;
+                              text-shadow: 1px 1px 2px $black,
+                                           -1px -1px 2px $hover;
+                              i{
+                                   margin-right: 5vw;
+                                   font-size: 0.9rem;
+                              }
                          }
                     }
                     .reseaux{
-                         grid-template-rows: 1fr 1fr;
-                         grid-template-columns:1fr 1fr;
-                         align-items: center;
+                         display: flex;
+                         flex-wrap: wrap;
                          a{
+                              min-width: 150px;
                               width: 20vw;
                               height: 7vh;
-                              font-size: 2vh;
+                              font-size: 2vw;
                          }
                     }
                }
                #projects{
-                    max-width:420px !important;
-                    min-height: 200px;
-                    height: 40vh;
-                    display: grid !important;
-                    grid-template-rows:1fr;
-                    grid-template-columns:auto auto auto auto auto;
-                    overflow-x: scroll;
+                    overflow: scroll;
+                    display: flex !important;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    flex-direction: column;
                     overflow-y: hidden;
                     .composante{
-                         width: 350px;
+                         width: 300px !important;
+                         height: 200px !important;
                          margin: 10px;
                          p{
-                              font-size: 7vw;
+                              font-size: 2rem;
                          }
-                         .btm-contenue{
-                              @include btm(2vh,auto,3vw, 10px);
+                         .btm-contenaire{
+                              .btm-contenue{
+                                   font-size: 0.9rem;
+                                   padding: 10px;
+                              }
                          }
                     }
                }

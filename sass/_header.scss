@@ -23,6 +23,10 @@ header{
                text-transform: lowercase;
                letter-spacing: 0.2vh;
                opacity: 0.5;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: row;
                &:hover{
                     background: $bg-3;
                     opacity: 0.6;
@@ -78,7 +82,6 @@ header{
 @media screen and (max-width : 870px){
      header{
           height: auto;
-
           margin-bottom: 0;
           grid-template-columns: 20% 1fr;
           grid-template-rows: 70px 1fr;
@@ -94,8 +97,8 @@ header{
           img{
                display: block;
                grid-area: image;
-               height:20vw;
-               width:20vw;
+               height:10vw;
+               width:10vw;
                border-radius:50%;
                border: 0.1vh solid $special-lettre;
                user-select: none;
@@ -117,11 +120,9 @@ header{
                transition: 0.8s ease-in-out;
                transform: translateY(-10%);
                a{
-                    display: block;
                     width: 100%;
                     i{
-                         transform: scale(1.2);
-                         position: absolute;
+                         transform: scale(1.1);
                          z-index: 1;
                     }
                     span{

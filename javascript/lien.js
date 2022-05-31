@@ -28,7 +28,8 @@ links.forEach((link)=> {
      })
 })
 
-numero.addEventListener('click', ()=> {
+numero.addEventListener('click', (e)=> {
+     e.preventDefault();
      num.textContent = "034 31 058 82"
      setTimeout(() => {
           num.textContent = "*** ** *** **"
