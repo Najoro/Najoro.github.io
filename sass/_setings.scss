@@ -39,5 +39,31 @@ $radius: 2vh;
 }
 body{
      background-color: $bg-3;
-     height: 100vh;
+     height: 95vh;
+     overflow: hidden;
+}
+.bull{
+     width:11vw;
+     height: 11vw;
+     border-radius: 50%;
+     box-shadow: 1px 1px 3px wheat;
+     background:$black;
+     position: fixed;
+     top: 1vw;
+     right: 1vw;
+     z-index: 1;
+     visibility: hidden;
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 0.6;
+     i{
+          font-size: 4vw;
+
+     }
+     &:hover{
+          color: #00FFDD !important;
+          opacity: 1;
+     }
 }
