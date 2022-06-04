@@ -1,7 +1,5 @@
 @media screen and (max-width : 870px){
      body{
-          overflow: scroll;
-          height: auto;
           background: $special-lettre;
           width: 100% !important;
           position: relative;
@@ -56,9 +54,9 @@
                }
                #contact{
                     width: inherit;
-                    height: 400px;
-                    display: grid !important;
-                    align-items: flex-start;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
                     .contacte-moi{
                          width:100%;
                          height: 30vh;
@@ -88,12 +86,14 @@
                     }
                     .reseaux{
                          display: flex;
+                         align-items: center;
                          flex-wrap: wrap;
                          a{
                               min-width: 150px;
                               width: 20vw;
                               height: 7vh;
                               font-size: 2vw;
+                              margin: 10px;
                          }
                     }
                }

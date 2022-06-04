@@ -10,15 +10,14 @@ $shap-height : 20%;
      }
 }
 #contact{
-     height: 80vh;
+     min-height: 80vh;
      background: linear-gradient(to top, $bg-1 $shap-height, transparent $shap-height) !important;
-     display: grid;
+     display: flex;
      justify-content: center;
-     position: relative;
      align-items: flex-end;
-     grid-template-columns:1fr;
-     grid-template-rows: 70% 1fr;
+     flex-direction: column;
      overflow: hidden;
+     position: relative;
      &::after{
           content: "";
           position: absolute;
@@ -81,7 +80,7 @@ $shap-height : 20%;
           }
      }
      .reseaux{
-          height: 100%;
+          width: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -89,7 +88,7 @@ $shap-height : 20%;
           a{
            width: 10vw;
            height: 10vh;
-           margin: 0 auto;
+           margin: 1rem auto;
            font-size: 1.1vw;
            display: flex;
            flex-direction: column;

@@ -27,8 +27,6 @@
 
 body {
   background-color: #1a8ae1;
-  height: 95vh;
-  overflow: hidden;
 }
 
 .bull {
@@ -414,15 +412,14 @@ main {
   }
 }
 #contact {
-  height: 80vh;
+  min-height: 80vh;
   background: linear-gradient(to top, #0e175f 20%, transparent 20%) !important;
-  display: grid;
+  display: flex;
   justify-content: center;
-  position: relative;
   align-items: flex-end;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70% 1fr;
+  flex-direction: column;
   overflow: hidden;
+  position: relative;
 }
 #contact::after {
   content: "";
@@ -495,7 +492,7 @@ main {
   margin-right: 2vw;
 }
 #contact .reseaux {
-  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -504,7 +501,7 @@ main {
 #contact .reseaux a {
   width: 10vw;
   height: 10vh;
-  margin: 0 auto;
+  margin: 1rem auto;
   font-size: 1.1vw;
   display: flex;
   flex-direction: column;
@@ -563,8 +560,6 @@ main {
 
 @media screen and (max-width: 870px) {
   body {
-    overflow: scroll;
-    height: auto;
     background: #00FFDD;
     width: 100% !important;
     position: relative;
@@ -616,9 +611,9 @@ main {
   }
   main .contenaire #contact {
     width: inherit;
-    height: 400px;
-    display: grid !important;
-    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   main .contenaire #contact .contacte-moi {
     width: 100%;
@@ -656,6 +651,7 @@ main {
   }
   main .contenaire #contact .reseaux {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
   }
   main .contenaire #contact .reseaux a {
@@ -663,6 +659,7 @@ main {
     width: 20vw;
     height: 7vh;
     font-size: 2vw;
+    margin: 10px;
   }
   main .contenaire #projects {
     height: auto;
