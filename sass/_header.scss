@@ -62,7 +62,7 @@ header{
           display: block;
           transition: 0.3s ease-in-out;
           position: absolute;
-          background:$white;
+          background:$white !important;
           border-radius: $radius;
           &:nth-child(1){
                width: 50%;

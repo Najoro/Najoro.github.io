@@ -125,7 +125,7 @@ header .menu a i {
   display: block;
   transition: 0.3s ease-in-out;
   position: absolute;
-  background: #ddd;
+  background: #ddd !important;
   border-radius: 2vh;
 }
 #beurgeur span:nth-child(1) {
