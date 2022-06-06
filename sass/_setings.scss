@@ -39,13 +39,15 @@ body{
      background-color: $bg-3;
 }
 .bull{
-     width:11vw;
-     height: 11vw;
+     width:10vw;
+     height: 10vw;
      border-radius: 50%;
      box-shadow: 1px 1px 3px wheat;
      background:$black;
+     font-size: 3rem;
+     font-weight: normal;
      position: fixed;
-     top: 1vw;
+     bottom: 1vw;
      right: 1vw;
      z-index: 1;
      visibility: hidden;
@@ -54,10 +56,6 @@ body{
      justify-content: center;
      align-items: center;
      opacity: 0.6;
-     i{
-          font-size: 4vw;
-
-     }
      &:hover{
           color: #00FFDD !important;
           opacity: 1;
