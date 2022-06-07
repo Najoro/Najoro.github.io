@@ -1,7 +1,7 @@
 #acceuil{
      padding: 5vh 0 0 5vh;
      height: 74vh;
-     background: linear-gradient(115deg, $bg-1 50%, transparent 100%) !important;
+     background: linear-gradient(95deg , $bg-1 50%, transparent 100%) !important;
      position: relative;
      overflow: hidden;
      display: grid;
@@ -16,12 +16,12 @@
           position: absolute;
           top: 0;
           right: 0;
+          width: 58%;
           height: 100%;
-          width: 100%;
-          background: url(../media/njr3.jpg) no-repeat center/cover;
-          z-index: -12;
-          filter: brightness(100%) ;
-          transform: translateX(37%);
+          background: url(../media/njr4.png) no-repeat center/cover;
+          opacity: 0.9;
+          z-index: -1;
+          transform: translate(10%);
      }
      h1{
           min-height: inherit;
