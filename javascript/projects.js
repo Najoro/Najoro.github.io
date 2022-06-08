@@ -7,7 +7,7 @@ let newProject = function (projectName, image,source,project) {
   projects.appendChild(span);
   span.style.background = `${image} no-repeat center/cover`;
   span.innerHTML = `
-    <div class="language-contenaire">nananan</div>
+    <div class="language-contenaire"></div>
     <p> ${projectName}</p>
     <div class="btm-contenaire">
       <a href="${source}" id="external" class="btm-contenue">Source</a>
