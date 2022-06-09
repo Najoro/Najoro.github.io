@@ -47,8 +47,8 @@ body{
      font-size: 3rem;
      font-weight: normal;
      position: fixed;
-     bottom: 1vw;
-     right: 1vw;
+     top: 2vw;
+     right: 2vw;
      z-index: 1;
      visibility: hidden;
      cursor: pointer;
@@ -56,6 +56,9 @@ body{
      justify-content: center;
      align-items: center;
      opacity: 0.6;
+     i{
+         transform: rotate(90deg);
+     }
      &:hover{
           color: #00FFDD !important;
           opacity: 1;

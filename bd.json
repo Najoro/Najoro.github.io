@@ -7,6 +7,12 @@
       "project": "./calculatrice.html"
     },
     {
+      "name" : "Generateur de Blague",
+      "image" : "url(../media/blague.png)",
+      "source":"https://github.com/Najoro/JAVASCRIPT-evolution/tree/master/exercice/blague",
+      "project": "./blague.html"
+    },
+    {
       "name" : "Generateur de Mot de passe",
       "image" : "url(../media/password.png)",
       "source": "https://github.com/Najoro/calculatrice",
@@ -23,12 +29,6 @@
       "image" : "url(../media/bulle.png)",
       "source":"https://github.com/Najoro/JAVASCRIPT-evolution/tree/master/exercice/formlulaire",
       "project": "./bulle.html"
-    },
-    {
-      "name" : "Generateur de Blague",
-      "image" : "url(../media/blague.png)",
-      "source":"https://github.com/Najoro/JAVASCRIPT-evolution/tree/master/exercice/blague",
-      "project": "./blague.html"
     },
     {
       "name" : "next project",

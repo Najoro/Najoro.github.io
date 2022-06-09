@@ -110,7 +110,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.btm {
+.btm ,.porfolio{
   width: auto;
   background: var(--color-text);
   color: var(--color-contenaire);
@@ -125,7 +125,7 @@ body {
   box-shadow: 0px 0px 10px var(--black);
   transition: 0.3s ease-in-out;
 }
-.btm:hover{
+.btm:hover, .porfolio:hover{
   transform: translate(5px,2px);
 }
 .btm:active{
@@ -133,4 +133,10 @@ body {
 }
 .btm i{
   font-size: 1.5rem;
+}
+.porfolio{
+  color:var(--color-btm);
+  padding: 10px 2rem;
+  background: var(--black);
+  border-radius: 50px;
 }

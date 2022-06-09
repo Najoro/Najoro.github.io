@@ -7,7 +7,7 @@
   .composante{
     display: block;
     height: 30vh;
-    width: 22vw;
+    width: 23vw;
     border-radius:$radius;
     opacity: 0.5;
     margin: 5px auto;
@@ -38,8 +38,6 @@
       top: 0;
       width: 100%;
       height: 4vh;
-      background: $white;
-      backdrop-filter: blur(10px);
       border-radius: $radius;      
       display: flex;
       justify-content: center;
