@@ -38,6 +38,32 @@ $radius: 2vh;
 body{
      background-color: $bg-3;
 }
+.box-contenaire{
+     position: relative;
+     .title{
+          position: absolute;
+          display: none !important;
+          top: 0%;
+          left: 1%;
+          border-radius: 10px;
+          display: block;
+          width: auto;
+          height: auto;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          background: $black !important;
+          font-size: 0.6rem;
+          z-index: 10;
+          cursor: not-allowed;
+          i{
+               color:$special-lettre;
+          }
+          span{
+               color: $white;
+          }
+     }
+}
 .bull{
      width:10vw;
      height: 10vw;
