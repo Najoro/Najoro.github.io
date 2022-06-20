@@ -61,3 +61,13 @@
           transform: translateX($translate);
      }
 }
+@mixin animation($time){
+     animation: pop 1s forwards;
+     animation-duration: $time;
+     transform-origin: center;
+}
+@keyframes pop {
+     to{
+          transform: rotateY(0);
+     }
+}

@@ -1,14 +1,5 @@
 $shap-height : 20%;
-@mixin animation($time){
-     animation: pop 1s forwards;
-     animation-duration: $time;
-     transform-origin: center;
-}
-@keyframes pop {
-     to{
-          transform: scaleY(1);
-     }
-}
+
 #contact{
      min-height: 80vh;
      background: linear-gradient(to top, $bg-1 $shap-height, transparent $shap-height) !important;
@@ -101,7 +92,8 @@ $shap-height : 20%;
            box-shadow: 0px 0px 5px  $black;
            font-weight: bold;
            transform-origin: top;
-           transition: 0.5s ease;
+           transform:rotateY(90deg);
+           transition: 1s linear;
            @include hover-active;
            &:hover{
                 color: $white;
@@ -111,19 +103,19 @@ $shap-height : 20%;
                 transform: scale(1.5);
            }
            &:nth-child(1){
-               @include animation(0.4)
+               @include animation(0.4s);
           }
 
           &:nth-child(2){
-               @include animation(1.2s)
+               @include animation(1.2s);
           }
 
           &:nth-child(3){
-               @include animation(1.6s)
+               @include animation(1.6s);
           }
 
           &:nth-child(4){
-               @include animation(2.2s)
+               @include animation(2.2s);
           }
           }
      }
