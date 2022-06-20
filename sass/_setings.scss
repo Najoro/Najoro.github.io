@@ -42,13 +42,13 @@ body{
      width:10vw;
      height: 10vw;
      border-radius: 50%;
-     box-shadow: 1px 1px 3px wheat;
-     background:$black;
-     font-size: 3rem;
+     box-shadow: 0px 0px 20px $white;
+     background:$bg-1;
+     font-size: 2rem;
      font-weight: normal;
      position: fixed;
-     top: 2vw;
-     right: 2vw;
+     bottom: 10rem;
+     right: 7vw;
      z-index: 1;
      visibility: hidden;
      cursor: pointer;
@@ -61,6 +61,7 @@ body{
      }
      &:hover{
           color: #00FFDD !important;
+          background: $black;
           opacity: 1;
      }
 }
