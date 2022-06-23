@@ -26,7 +26,7 @@
 }
 
 body {
-  background-color: #1a8ae1;
+  background-color: #2967a1;
 }
 
 .box-contenaire {
@@ -84,6 +84,20 @@ body {
   opacity: 1;
 }
 
+@media screen and (max-width: 870px) {
+  body {
+    background: #ddd;
+    width: 100% !important;
+    position: relative;
+  }
+
+  .box-contenaire {
+    height: 100vh !important;
+  }
+  .box-contenaire .title {
+    display: block !important;
+  }
+}
 @keyframes pop {
   to {
     transform: rotateY(0);
@@ -362,6 +376,28 @@ main {
   .identiter {
     display: none;
   }
+
+  main {
+    width: 100%;
+    height: 10vw !important;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 2px;
+    grid-template-areas: "identity" "acceuil";
+  }
+  main .contenaire {
+    grid-area: acceuil;
+    height: auto;
+  }
+  main .contenaire .box-contenaire {
+    width: inherit !important;
+    margin: 1px 0;
+    border: none;
+    border-radius: 0px;
+    min-height: 150px;
+    max-height: 500px;
+  }
 }
 #acceuil {
   padding: 5vh 0 0 5vh;
@@ -441,6 +477,31 @@ main {
   transform: translateX(2vh);
 }
 
+@media screen and (max-width: 870px) {
+  #acceuil {
+    padding: 10rem 10px 0;
+    height: 40vh;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh 1fr 1fr;
+    grid-template-areas: "h1" "h2" "btm";
+  }
+  #acceuil h1 {
+    grid-area: "h1";
+    font-size: 7vw;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+  }
+  #acceuil h2 {
+    grid-area: "h2";
+    font-size: 3vw;
+  }
+  #acceuil .btm {
+    grid-area: "btm";
+    width: 50vw;
+  }
+}
 #contact {
   min-height: 80vh;
   background: linear-gradient(to top, #0e175f 20%, transparent 20%) !important;
@@ -483,7 +544,8 @@ main {
   padding: 2vh 3vw;
   margin: 0 auto;
   border-radius: 2vh;
-  background: #2967a1;
+  background: #333 !important;
+  border: 1px dashed #1a8ae1;
   box-shadow: 0px 0px 20px #333;
   display: flex !important;
   justify-content: center;
@@ -590,80 +652,30 @@ main {
 }
 
 @media screen and (max-width: 870px) {
-  body {
-    background: #00FFDD;
-    width: 100% !important;
-    position: relative;
-  }
-
-  .box-contenaire .title {
-    display: block !important;
-  }
-
-  main {
-    width: 100%;
-    height: 10vw !important;
-    padding: 0;
-    margin: 0;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto 2px;
-    grid-template-areas: "identity" "acceuil";
-  }
-  main .contenaire {
-    grid-area: acceuil;
-    height: auto;
-  }
-  main .contenaire .box-contenaire {
-    width: inherit !important;
-    margin: 1px 0;
-    border: none;
-    border-radius: 0px;
-    min-height: 150px;
-    max-height: 500px;
-  }
-  main .contenaire #acceuil {
-    padding: 2rem 10px;
-    height: 40vh;
-    display: grid !important;
-    grid-template-columns: 1fr;
-    grid-template-rows: 8vh 1fr 1fr;
-    grid-template-areas: "h1" "h2" "btm";
-  }
-  main .contenaire #acceuil h1 {
-    grid-area: "h1";
-    font-size: 7vw;
-    padding: 0;
-    margin: 0;
-    height: 20px;
-  }
-  main .contenaire #acceuil h2 {
-    grid-area: "h2";
-    font-size: 3vw;
-  }
-  main .contenaire #acceuil .btm {
-    grid-area: "btm";
-    width: 50vw;
-  }
-  main .contenaire #contact {
+  #contact {
+    padding: 5rem 0;
     width: inherit;
     display: flex !important;
     justify-content: space-around;
+    align-items: center;
     flex-direction: column;
+    background: #0e175f !important;
   }
-  main .contenaire #contact .contacte-moi {
-    width: 100%;
-    height: 30vh;
+  #contact .contacte-moi {
+    width: 80%;
+    border: 1px dashed #2967a1;
+    height: 35vh;
     border-radius: 0px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     background: transparent;
     backdrop-filter: blur(2px);
   }
-  main .contenaire #contact .contacte-moi h1 {
+  #contact .contacte-moi h1 {
     font-size: 4vw;
     text-shadow: 1px 1px 2px #333, -1px -1px 2px #2967a1;
   }
-  main .contenaire #contact .contacte-moi h1::after {
+  #contact .contacte-moi h1::after {
     content: "";
     background: #1a8ae1;
     transform: translateX(-50%);
@@ -675,48 +687,29 @@ main {
     bottom: 0;
     right: none;
   }
-  main .contenaire #contact .contacte-moi .contenue-contact {
+  #contact .contacte-moi .contenue-contact {
     line-height: 6vh;
     font-size: 3vw;
     text-shadow: 1px 1px 2px #333, -1px -1px 2px #2967a1;
   }
-  main .contenaire #contact .contacte-moi .contenue-contact i {
+  #contact .contacte-moi .contenue-contact i {
     margin-right: 5vw;
     font-size: 0.9rem;
   }
-  main .contenaire #contact .reseaux {
+  #contact .reseaux {
+    width: auto;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-  }
-  main .contenaire #contact .reseaux a {
-    min-width: 150px;
-    width: 20vw;
-    height: 7vh;
-    font-size: 2vw;
-    margin: 10px;
-  }
-  main .contenaire #projects {
-    height: auto;
-    overflow: scroll;
-    display: flex !important;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    flex-direction: column;
-    overflow-y: hidden;
+    margin-top: 1rem;
   }
-  main .contenaire #projects .composante {
-    width: 300px !important;
-    height: 200px !important;
+  #contact .reseaux a {
+    min-width: 150px;
+    width: 10rem !important;
+    height: 4rem;
+    font-size: 1rem;
     margin: 10px;
-  }
-  main .contenaire #projects .composante p {
-    font-size: 2rem;
-  }
-  main .contenaire #projects .composante .btm-contenaire .btm-contenue {
-    font-size: 0.9rem;
-    padding: 10px;
   }
 }
 #beurgeur.activeJS span:nth-child(1) {
@@ -772,16 +765,20 @@ main {
   height: 80vh;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   overflow-y: scroll;
   overflow-x: hidden;
+  background: #333;
 }
 #projects .composante {
   display: block;
   height: 30vh;
   width: 23vw;
   border-radius: 2vh;
+  border: 1px solid #00FFDD;
   opacity: 0.5;
-  margin: 5px auto;
+  margin: 0.6rem;
   display: flex;
   align-items: flex-end;
   position: relative;
@@ -816,56 +813,41 @@ main {
 }
 #projects .composante .btm-contenaire {
   width: 100%;
-  height: 5vh;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: #ddd;
+  background: #333;
   backdrop-filter: blur(10px);
-  border-radius: 2vh;
 }
-#projects .composante .btm-contenaire .btm-contenue {
-  color: #333 !important;
-  text-transform: uppercase;
-  font-weight: bold;
-  background: transparent !important;
-  border: none !important;
-  padding: 1px 1rem;
-  background: #1a8ae1;
-  color: #333;
-  font-size: 1vw;
-  border-bottom: 0.2vh solid #ddd;
-  border-right: 0.1vh solid #2967a1;
-  width: auto;
-  height: 1vw;
-  border-radius: 2vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s ease-in-out;
+#projects .composante .btm-contenaire i {
+  color: #00FFDD;
+  font-size: large;
 }
-#projects .composante .btm-contenaire .btm-contenue:hover {
-  transform: scale(1.1);
-  transition: 0.1s ease-in-out;
-  color: #2967a1;
-  background: #1a8ae1;
-}
-#projects .composante .btm-contenaire .btm-contenue:active {
-  animation: anim 0.5s infinite;
-}
-@keyframes anim {
-  to {
-    transform: scale(0.8);
+
+@media screen and (max-width: 870px) {
+  #projects {
+    padding: 3rem 0;
+    overflow: scroll;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: no-wrap;
+    flex-direction: column;
+    overflow-y: hidden;
   }
-}
-#projects .composante .btm-contenaire .btm-contenue:hover {
-  border-bottom: none;
-  border-right: none;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #2967a1;
-  box-shadow: 0.2vh 0.3vh 0.2vh 0.1vh #333;
-  color: #ddd;
-  transform: translateX(10px);
+  #projects .composante {
+    width: 300px !important;
+    height: 200px !important;
+    margin: 10px;
+  }
+  #projects .composante p {
+    font-size: 2rem;
+  }
+  #projects .composante .btm-contenaire .btm-contenue {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

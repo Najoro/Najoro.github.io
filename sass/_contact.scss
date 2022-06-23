@@ -41,7 +41,8 @@ $shap-height : 20%;
           padding: 2vh 3vw;
           margin: 0 auto;
           border-radius: $radius;
-          background: $hover;
+          background: $black !important;
+          border: 1px dashed $bg-3;
           box-shadow: 0px 0px 20px  $black;
           display: flex !important;
           justify-content: center;
@@ -117,6 +118,60 @@ $shap-height : 20%;
           &:nth-child(4){
                @include animation(2.2s);
           }
+          }
+     }
+}
+@media screen and (max-width : 870px){
+     #contact{
+          padding: 5rem 0;
+          width: inherit;
+          display: flex !important;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          background: $bg-1 !important;
+          .contacte-moi{
+               width:80%;
+               border: 1px dashed $hover;
+               height: 35vh;
+               border-radius: 0px;
+               display: grid;
+               grid-template-rows: 1fr 1fr 1fr;
+               background: transparent;
+               backdrop-filter: blur(2px);
+               h1{
+                    font-size:4vw;
+                    text-shadow: 1px 1px 2px $black,
+                    -1px -1px 2px $hover;
+                    &::after{
+                         @include ligne(20vw,0.1vh, none, 50%,0,none);
+                    }
+               }
+               .contenue-contact{
+                    line-height:6vh;
+                    font-size: 3vw;
+                    text-shadow: 1px 1px 2px $black,
+                                 -1px -1px 2px $hover;
+                    i{
+                         margin-right: 5vw;
+                         font-size: 0.9rem;
+                    }
+               }
+          }
+          .reseaux{
+               width:auto;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-wrap: wrap;
+               margin-top: 1rem;
+               a{
+                    min-width: 150px;
+                    width: 10rem !important;
+                    height: 4rem;
+                    font-size: 1rem;
+                    margin: 10px;
+               }
           }
      }
 }

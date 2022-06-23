@@ -10,8 +10,8 @@ let newProject = function (projectName, image,source,project) {
     <div class="language-contenaire"></div>
     <p> ${projectName}</p>
     <div class="btm-contenaire">
-      <a href="${source}" id="external" class="btm-contenue">Source</a>
-      <a href="${project}" id="external" class="btm-contenue">afficher</a>
+      <a href="${source}" id="external" class="btm-contenue"><i class="fa-solid fa-code"></i></a>
+      <a href="${project}" id="external" class="btm-contenue"><i class="fa-solid fa-eye"></i></a>
     </div>
   `;
   span.addEventListener("mouseenter", () => {

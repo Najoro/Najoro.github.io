@@ -36,7 +36,7 @@ $radius: 2vh;
      text-decoration: none;
 }
 body{
-     background-color: $bg-3;
+     background-color: $hover;
 }
 .box-contenaire{
      position: relative;
@@ -89,5 +89,18 @@ body{
           color: #00FFDD !important;
           background: $black;
           opacity: 1;
+     }
+}
+@media screen and (max-width : 870px){
+     body{
+          background: $white;
+          width: 100% !important;
+          position: relative;
+     }
+     .box-contenaire{
+          height: 100vh !important;
+          .title{
+               display: block !important;
+          }
      }
 }
