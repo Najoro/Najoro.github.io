@@ -1,5 +1,5 @@
 {
-  "all": [
+  "project": [
     {
       "name" : "Calculatrice",
       "image" : "url(../media/projects/calculatrice.png)",
@@ -37,5 +37,28 @@
       "source":"",
       "project": ""
     }
-  ]
+  ],
+  "identiter" : {
+    "language" : [
+      {"nom" : "HTML/CSS", "pourcentage" : "60"},
+      {"nom" : "JavScript","pourcentage" : "20"},
+      {"nom" : "Langage C","pourcentage" : "10"}
+    ],
+
+    "framworks" : [
+      {"nom" : "Sass","pourcentage" : "20"},
+      {"nom" : "Bootstrap","pourcentage" : "20"}
+    ],
+    "autre" : [
+      {"nom" : "Malagasy","pourcentage" : "100"},
+      {"nom" : "Francais","pourcentage" : "40"},
+      {"nom" : "Anglais","pourcentage" : "20"},
+      {"nom" : "Figma","pourcentage" : "20"}
+    ],
+    "interet" : [
+      {"nom" : "Football"},
+      {"nom" : "Course a pied"},
+      {"nom" : "Natation"}
+    ]
+  }
 }

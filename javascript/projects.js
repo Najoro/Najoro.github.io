@@ -25,7 +25,7 @@ let newProject = function (projectName, image,source,project) {
 async function reclame_bd(){
   await fetch("bd.json")
   .then((rep1) => rep1.json())
-  .then((rep2) => bds = rep2.all);
+  .then((rep2) => bds = rep2.project);
 
   bds.map((bd)=> {
     newProject(bd.name, bd.image,bd.source, bd.project);
