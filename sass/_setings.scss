@@ -3,6 +3,7 @@ $bg-1:#0e175f;
 $bg-2:#030a40f8;
 $bg-3:#1a8ae1;
 $hover:#2967a1;
+$hover2:#2967a149;
 $special-lettre:#00FFDD;
 $text: #E8FFC2;
 $white:#ddd;
@@ -65,14 +66,13 @@ body{
      }
 }
 .bull{
-     width:10vw;
-     height: 10vw;
      border-radius: 50%;
      box-shadow: 0px 0px 20px $white;
      background:$bg-1;
      font-size: 2rem;
      font-weight: normal;
      position: fixed;
+     padding: 1.2rem;
      bottom: 10rem;
      right: 7vw;
      z-index: 1;

@@ -39,26 +39,30 @@
     }
   ],
   "identiter" : {
-    "language" : [
-      {"nom" : "HTML/CSS", "pourcentage" : "60"},
-      {"nom" : "JavScript","pourcentage" : "20"},
-      {"nom" : "Langage C","pourcentage" : "10"}
+    "languages" : [
+      {"nom" : "CSS", "pourcentage" : "60"},
+      {"nom" : "HTML", "pourcentage" : "70"},
+      {"nom" : "Langage C","pourcentage" : "20"},
+      {"nom" : "JavScript","pourcentage" : "40"}
     ],
 
     "framworks" : [
-      {"nom" : "Sass","pourcentage" : "20"},
+      {"nom" : "Sass","pourcentage" : "50"},
+      {"nom" : "React","pourcentage" : "10"},
       {"nom" : "Bootstrap","pourcentage" : "20"}
     ],
     "autre" : [
-      {"nom" : "Malagasy","pourcentage" : "100"},
+      {"nom" : "Malagasy","pourcentage" : "95"},
       {"nom" : "Francais","pourcentage" : "40"},
       {"nom" : "Anglais","pourcentage" : "20"},
-      {"nom" : "Figma","pourcentage" : "20"}
+      {"nom" : "Figma","pourcentage" : "10"}
     ],
     "interet" : [
       {"nom" : "Football"},
-      {"nom" : "Course a pied"},
-      {"nom" : "Natation"}
+      {"nom" : "marche a pied"},
+      {"nom" : "Natation"},
+      {"nom" : "cuisiner"},
+      {"nom" : "jeux Video"}
     ]
   }
 }

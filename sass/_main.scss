@@ -9,7 +9,7 @@ main{
 }
 //----------------------------------------------------------------------------
 $image-size : 10vw;
-.identiter{
+.profil{
   grid-area: identity;
   width: inherit;
   height: 80vh;
@@ -95,7 +95,7 @@ $image-size : 10vw;
   display: none !important;
 }
 @media screen and (max-width : 870px){
-     .identiter{
+     .profil{
           display: none;
      }
      main{

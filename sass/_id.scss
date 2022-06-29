@@ -1,5 +1,80 @@
-#id{
-  display: block !important;
-  height: 100vh;
-  background: #000;
+#identiter {
+  height: 80vh;
+  background: transparent;
+  .contenaire-identiter {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 40% 30% 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "languages diplomes diplomes"
+    "autre autre interet ";
+    .contenaire-etiiquette{
+      width: 100%;
+      text-align: center;
+      margin: 5px 0;
+      .etiiquette{
+        text-transform: uppercase;
+        font-size: 1.3rem !important;
+        letter-spacing: 0.2rem;
+        color: $special-lettre;
+        font-weight: 600 !important;
+        text-align: center;
+      }
+    }
+   
+    .eatchLanguage{
+      width: inherit;
+      height: inherit;
+      .progresseBarre{
+        width: 100%;
+        max-width: 30rem;
+        height: 0.4rem;
+        margin: 0.3rem 0;
+        border: .1px solid $hover2;
+        border-radius: 20px;
+        .eatch-Bare{
+          max-width: inherit;
+          height: inherit;
+          margin: 0;
+          padding: 0;
+          background:$hover;
+          animation: anim 2s ease-in-out;
+        }
+        @keyframes anim {
+          0%{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .languages {
+      grid-area: languages;
+      width: 100%;
+      background: $bg-1;
+      border-radius: 20px;
+      display: grid;
+      grid-row-gap: 10px;
+      .language-contenue{
+        padding: 1rem;
+      }
+    }
+    .diplomes {
+      grid-area: diplomes;
+      background: $bg-1;
+      border-radius: 20px;
+    }
+    .autre {
+      grid-area: autre;
+      background: $bg-1;
+      border-radius: 20px;
+    }
+    .interets {
+      grid-area: interet;
+      background: $bg-1;
+      border-radius: 20px;
+    }
+  }
 }

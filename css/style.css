@@ -57,14 +57,13 @@ body {
 }
 
 .bull {
-  width: 10vw;
-  height: 10vw;
   border-radius: 50%;
   box-shadow: 0px 0px 20px #ddd;
   background: #0e175f;
   font-size: 2rem;
   font-weight: normal;
   position: fixed;
+  padding: 1.2rem;
   bottom: 10rem;
   right: 7vw;
   z-index: 1;
@@ -257,7 +256,7 @@ main {
   border-radius: 10px;
 }
 
-.identiter {
+.profil {
   grid-area: identity;
   width: inherit;
   height: 80vh;
@@ -272,7 +271,7 @@ main {
   justify-content: space-evenly;
   align-items: center;
 }
-.identiter .image img {
+.profil .image img {
   height: 10vw;
   width: 10vw;
   border-radius: 50%;
@@ -280,7 +279,7 @@ main {
   user-select: none;
   cursor: not-allowed;
 }
-.identiter .image h1 {
+.profil .image h1 {
   font-family: "font-4";
   font-size: 1vw;
   font-weight: bold;
@@ -289,13 +288,13 @@ main {
   user-select: none;
   cursor: not-allowed;
 }
-.identiter .symbol {
+.profil .symbol {
   font-size: 10vh;
   cursor: not-allowed;
   user-select: none;
   color: #1a8ae1;
 }
-.identiter .status {
+.profil .status {
   position: relative;
   font-size: 1.2rem;
   padding: 2rem 0 0;
@@ -306,7 +305,7 @@ main {
   padding-top: 1vh;
   margin-left: 1vw;
 }
-.identiter .status::after {
+.profil .status::after {
   content: "";
   background: #1a8ae1;
   transform: translateX(-50%);
@@ -318,7 +317,7 @@ main {
   bottom: none;
   right: none;
 }
-.identiter footer {
+.profil footer {
   min-width: 10vw;
   width: 100%;
   font-size: 3vh;
@@ -328,7 +327,7 @@ main {
   align-items: center;
   flex-wrap: wrap;
 }
-.identiter footer a {
+.profil footer a {
   width: 3vw;
   height: 3vw;
   display: flex;
@@ -338,13 +337,13 @@ main {
   background: #0e175f;
   border-radius: 50%;
 }
-.identiter footer a:hover {
+.profil footer a:hover {
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
   color: #2967a1;
   background: #1a8ae1;
 }
-.identiter footer a:active {
+.profil footer a:active {
   animation: anim 0.5s infinite;
 }
 @keyframes anim {
@@ -352,7 +351,7 @@ main {
     transform: scale(0.8);
   }
 }
-.identiter footer a i {
+.profil footer a i {
   color: #ddd;
 }
 
@@ -373,7 +372,7 @@ main {
 }
 
 @media screen and (max-width: 870px) {
-  .identiter {
+  .profil {
     display: none;
   }
 
@@ -848,6 +847,83 @@ main {
     font-size: 0.9rem;
     padding: 10px;
   }
+}
+#identiter {
+  height: 80vh;
+  background: transparent;
+}
+#identiter .contenaire-identiter {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 40% 30% 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "languages diplomes diplomes" "autre autre interet ";
+}
+#identiter .contenaire-identiter .contenaire-etiiquette {
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}
+#identiter .contenaire-identiter .contenaire-etiiquette .etiiquette {
+  text-transform: uppercase;
+  font-size: 1.3rem !important;
+  letter-spacing: 0.2rem;
+  color: #00FFDD;
+  font-weight: 600 !important;
+  text-align: center;
+}
+#identiter .contenaire-identiter .eatchLanguage {
+  width: inherit;
+  height: inherit;
+}
+#identiter .contenaire-identiter .eatchLanguage .progresseBarre {
+  width: 100%;
+  max-width: 30rem;
+  height: 0.4rem;
+  margin: 0.3rem 0;
+  border: 0.1px solid rgba(41, 103, 161, 0.2862745098);
+  border-radius: 20px;
+}
+#identiter .contenaire-identiter .eatchLanguage .progresseBarre .eatch-Bare {
+  max-width: inherit;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  background: #2967a1;
+  animation: anim 2s ease-in-out;
+}
+@keyframes anim {
+  0% {
+    width: 100%;
+  }
+}
+#identiter .contenaire-identiter .languages {
+  grid-area: languages;
+  width: 100%;
+  background: #0e175f;
+  border-radius: 20px;
+  display: grid;
+  grid-row-gap: 10px;
+}
+#identiter .contenaire-identiter .languages .language-contenue {
+  padding: 1rem;
+}
+#identiter .contenaire-identiter .diplomes {
+  grid-area: diplomes;
+  background: #0e175f;
+  border-radius: 20px;
+}
+#identiter .contenaire-identiter .autre {
+  grid-area: autre;
+  background: #0e175f;
+  border-radius: 20px;
+}
+#identiter .contenaire-identiter .interets {
+  grid-area: interet;
+  background: #0e175f;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
