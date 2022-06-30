@@ -40,10 +40,10 @@
   ],
   "identiter" : {
     "languages" : [
-      {"nom" : "CSS", "pourcentage" : "60"},
       {"nom" : "HTML", "pourcentage" : "70"},
-      {"nom" : "Langage C","pourcentage" : "20"},
-      {"nom" : "JavScript","pourcentage" : "40"}
+      {"nom" : "CSS", "pourcentage" : "60"},
+      {"nom" : "JavScript","pourcentage" : "40"},
+      {"nom" : "Langage C","pourcentage" : "20"}
     ],
 
     "framworks" : [
@@ -52,17 +52,42 @@
       {"nom" : "Bootstrap","pourcentage" : "20"}
     ],
     "autre" : [
-      {"nom" : "Malagasy","pourcentage" : "95"},
-      {"nom" : "Francais","pourcentage" : "40"},
-      {"nom" : "Anglais","pourcentage" : "20"},
-      {"nom" : "Figma","pourcentage" : "10"}
+      [
+        {"nom" : "Malagasy","pourcentage" : "95"},
+        {"nom" : "Francais","pourcentage" : "40"},
+        {"nom" : "Anglais","pourcentage" : "20"}
+      ],
+      [
+        {"nom" : "Figma","pourcentage" : "10"}
+      ]
     ],
     "interet" : [
       {"nom" : "Football"},
       {"nom" : "marche a pied"},
-      {"nom" : "Natation"},
       {"nom" : "cuisiner"},
       {"nom" : "jeux Video"}
+    ],
+    "Diplome" : [
+      {
+        "nom" : "Bacc serie C",
+        "obtention" : "2017",
+        "ecole" : "Lycee Modern Ampefiloha"
+      },
+      {
+        "nom" : "Bacc +2 Informatique",
+        "obtention" : "2020",
+        "ecole" : "C.N.T.M.A.D"
+      },
+      {
+        "nom" : "Bacc + 2 Mathematique et Informatique",
+        "obtention" : "2020",
+        "ecole" : "faculter des Science (Ankatso)"
+      },
+      {
+        "nom" : "Maintenance et Reseaux Indormatique",
+        "obtention" : "2019",
+        "ecole" : "Nir'info"
+      }
     ]
   }
 }

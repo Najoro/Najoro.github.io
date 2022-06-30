@@ -71,3 +71,7 @@
           transform: rotateY(0);
      }
 }
+@mixin scrollY {
+     overflow-y:scroll;
+     overflow-x: hidden;
+}

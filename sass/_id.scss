@@ -1,3 +1,5 @@
+
+
 #identiter {
   height: 80vh;
   background: transparent;
@@ -6,75 +8,139 @@
     height: 100%;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 40% 30% 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 40% 30% auto;
+    grid-template-rows: 45vh 1fr;
     grid-template-areas: 
     "languages diplomes diplomes"
     "autre autre interet ";
-    .contenaire-etiiquette{
-      width: 100%;
-      text-align: center;
-      margin: 5px 0;
-      .etiiquette{
-        text-transform: uppercase;
-        font-size: 1.3rem !important;
-        letter-spacing: 0.2rem;
-        color: $special-lettre;
-        font-weight: 600 !important;
-        text-align: center;
-      }
-    }
-   
-    .eatchLanguage{
-      width: inherit;
-      height: inherit;
-      .progresseBarre{
-        width: 100%;
-        max-width: 30rem;
-        height: 0.4rem;
-        margin: 0.3rem 0;
-        border: .1px solid $hover2;
-        border-radius: 20px;
-        .eatch-Bare{
-          max-width: inherit;
-          height: inherit;
-          margin: 0;
-          padding: 0;
-          background:$hover;
-          animation: anim 2s ease-in-out;
-        }
-        @keyframes anim {
-          0%{
-            width: 100%;
-          }
-        }
-      }
-    }
+
     .languages {
       grid-area: languages;
       width: 100%;
       background: $bg-1;
       border-radius: 20px;
       display: grid;
-      grid-row-gap: 10px;
+      @include scrollY;
       .language-contenue{
-        padding: 1rem;
+        padding: 10px 1rem;
       }
     }
     .diplomes {
       grid-area: diplomes;
       background: $bg-1;
       border-radius: 20px;
+      height: inherit;
+      @include scrollY();
+      font-size: 1rem;
+      .diplomes-contenaire{
+        height: 80%;
+        display: grid;
+        margin: 10px;
+        ul{
+          display: grid;
+          grid-template-columns: 35% 35% auto;
+          li:nth-child(2){
+            margin: 0 auto;
+          }
+        }
+        
+      }
     }
-    .autre {
+    .autres {
       grid-area: autre;
       background: $bg-1;
       border-radius: 20px;
+      // @include scrollY;
+      .autres-contenaire{
+        margin: 10px 1rem;
+        display: flex;
+        .autres-contenaire1,.autres-contenaire2{
+          width: 100%;
+          margin: 0 10px;
+        } 
+      }
     }
     .interets {
       grid-area: interet;
       background: $bg-1;
       border-radius: 20px;
+      .interets-contenaire{
+        ul{
+          line-height: 1.5rem;
+          text-transform: capitalize;
+          margin: 2rem;
+          li{
+            list-style-type: square;    
+          }
+        }
+      }
     }
   }
+  .contenaire-etiquette{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    .etiquette{
+      text-transform: uppercase;
+      font-size: 1rem !important;
+      letter-spacing: 0.2rem;
+      color: $special-lettre;
+      font-weight: 600 !important;
+    }
+  }
+}
+.eatchLanguage{
+  width: inherit;
+  height: inherit;
+  font-size: 0.8rem;
+  .progresseBarre{
+    width: 100%;
+    height: 0.4rem;
+    margin: 0.3rem 0;
+    border: .1px solid $hover2;
+    border-radius: 20px;
+    .eatch-Bare{
+      max-width: inherit;
+      height: inherit;
+      margin: 0;
+      padding: 0;
+      background:$hover;
+      animation: anim 2s ease-in-out;
+    }
+    @keyframes anim {
+      0%{
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width : 870px){
+  #identiter {
+    height: auto;
+    display: flex !important;
+    .contenaire-identiter{
+      display: grid !important;
+      height: 100vh !important;
+      grid-template-columns: 100%;
+      grid-template-areas: 
+      "languages"
+      "diplomes"
+      "autre" 
+      "interet";
+    }
+    .languages{
+      grid-area: languages;
+
+      border-radius: 0px !important;
+    }
+    .diplomes {
+      grid-area: diplomes;
+    }
+    .autres{
+      grid-area: autre;
+    }
+    .interets{
+      grid-area: interet;
+    }
+    }
 }

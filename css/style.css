@@ -857,36 +857,95 @@ main {
   height: 100%;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 40% 30% 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 40% 30% auto;
+  grid-template-rows: 45vh 1fr;
   grid-template-areas: "languages diplomes diplomes" "autre autre interet ";
 }
-#identiter .contenaire-identiter .contenaire-etiiquette {
+#identiter .contenaire-identiter .languages {
+  grid-area: languages;
+  width: 100%;
+  background: #0e175f;
+  border-radius: 20px;
+  display: grid;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#identiter .contenaire-identiter .languages .language-contenue {
+  padding: 10px 1rem;
+}
+#identiter .contenaire-identiter .diplomes {
+  grid-area: diplomes;
+  background: #0e175f;
+  border-radius: 20px;
+  height: inherit;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+#identiter .contenaire-identiter .diplomes .diplomes-contenaire {
+  height: 80%;
+  display: grid;
+  margin: 10px;
+}
+#identiter .contenaire-identiter .diplomes .diplomes-contenaire ul {
+  display: grid;
+  grid-template-columns: 35% 35% auto;
+}
+#identiter .contenaire-identiter .diplomes .diplomes-contenaire ul li:nth-child(2) {
+  margin: 0 auto;
+}
+#identiter .contenaire-identiter .autres {
+  grid-area: autre;
+  background: #0e175f;
+  border-radius: 20px;
+}
+#identiter .contenaire-identiter .autres .autres-contenaire {
+  margin: 10px 1rem;
+  display: flex;
+}
+#identiter .contenaire-identiter .autres .autres-contenaire .autres-contenaire1, #identiter .contenaire-identiter .autres .autres-contenaire .autres-contenaire2 {
+  width: 100%;
+  margin: 0 10px;
+}
+#identiter .contenaire-identiter .interets {
+  grid-area: interet;
+  background: #0e175f;
+  border-radius: 20px;
+}
+#identiter .contenaire-identiter .interets .interets-contenaire ul {
+  line-height: 1.5rem;
+  text-transform: capitalize;
+  margin: 2rem;
+}
+#identiter .contenaire-identiter .interets .interets-contenaire ul li {
+  list-style-type: square;
+}
+#identiter .contenaire-etiquette {
   width: 100%;
   text-align: center;
   margin: 5px 0;
 }
-#identiter .contenaire-identiter .contenaire-etiiquette .etiiquette {
+#identiter .contenaire-etiquette .etiquette {
   text-transform: uppercase;
-  font-size: 1.3rem !important;
+  font-size: 1rem !important;
   letter-spacing: 0.2rem;
   color: #00FFDD;
   font-weight: 600 !important;
-  text-align: center;
 }
-#identiter .contenaire-identiter .eatchLanguage {
+
+.eatchLanguage {
   width: inherit;
   height: inherit;
+  font-size: 0.8rem;
 }
-#identiter .contenaire-identiter .eatchLanguage .progresseBarre {
+.eatchLanguage .progresseBarre {
   width: 100%;
-  max-width: 30rem;
   height: 0.4rem;
   margin: 0.3rem 0;
   border: 0.1px solid rgba(41, 103, 161, 0.2862745098);
   border-radius: 20px;
 }
-#identiter .contenaire-identiter .eatchLanguage .progresseBarre .eatch-Bare {
+.eatchLanguage .progresseBarre .eatch-Bare {
   max-width: inherit;
   height: inherit;
   margin: 0;
@@ -899,31 +958,31 @@ main {
     width: 100%;
   }
 }
-#identiter .contenaire-identiter .languages {
-  grid-area: languages;
-  width: 100%;
-  background: #0e175f;
-  border-radius: 20px;
-  display: grid;
-  grid-row-gap: 10px;
-}
-#identiter .contenaire-identiter .languages .language-contenue {
-  padding: 1rem;
-}
-#identiter .contenaire-identiter .diplomes {
-  grid-area: diplomes;
-  background: #0e175f;
-  border-radius: 20px;
-}
-#identiter .contenaire-identiter .autre {
-  grid-area: autre;
-  background: #0e175f;
-  border-radius: 20px;
-}
-#identiter .contenaire-identiter .interets {
-  grid-area: interet;
-  background: #0e175f;
-  border-radius: 20px;
+
+@media screen and (max-width: 870px) {
+  #identiter {
+    height: auto;
+    display: flex !important;
+  }
+  #identiter .contenaire-identiter {
+    display: grid !important;
+    height: 100vh !important;
+    grid-template-columns: 100%;
+    grid-template-areas: "languages" "diplomes" "autre" "interet";
+  }
+  #identiter .languages {
+    grid-area: languages;
+    border-radius: 0px !important;
+  }
+  #identiter .diplomes {
+    grid-area: diplomes;
+  }
+  #identiter .autres {
+    grid-area: autre;
+  }
+  #identiter .interets {
+    grid-area: interet;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
