@@ -3,6 +3,7 @@ const childsContainer = document.querySelector(".contenaire").childNodes;
 const Menu = document.querySelector(".menu");
 const as = document.querySelectorAll('.menu a');
 
+console.log(childsContainer.nodeType);
 
 as.forEach((a)=> {
   a.addEventListener('click', (e) => {

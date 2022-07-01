@@ -123,54 +123,29 @@ $shap-height : 20%;
 }
 @media screen and (max-width : 870px){
      #contact{
-          padding: 5rem 0;
-          width: inherit;
-          display: flex !important;
-          justify-content: space-around;
-          align-items: center;
-          flex-direction: column;
           background: $bg-1 !important;
+          justify-content: center;
+          justify-content: space-around;
           .contacte-moi{
-               width:80%;
-               border: 1px dashed $hover;
-               height: 35vh;
-               border-radius: 0px;
-               display: grid;
-               grid-template-rows: 1fr 1fr 1fr;
-               background: transparent;
-               backdrop-filter: blur(2px);
+               width: 90%;
                h1{
-                    font-size:4vw;
-                    text-shadow: 1px 1px 2px $black,
-                    -1px -1px 2px $hover;
-                    &::after{
-                         @include ligne(20vw,0.1vh, none, 50%,0,none);
-                    }
+                    font-size: 5vw !important;
                }
                .contenue-contact{
-                    line-height:6vh;
-                    font-size: 3vw;
-                    text-shadow: 1px 1px 2px $black,
-                                 -1px -1px 2px $hover;
-                    i{
-                         margin-right: 5vw;
-                         font-size: 0.9rem;
+                    font-size: 2.9vw;
+                    a i{
+                         margin: 0 7vw 0 0;
                     }
                }
           }
           .reseaux{
-               width:auto;
                display: flex;
-               align-items: center;
+               flex-direction: row;
                justify-content: center;
                flex-wrap: wrap;
-               margin-top: 1rem;
                a{
-                    min-width: 150px;
-                    width: 10rem !important;
-                    height: 4rem;
-                    font-size: 1rem;
-                    margin: 10px;
+                    width: 20%;
+                    font-size: 3vw;
                }
           }
      }

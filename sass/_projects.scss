@@ -10,7 +10,7 @@
   .composante{
     display: block;
     height: 30vh;
-    width: 23vw;
+    width: 22vw;
     border-radius:$radius;
     border: 1px solid $special-lettre;
     opacity: 0.5;
@@ -65,27 +65,11 @@
 }
 @media screen and (max-width : 870px){
   #projects{
-    padding: 3rem 0;
-    overflow: scroll;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: no-wrap;
-    flex-direction: column;
-    overflow-y: hidden;
     .composante{
-         width: 300px !important;
-         height: 200px !important;
-         margin: 10px;
-         p{
-              font-size: 2rem;
-         }
-         .btm-contenaire{
-              .btm-contenue{
-                   font-size: 0.9rem;
-                   padding: 10px;
-              }
-         }
+      width: 100% !important;
+      p{
+        font-size: 9vw;
+      }
     }
-}
+  }
 }

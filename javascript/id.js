@@ -19,7 +19,7 @@ const DisplayInteret = async function (tag, ref) {
   const Interets = ref;
   Interets.map((Interet) => {
     tag.innerHTML += `
-    <li>${Interet.nom}</li>
+    <li><i class="${Interet.icone}">-</i>${Interet.nom}</li>
     `;
   });
 };
@@ -28,8 +28,15 @@ const DisplayLanguages = async function (tag, ref) {
   languages.map((language) => {
     tag.innerHTML += `
     <div class="eatchLanguage">
-      <h4>${language.nom}</h4>
-      <div class="progresseBarre">
+      <h4>
+        ${
+          language.icone != " "
+            ? `<i class="${language.icone}" style ="color :${language.color};"></i>`
+            : `<img src = "${language.flag}" alt = ""/>`
+        }
+        ${language.nom}
+        </h4>
+        <div class="progresseBarre">
         <div class="eatch-Bare" style = "width:${language.pourcentage}%;"></div>
       </div>
     </div>
@@ -40,7 +47,6 @@ const DisplayDiplome = async function (tag, ref) {
   const languages = ref;
   languages.map((language) => {
     tag.innerHTML += `
-
       <ul class="DiplomeEatch">
         <li>${language.nom}</li>
         <li>${language.obtention}</li>

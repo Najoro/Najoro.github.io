@@ -83,58 +83,16 @@ header{
 @media screen and (max-width : 870px){
      header{
           width: 100%;
-          margin: 0;
-          border-radius: 0;
-          height: auto;
-          grid-template-columns: 20% 1fr;
-          grid-template-rows: 70px 1fr;
-          grid-template-areas:
-          "image beurgeur"
-          "image menu";
-          justify-content: center;
-          align-items: center;
-          z-index: 1;
-          top: 0;
-          overflow: hidden;
-          img{
-               display: block;
-               grid-area: image;
-               height:8.5vw;
-               width:8.5vw;
-               border-radius:50%;
-               border: 0.1vh solid $white;
-               user-select: none;
-               cursor: not-allowed;
-               margin: 0 auto;
-               position: absolute;
-               top: 10px;
-               left: 10px;
-          }
-          h1{
-               display: none;
-          }
+          border-radius: 0px;
+          margin: 0 0 10px;
           .menu{
-               height:6vh;
-               grid-area: menu;
-               text-align: center;
-               z-index: 1;
-               display: none;
-               transition: 0.8s ease-in-out;
-               transform: translateY(-10%);
-               a{
-                    width: 100%;
-                    i{
-                         transform: scale(0.9);
-                         z-index: 1;
-                    }
-                    span{
-                         display: none;
-                    }
+               position: relative;
+               span{
+                    font-size: 0px;
                }
-          }
-          #beurgeur{
-               grid-area: beurgeur;
-               visibility: visible;
+               i{
+                    // position: absolute;
+               }
           }
      }
 }

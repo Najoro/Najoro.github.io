@@ -91,16 +91,3 @@ body{
           opacity: 1;
      }
 }
-@media screen and (max-width : 870px){
-     body{
-          background: $white;
-          width: 100% !important;
-          position: relative;
-     }
-     .box-contenaire{
-          height: 100vh !important;
-          .title{
-               display: block !important;
-          }
-     }
-}

@@ -83,20 +83,6 @@ body {
   opacity: 1;
 }
 
-@media screen and (max-width: 870px) {
-  body {
-    background: #ddd;
-    width: 100% !important;
-    position: relative;
-  }
-
-  .box-contenaire {
-    height: 100vh !important;
-  }
-  .box-contenaire .title {
-    display: block !important;
-  }
-}
 @keyframes pop {
   to {
     transform: rotateY(0);
@@ -194,57 +180,14 @@ header .menu a i {
 @media screen and (max-width: 870px) {
   header {
     width: 100%;
-    margin: 0;
-    border-radius: 0;
-    height: auto;
-    grid-template-columns: 20% 1fr;
-    grid-template-rows: 70px 1fr;
-    grid-template-areas: "image beurgeur" "image menu";
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    top: 0;
-    overflow: hidden;
-  }
-  header img {
-    display: block;
-    grid-area: image;
-    height: 8.5vw;
-    width: 8.5vw;
-    border-radius: 50%;
-    border: 0.1vh solid #ddd;
-    user-select: none;
-    cursor: not-allowed;
-    margin: 0 auto;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  header h1 {
-    display: none;
+    border-radius: 0px;
+    margin: 0 0 10px;
   }
   header .menu {
-    height: 6vh;
-    grid-area: menu;
-    text-align: center;
-    z-index: 1;
-    display: none;
-    transition: 0.8s ease-in-out;
-    transform: translateY(-10%);
+    position: relative;
   }
-  header .menu a {
-    width: 100%;
-  }
-  header .menu a i {
-    transform: scale(0.9);
-    z-index: 1;
-  }
-  header .menu a span {
-    display: none;
-  }
-  header #beurgeur {
-    grid-area: beurgeur;
-    visibility: visible;
+  header .menu span {
+    font-size: 0px;
   }
 }
 main {
@@ -377,25 +320,14 @@ main {
   }
 
   main {
+    display: block;
     width: 100%;
-    height: 10vw !important;
-    padding: 0;
-    margin: 0;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto 2px;
-    grid-template-areas: "identity" "acceuil";
   }
-  main .contenaire {
-    grid-area: acceuil;
-    height: auto;
-  }
-  main .contenaire .box-contenaire {
-    width: inherit !important;
-    margin: 1px 0;
-    border: none;
-    border-radius: 0px;
-    min-height: 150px;
-    max-height: 500px;
+
+  .box-contenaire {
+    width: 100%;
+    border-radius: 0;
+    min-height: 80vh;
   }
 }
 #acceuil {
@@ -477,28 +409,48 @@ main {
 }
 
 @media screen and (max-width: 870px) {
-  #acceuil {
-    padding: 10rem 10px 0;
-    height: 40vh;
-    display: grid !important;
-    grid-template-columns: 1fr;
-    grid-template-rows: 8vh 1fr 1fr;
-    grid-template-areas: "h1" "h2" "btm";
-  }
   #acceuil h1 {
-    grid-area: "h1";
-    font-size: 7vw;
-    padding: 0;
-    margin: 0;
-    height: 20px;
+    font-size: 8vw;
   }
   #acceuil h2 {
-    grid-area: "h2";
     font-size: 3vw;
   }
   #acceuil .btm {
-    grid-area: "btm";
+    background: #1a8ae1;
+    color: #333;
+    font-size: 4vw;
+    border-bottom: 0.2vh solid #ddd;
+    border-right: 0.1vh solid #2967a1;
     width: 50vw;
+    height: 7vw;
+    border-radius: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+  }
+  #acceuil .btm:hover {
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+    color: #2967a1;
+    background: #1a8ae1;
+  }
+  #acceuil .btm:active {
+    animation: anim 0.5s infinite;
+  }
+  @keyframes anim {
+    to {
+      transform: scale(0.8);
+    }
+  }
+  #acceuil .btm:hover {
+    border-bottom: none;
+    border-right: none;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #2967a1;
+    box-shadow: 0.2vh 0.3vh 0.2vh 0.1vh #333;
+    color: #ddd;
+    transform: translateX(2vw);
   }
 }
 #contact {
@@ -652,63 +604,31 @@ main {
 
 @media screen and (max-width: 870px) {
   #contact {
-    padding: 5rem 0;
-    width: inherit;
-    display: flex !important;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
     background: #0e175f !important;
+    justify-content: center;
+    justify-content: space-around;
   }
   #contact .contacte-moi {
-    width: 80%;
-    border: 1px dashed #2967a1;
-    height: 35vh;
-    border-radius: 0px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    background: transparent;
-    backdrop-filter: blur(2px);
+    width: 90%;
   }
   #contact .contacte-moi h1 {
-    font-size: 4vw;
-    text-shadow: 1px 1px 2px #333, -1px -1px 2px #2967a1;
-  }
-  #contact .contacte-moi h1::after {
-    content: "";
-    background: #1a8ae1;
-    transform: translateX(-50%);
-    position: absolute;
-    width: 20vw;
-    height: 0.1vh;
-    top: none;
-    left: 50%;
-    bottom: 0;
-    right: none;
+    font-size: 5vw !important;
   }
   #contact .contacte-moi .contenue-contact {
-    line-height: 6vh;
-    font-size: 3vw;
-    text-shadow: 1px 1px 2px #333, -1px -1px 2px #2967a1;
+    font-size: 2.9vw;
   }
-  #contact .contacte-moi .contenue-contact i {
-    margin-right: 5vw;
-    font-size: 0.9rem;
+  #contact .contacte-moi .contenue-contact a i {
+    margin: 0 7vw 0 0;
   }
   #contact .reseaux {
-    width: auto;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 1rem;
   }
   #contact .reseaux a {
-    min-width: 150px;
-    width: 10rem !important;
-    height: 4rem;
-    font-size: 1rem;
-    margin: 10px;
+    width: 20%;
+    font-size: 3vw;
   }
 }
 #beurgeur.activeJS span:nth-child(1) {
@@ -773,7 +693,7 @@ main {
 #projects .composante {
   display: block;
   height: 30vh;
-  width: 23vw;
+  width: 22vw;
   border-radius: 2vh;
   border: 1px solid #00FFDD;
   opacity: 0.5;
@@ -825,27 +745,11 @@ main {
 }
 
 @media screen and (max-width: 870px) {
-  #projects {
-    padding: 3rem 0;
-    overflow: scroll;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: no-wrap;
-    flex-direction: column;
-    overflow-y: hidden;
-  }
   #projects .composante {
-    width: 300px !important;
-    height: 200px !important;
-    margin: 10px;
+    width: 100% !important;
   }
   #projects .composante p {
-    font-size: 2rem;
-  }
-  #projects .composante .btm-contenaire .btm-contenue {
-    font-size: 0.9rem;
-    padding: 10px;
+    font-size: 9vw;
   }
 }
 #identiter {
@@ -857,7 +761,7 @@ main {
   height: 100%;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 40% 30% auto;
+  grid-template-columns: 40% 35% auto;
   grid-template-rows: 45vh 1fr;
   grid-template-areas: "languages diplomes diplomes" "autre autre interet ";
 }
@@ -889,6 +793,7 @@ main {
 }
 #identiter .contenaire-identiter .diplomes .diplomes-contenaire ul {
   display: grid;
+  margin-top: 2rem;
   grid-template-columns: 35% 35% auto;
 }
 #identiter .contenaire-identiter .diplomes .diplomes-contenaire ul li:nth-child(2) {
@@ -915,15 +820,16 @@ main {
 #identiter .contenaire-identiter .interets .interets-contenaire ul {
   line-height: 1.5rem;
   text-transform: capitalize;
-  margin: 2rem;
+  margin: 1rem;
 }
 #identiter .contenaire-identiter .interets .interets-contenaire ul li {
   list-style-type: square;
+  margin: 0 1rem;
 }
 #identiter .contenaire-etiquette {
   width: 100%;
-  text-align: center;
   margin: 5px 0;
+  text-align: center;
 }
 #identiter .contenaire-etiquette .etiquette {
   text-transform: uppercase;
@@ -937,6 +843,13 @@ main {
   width: inherit;
   height: inherit;
   font-size: 0.8rem;
+}
+.eatchLanguage img {
+  width: 1rem;
+  margin-right: 0.2rem;
+}
+.eatchLanguage i {
+  transform: scale(1.2);
 }
 .eatchLanguage .progresseBarre {
   width: 100%;
@@ -960,28 +873,34 @@ main {
 }
 
 @media screen and (max-width: 870px) {
-  #identiter {
-    height: auto;
-    display: flex !important;
-  }
   #identiter .contenaire-identiter {
-    display: grid !important;
-    height: 100vh !important;
     grid-template-columns: 100%;
-    grid-template-areas: "languages" "diplomes" "autre" "interet";
+    grid-template-rows: auto;
+    grid-template-areas: "languages" "autre" "diplomes" "interet";
+  }
+  #identiter .diplomes,
+#identiter .languages, #identiter .autres, #identiter .interets {
+    height: auto;
+    overflow: visible !important;
+    border-radius: 0px !important;
+    margin: 0 !important;
   }
   #identiter .languages {
     grid-area: languages;
-    border-radius: 0px !important;
   }
   #identiter .diplomes {
     grid-area: diplomes;
+    height: auto !important;
   }
   #identiter .autres {
     grid-area: autre;
   }
   #identiter .interets {
     grid-area: interet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 

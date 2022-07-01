@@ -8,7 +8,7 @@
     height: 100%;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 40% 30% auto;
+    grid-template-columns: 40% 35% auto;
     grid-template-rows: 45vh 1fr;
     grid-template-areas: 
     "languages diplomes diplomes"
@@ -38,6 +38,7 @@
         margin: 10px;
         ul{
           display: grid;
+          margin-top: 2rem;
           grid-template-columns: 35% 35% auto;
           li:nth-child(2){
             margin: 0 auto;
@@ -68,9 +69,10 @@
         ul{
           line-height: 1.5rem;
           text-transform: capitalize;
-          margin: 2rem;
+          margin: 1rem;
           li{
-            list-style-type: square;    
+            list-style-type: square;
+            margin:  0 1rem ;    
           }
         }
       }
@@ -78,8 +80,8 @@
   }
   .contenaire-etiquette{
     width: 100%;
-    text-align: center;
     margin: 5px 0;
+    text-align: center;
     .etiquette{
       text-transform: uppercase;
       font-size: 1rem !important;
@@ -93,6 +95,13 @@
   width: inherit;
   height: inherit;
   font-size: 0.8rem;
+  img{
+    width: 1rem;
+    margin-right: 0.2rem;
+  }
+  i{
+    transform: scale(1.2);
+  }
   .progresseBarre{
     width: 100%;
     height: 0.4rem;
@@ -115,32 +124,39 @@
   }
 }
 @media screen and (max-width : 870px){
-  #identiter {
-    height: auto;
-    display: flex !important;
-    .contenaire-identiter{
-      display: grid !important;
-      height: 100vh !important;
+  #identiter{
+    .contenaire-identiter {
       grid-template-columns: 100%;
+      grid-template-rows: auto;
       grid-template-areas: 
-      "languages"
+      "languages" 
+      "autre"
       "diplomes"
-      "autre" 
       "interet";
+    }
+    .diplomes,
+    .languages,.autres, .interets{
+      height: auto;
+      overflow:visible!important;
+      border-radius: 0px !important;
+      margin: 0 !important;
     }
     .languages{
       grid-area: languages;
-
-      border-radius: 0px !important;
     }
-    .diplomes {
+    .diplomes{
       grid-area: diplomes;
+      height: auto !important;
     }
     .autres{
       grid-area: autre;
     }
     .interets{
       grid-area: interet;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
-    }
+  }
 }

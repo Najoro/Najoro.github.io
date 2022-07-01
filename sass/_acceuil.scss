@@ -44,30 +44,14 @@
 }
 @media screen and (max-width : 870px){
      #acceuil{
-          padding: 10rem 10px 0;
-          height: 40vh;
-          display: grid !important;
-          grid-template-columns: 1fr;
-          grid-template-rows: 8vh 1fr 1fr;
-          grid-template-areas: 
-               "h1"
-               "h2"
-               "btm";
-
           h1{
-               grid-area: "h1";
-               font-size: 7vw;
-               padding: 0;
-               margin: 0;
-               height: 20px;
+               font-size: 8vw;
           }
           h2{
-               grid-area: "h2";
                font-size: 3vw;
           }
           .btm{
-               grid-area: "btm";
-               width: 50vw;
+               @include btm(4vw, 50vw, 7vw, 2vw);
           }
      }
 }
