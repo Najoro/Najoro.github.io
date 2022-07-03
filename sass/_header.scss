@@ -3,17 +3,31 @@ header{
      height: 10vh;
      margin: 3px auto 5px;
      border-radius: $radius;
-     background: $black;
+     background: $bg-1;
      display: grid;
      grid-template-columns: 10% 80% 10%;
      font-size: 2vh;
      img{
           display: none;
      }
-     h1{
+     .porfolio{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
           @include special-Letter;
-          color: $special-lettre;
+          h1{
+               @include special-Letter;
+               color: $special-lettre;
+          }
+          .date{
+               color: $white;
+               font-size: 1rem;
+          }
+          
      }
+   
      .menu{
           width: 80%;
           margin: 0 auto;
@@ -89,9 +103,6 @@ header{
                position: relative;
                span{
                     font-size: 0px;
-               }
-               i{
-                    // position: absolute;
                }
           }
      }

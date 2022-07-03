@@ -1,6 +1,6 @@
 
 
-#identiter {
+#statistique {
   height: 80vh;
   background: transparent;
   .contenaire-identiter {
@@ -8,7 +8,7 @@
     height: 100%;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 40% 35% auto;
+    grid-template-columns: 40% 20% auto;
     grid-template-rows: 45vh 1fr;
     grid-template-areas: 
     "languages diplomes diplomes"
@@ -66,9 +66,12 @@
       background: $bg-1;
       border-radius: 20px;
       .interets-contenaire{
+        display: flex;
+        justify-content: center;
         ul{
           line-height: 1.5rem;
           text-transform: capitalize;
+          margin: 0 auto;
           margin: 1rem;
           li{
             list-style-type: square;
@@ -124,7 +127,7 @@
   }
 }
 @media screen and (max-width : 870px){
-  #identiter{
+  #statistique{
     .contenaire-identiter {
       grid-template-columns: 100%;
       grid-template-rows: auto;

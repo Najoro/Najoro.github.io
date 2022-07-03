@@ -13,7 +13,7 @@ async function fetchUp() {
     .then((res1) => res1.json())
     .then((res2) => (data = res2.identiter));
 
-  console.log(data);
+  // console.log(data);
 }
 const DisplayInteret = async function (tag, ref) {
   const Interets = ref;
@@ -25,7 +25,7 @@ const DisplayInteret = async function (tag, ref) {
 };
 const DisplayLanguages = async function (tag, ref) {
   const languages = ref;
-  languages.map((language) => {
+  await languages.map((language) => {
     tag.innerHTML += `
     <div class="eatchLanguage">
       <h4>

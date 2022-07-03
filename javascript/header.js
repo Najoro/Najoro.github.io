@@ -2,6 +2,14 @@
 const childsContainer = document.querySelector(".contenaire").childNodes;
 const Menu = document.querySelector(".menu");
 const as = document.querySelectorAll('.menu a');
+const date = document.querySelector('.date');
+
+function DateNow(){
+  let Datenow = new Date()
+  console.log(Datenow);
+  date.textContent = Datenow.toLocaleTimeString().split(' ')[0]
+}
+DateNow();
 
 console.log(childsContainer.nodeType);
 
@@ -23,8 +31,8 @@ Menu.childNodes.forEach((child) => {
 
   let handleActive = (childs, C, cur) => {
     childs.forEach((element) => {
-      if (element.nodeType != 3) {
-       if (element.id == cur || element==cur) {
+      if (element.nodeType !== 3) {
+       if (element.id == cur) {
             element.classList.remove(C) 
        }
         else {
@@ -37,7 +45,7 @@ Menu.childNodes.forEach((child) => {
   };
   
   child.addEventListener("click", (e) => {
-    let curentElement = e.target.innerText.toLowerCase();
+    let curentElement = child.textContent.toLowerCase();
     handleActive(childsContainer, "desactive", curentElement);
   });
 });
