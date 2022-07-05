@@ -1,4 +1,3 @@
-
 const childsContainer = document.querySelector(".contenaire").childNodes;
 const Menu = document.querySelector(".menu");
 const as = document.querySelectorAll('.menu a');
@@ -6,8 +5,10 @@ const date = document.querySelector('.date');
 
 function DateNow(){
   let Datenow = new Date()
-  console.log(Datenow);
-  date.textContent = Datenow.toLocaleTimeString().split(' ')[0]
+  console.log(Datenow.toISOString());
+  date.innerHTML = `
+  ${Datenow.toISOString().split('T')[1].split(".")[0]}
+  `
 }
 DateNow();
 

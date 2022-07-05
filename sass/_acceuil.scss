@@ -1,16 +1,8 @@
 #acceuil{
-     padding: 5vh 0 0 5vh;
-     height: 74vh;
+     height: 80vh;
      background: linear-gradient(95deg , $bg-1 50%, transparent 100%) !important;
-     position: relative;
      overflow: hidden;
-     display: grid;
-     grid-template-columns: 1fr;
-     grid-template-rows: 19vh 1fr 1fr;
-     grid-template-areas: 
-          "h1"
-          "h2"
-          "btm";
+     position: relative;
      &::after{
           content: "";
           position: absolute;
@@ -23,36 +15,56 @@
           z-index: -1;
           transform: translate(10%);
      }
-     h1{
-          min-height: inherit;
-          grid-area: h1;
-          font-family: "font-4", sans-serif;
-          @include special-Letter;
-          font-size: 10vh;
+     .contenue-acceuil{
+          padding: 5vh 0 0 5vh;
+          width: inherit;
+          height: inherit;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 19vh 1fr 1fr;
+          grid-template-areas: 
+               "h1"
+               "h2"
+               "btm";
+          h1{
+               min-height: inherit;
+               grid-area: h1;
+               font-family: "font-4", sans-serif;
+               @include special-Letter;
+               font-size: 10vh;
+          }
+          h2{
+               grid-area: h2;
+               font-weight: normal;
+               font-size:1.2vw;
+     
+          }
+          .btm{
+               grid-area: btm;
+               @include btm(3vh, 23vw, 6vh, 2vh);
+               box-shadow: -2px -3px 2px 1px $black;
+          }
      }
-     h2{
-          grid-area: h2;
-          font-weight: normal;
-          font-size:1.2vw;
 
-     }
-     .btm{
-          grid-area: btm;
-          @include btm(3vh, 20vw, 6vh, 2vh);
-          box-shadow: -2px -3px 2px 1px $black;
-     }
 }
 @media screen and (max-width : 870px){
      #acceuil{
-          height: 100vh !important;
-          h1{
-               font-size: 8vw;
-          }
-          h2{
-               font-size: 3vw;
-          }
-          .btm{
-               @include btm(4vw, 50vw, 7vw, 2vw);
+          margin: 0;
+          padding: 0;
+          height: 82vh;
+          .contenue-acceuil{
+               height: 70vh !important;
+               width: 100%;
+               padding: 1rem;
+               h1{
+                    font-size: 8vw;
+               }
+               h2{
+                    font-size: 3vw;
+               }
+               .btm{
+                    @include btm(4vw, 50vw, 7vw, 2vw);
+               }
           }
      }
 }
