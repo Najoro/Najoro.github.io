@@ -8,36 +8,44 @@ const diplomes = document.querySelector(".diplomes-contenaire");
 const interets = document.querySelector(".interets-contenaire");
 let data = [];
 
+// recuperation du donne .....
+
 async function fetchUp() {
   await fetch("bd.json")
     .then((res1) => res1.json())
     .then((res2) => (data = res2.identiter));
 
-  // console.log(data);
+  console.log(data);
 }
-const DisplayInteret = async function (tag, ref) {
-  const Interets = ref;
-  Interets.map((Interet) => {
-    tag.innerHTML += `
-    <li><i class="${Interet.icone}">-</i>${Interet.nom}</li>
-    `;
-  });
-};
+
+//affichage .......
+
+function Teste(Atester, vrais, faux) {
+  return Atester != " " ? vrais : faux;
+}
+
 const DisplayLanguages = async function (tag, ref) {
   const languages = ref;
   await languages.map((language) => {
     tag.innerHTML += `
     <div class="eatchLanguage">
       <h4>
-        ${
-          language.icone != " "
-            ? `<i class="${language.icone}" style ="color :${language.color};"></i>`
-            : `<img src = "${language.flag}" alt = ""/>`
-        }
-        ${language.nom}
+       ${Teste(
+         language.icone,
+         `<i class="${language.icone}" style ="color :${language.color};"></i>`,
+         `<img src = "${language.flag}" alt = ""/>`
+       )}
         </h4>
-        <div class="progresseBarre">
-        <div class="eatch-Bare" style = "width:${language.pourcentage}%;"></div>
+        <h1>${language.nom} </h1>
+
+        ${Teste(
+          language.pourcentage,
+          `<div class="progresseBarre">
+              <div class="eatch-Bare" style = "width:${language.pourcentage}%;">
+            </div>
+          `,
+          " "
+        )}
       </div>
     </div>
     `;
@@ -61,7 +69,7 @@ async function fetchCall() {
   DisplayLanguages(languagesFramwork, data.framworks);
   DisplayLanguages(autre1, data.autre[0]);
   DisplayLanguages(autre2, data.autre[1]);
-  DisplayInteret(interets.firstElementChild, data.interet);
+  DisplayLanguages(interets.firstElementChild, data.interet);
   DisplayDiplome(diplomes, data.Diplome);
 }
 fetchCall();

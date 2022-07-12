@@ -34,18 +34,12 @@
      }
 }
 .active{
-     // background: $bg-3;
-     border-radius: 10px;
-     color: #fff;
      padding: 0 2rem;
      transform: scale(1.2);
-     background:$hover;
      cursor: no-drop;
      opacity: 1 !important;
      text-transform: uppercase !important;
      &:hover{
-          opacity: 1 !important;
-          background: $hover !important;
+          background:none !important;
      }
-     
 }

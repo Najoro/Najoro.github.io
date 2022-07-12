@@ -3,14 +3,14 @@ const Menu = document.querySelector(".menu");
 const as = document.querySelectorAll('.menu a');
 const date = document.querySelector('.date');
 
-function DateNow(){
-  let Datenow = new Date()
-  console.log(Datenow.toISOString());
-  date.innerHTML = `
-  ${Datenow.toISOString().split('T')[1].split(".")[0]}
-  `
-}
-DateNow();
+// function DateNow(){
+//   let Datenow = new Date()
+//   console.log(Datenow.toISOString());
+//   date.innerHTML = `
+//   ${Datenow.toISOString().split('T')[1].split(".")[0]}
+//   `
+// }
+// DateNow();
 
 console.log(childsContainer.nodeType);
 
