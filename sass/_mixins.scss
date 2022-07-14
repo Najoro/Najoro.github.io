@@ -25,7 +25,7 @@
           }
      }
 }
-@mixin ligne($width, $height, $top, $left, $bottom, $right){
+@mixin ligne($width , $height, $top : 0, $left : 0, $bottom : 0, $right : 0){
      content: "";
      background: $bg-3;
      transform: translateX(-50%);

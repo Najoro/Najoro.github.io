@@ -1,11 +1,7 @@
-const languagesBase = document.querySelector(".languages-base-contenaire");
-const languagesFramwork = document.querySelector(
-  ".languages-framwork-contenaire"
-);
-const autre1 = document.querySelector(".autres-contenaire1");
-const autre2 = document.querySelector(".autres-contenaire2");
-const diplomes = document.querySelector(".diplomes-contenaire");
-const interets = document.querySelector(".interets-contenaire");
+const languagesBase = document.getElementById("languages");
+const autres = document.getElementById("autres");
+const diplomes = document.getElementById("diplomes");
+const interets = document.getElementById("interets");
 let data = [];
 
 // recuperation du donne .....
@@ -18,7 +14,7 @@ async function fetchUp() {
   console.log(data);
 }
 
-//affichage .......
+//function .......
 
 function Teste(Atester, vrais, faux) {
   return Atester != " " ? vrais : faux;
@@ -63,12 +59,12 @@ const DisplayDiplome = async function (tag, ref) {
     `;
   });
 };
+//affichage...
 async function fetchCall() {
   await fetchUp();
   DisplayLanguages(languagesBase, data.languages);
-  DisplayLanguages(languagesFramwork, data.framworks);
-  DisplayLanguages(autre1, data.autre[0]);
-  DisplayLanguages(autre2, data.autre[1]);
+  DisplayLanguages(autres.firstElementChild, data.autre[0]);
+  DisplayLanguages(autres.lastElementChild, data.autre[1]);
   DisplayLanguages(interets.firstElementChild, data.interet);
   DisplayDiplome(diplomes, data.Diplome);
 }
