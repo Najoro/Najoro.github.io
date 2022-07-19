@@ -123,6 +123,7 @@ $shap-height : 20%;
 }
 @media screen and (max-width : 870px){
      #contact{
+          min-height: 70vh !important;
           background: $bg-1 !important;
           justify-content: center;
           justify-content: space-around;
