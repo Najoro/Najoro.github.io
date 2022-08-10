@@ -2,17 +2,15 @@
   height: 80vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: auto;
   background:transparent;
   .composante{
     display: block;
-    height: 37vh;
-    width: 22vw;
+    height: 35.8vh;
+    width: 24vw;
     border: 1px solid $special-lettre;
-    margin: 0.6rem;
     display: flex;
     align-items: flex-end;
     position: relative;

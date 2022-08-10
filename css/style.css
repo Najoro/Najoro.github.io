@@ -26,7 +26,7 @@
 }
 
 body {
-  background-color: #2967a1;
+  background-color: #75777a;
 }
 
 .bull {
@@ -65,10 +65,9 @@ header {
   width: 95vw;
   height: 10vh;
   margin: 3px auto 5px;
-  border-radius: 2vh;
-  background: #0e175f;
+  background: rgba(26, 3, 33, 0.9725490196);
   display: grid;
-  grid-template-columns: 10% 80% 10%;
+  grid-template-columns: 20% 70% 10%;
   font-size: 2vh;
   position: relative;
 }
@@ -90,8 +89,11 @@ header .porfolio {
   margin-left: 1vw;
 }
 header .porfolio .clock h1 {
+  font-family: "Inspiration", cursive;
+  font-weight: bold;
+  letter-spacing: 5px;
   color: #00FFDD;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 header .porfolio .clock .date {
   color: #ddd;
@@ -145,7 +147,7 @@ header .menu a i {
   transition: 0.3s ease-in-out;
   position: absolute;
   background: #ddd !important;
-  border-radius: 2vh;
+  border-radius: 0;
 }
 #beurgeur span:nth-child(1) {
   width: 50%;
@@ -223,14 +225,14 @@ main {
 .profil {
   grid-area: identity;
   width: inherit;
-  height: 80vh;
+  height: 83vh;
   text-align: center;
   position: relative;
+  transform: translateY(-3vh);
   flex-direction: column;
   margin-right: 1vh;
   margin-bottom: 2vh;
-  border-radius: 2vh;
-  background: #0e175f;
+  background: rgba(26, 3, 33, 0.9725490196);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -297,14 +299,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 0.2vh 0.2vh #2967a1;
+  box-shadow: 0px 0px 0.2vh 0.2vh #75777a;
   background: #0e175f;
   border-radius: 50%;
 }
 .profil footer a:hover {
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
-  color: #2967a1;
+  color: #75777a;
   background: #1a8ae1;
 }
 .profil footer a:active {
@@ -327,7 +329,7 @@ main {
 
 .box-contenaire {
   background: #0e175f;
-  border-radius: 2vh;
+  border-radius: 0;
   margin-bottom: 1vh;
 }
 
@@ -390,6 +392,7 @@ main {
 #acceuil .contenue-acceuil h2 {
   grid-area: h2;
   font-weight: normal;
+  font-family: "Inconsolata", monospace;
   font-size: 1.2vw;
 }
 #acceuil .contenue-acceuil .btm {
@@ -398,10 +401,10 @@ main {
   color: #333;
   font-size: 3vh;
   border-bottom: 0.2vh solid #ddd;
-  border-right: 0.1vh solid #2967a1;
+  border-right: 0.1vh solid #75777a;
   width: 23vw;
   height: 6vh;
-  border-radius: 2vh;
+  border-radius: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -411,7 +414,7 @@ main {
 #acceuil .contenue-acceuil .btm:hover {
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
-  color: #2967a1;
+  color: #75777a;
   background: #1a8ae1;
 }
 #acceuil .contenue-acceuil .btm:active {
@@ -426,7 +429,7 @@ main {
   border-bottom: none;
   border-right: none;
   border-top: 1px solid #ddd;
-  border-left: 1px solid #2967a1;
+  border-left: 1px solid #75777a;
   box-shadow: 0.2vh 0.3vh 0.2vh 0.1vh #333;
   color: #ddd;
   transform: translateX(2vh);
@@ -454,10 +457,10 @@ main {
     color: #333;
     font-size: 4vw;
     border-bottom: 0.2vh solid #ddd;
-    border-right: 0.1vh solid #2967a1;
+    border-right: 0.1vh solid #75777a;
     width: 50vw;
     height: 7vw;
-    border-radius: 2vh;
+    border-radius: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -466,7 +469,7 @@ main {
   #acceuil .contenue-acceuil .btm:hover {
     transform: scale(1.1);
     transition: 0.1s ease-in-out;
-    color: #2967a1;
+    color: #75777a;
     background: #1a8ae1;
   }
   #acceuil .contenue-acceuil .btm:active {
@@ -481,7 +484,7 @@ main {
     border-bottom: none;
     border-right: none;
     border-top: 1px solid #ddd;
-    border-left: 1px solid #2967a1;
+    border-left: 1px solid #75777a;
     box-shadow: 0.2vh 0.3vh 0.2vh 0.1vh #333;
     color: #ddd;
     transform: translateX(2vw);
@@ -528,7 +531,7 @@ main {
   height: 40vh;
   padding: 2vh 3vw;
   margin: 0 auto;
-  border-radius: 2vh;
+  border-radius: 0;
   background: #333 !important;
   border: 1px dashed #1a8ae1;
   box-shadow: 0px 0px 20px #333;
@@ -584,8 +587,8 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: #2967a1;
-  border-radius: 2vh;
+  background: #75777a;
+  border-radius: 0;
   color: #333;
   line-height: 1rem;
   box-shadow: 0px 0px 5px #333;
@@ -597,7 +600,7 @@ main {
 #contact .reseaux a:hover {
   transform: scale(1.1);
   transition: 0.1s ease-in-out;
-  color: #2967a1;
+  color: #75777a;
   background: #1a8ae1;
 }
 #contact .reseaux a:active {
@@ -721,26 +724,24 @@ main {
   height: 80vh;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: auto;
   background: transparent;
 }
 #projects .composante {
   display: block;
-  height: 37vh;
-  width: 22vw;
+  height: 35.8vh;
+  width: 24vw;
   border: 1px solid #00FFDD;
-  margin: 0.6rem;
   display: flex;
   align-items: flex-end;
   position: relative;
   text-align: center;
 }
 #projects .composante p {
-  color: #2967a1;
-  text-shadow: 2px 2px 0px #ddd, 3px 3px 0px #2967a1, -1px 1px 0px #333;
+  color: #75777a;
+  text-shadow: 2px 2px 0px #ddd, 3px 3px 0px #75777a, -1px 1px 0px #333;
   width: 100%;
   height: 100%;
   letter-spacing: 3px;
@@ -758,7 +759,7 @@ main {
   top: 0;
   width: 100%;
   height: 4vh;
-  border-radius: 2vh;
+  border-radius: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -809,7 +810,6 @@ main {
   height: 100%;
   background: #0e175f;
   overflow: auto;
-  border-radius: 20px;
 }
 #statistique .contenaire-identiter .object .etiquette-contenaire {
   width: 100%;
@@ -924,7 +924,7 @@ main {
   text-transform: uppercase;
 }
 .DiplomeEatch:nth-child(1) li {
-  color: #2967a1;
+  color: #1a8ae1;
 }
 .DiplomeEatch li {
   margin: 0;
@@ -949,7 +949,7 @@ main {
   left: 100%;
   bottom: 0;
   right: 0;
-  background: rgba(41, 103, 161, 0.2862745098) !important;
+  background: #2967a1 !important;
 }
 
 @media screen and (max-width: 870px) {

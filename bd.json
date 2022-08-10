@@ -4,38 +4,57 @@
       "name": "Calculatrice",
       "image": "url(../media/projects/calculatrice.png)",
       "source": "https://github.com/Najoro/calculatrice",
-      "project": "./pages/calculatrice.html"
+      "project": "./pages/calculatrice.html",
+      "language" : {
+        "HTML" : "Html",
+        "CSS" : "css"
+      }
     },
     {
       "name": "Generateur de Blague",
       "image": "url(../media/projects/blague.png)",
       "source": "https://github.com/Najoro/JAVASCRIPT-evolution/tree/master/exercice/blague",
-      "project": "./pages/blague.html"
-    },
+      "project": "./pages/blague.html",
+      "language" : {
+        "HTML" : "Html",
+        "CSS" : "css"
+      }    },
     {
       "name": "Generateur de Mot de passe",
       "image": "url(../media/projects/password.png)",
       "source": "https://github.com/Najoro/calculatrice",
-      "project": "./pages/generateur.html"
-    },
+      "project": "./pages/generateur.html",
+      "language" : {
+        "HTML" : "Html",
+        "CSS" : "css"
+      }    },
     {
       "name": "Formulaire",
       "image": "url(../media/projects/formulaire.png)",
       "source": "https://github.com/Najoro/JAVASCRIPT-evolution/tree/master/exercice/formlulaire",
-      "project": "./pages/fromulaire.html"
-    },
+      "project": "./pages/fromulaire.html",
+      "language" : {
+        "HTML" : "Html",
+        "CSS" : "css"
+      }    },
     {
       "name": "Generateur de bulle",
       "image": "url(../media/projects/bulle.png)",
       "source": "https://github.com/Najoro/JAVASCRIPT-evolution/tree/master/exercice/formlulaire",
-      "project": "./pages/bulle.html"
-    },
+      "project": "./pages/bulle.html",
+      "language" : {
+        "HTML" : "Html",
+        "CSS" : "css"
+      }    },
     {
       "name": "next project",
       "image": "",
       "source": "",
-      "project": ""
-    }
+      "project": "",
+      "language" : {
+        "HTML" : "Html",
+        "CSS" : "css"
+      }    }
   ],
   "identiter": {
     "languages": [

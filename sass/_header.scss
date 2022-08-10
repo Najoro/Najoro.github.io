@@ -2,10 +2,9 @@ header{
      width: 95vw;
      height: 10vh;
      margin: 3px auto 5px;
-     border-radius: $radius;
-     background: $bg-1;
+     background: $bg-4;
      display: grid;
-     grid-template-columns: 10% 80% 10%;
+     grid-template-columns: 20% 70% 10%;
      font-size: 2vh;
      position: relative;
      img{
@@ -23,8 +22,11 @@ header{
           @include special-Letter;
           .clock{
                h1{
+                    font-family: 'Inspiration', cursive;
+                    font-weight: bold;
+                    letter-spacing: 5px;
                     color: $special-lettre;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                }
                .date{
                     color: $white;
