@@ -15,7 +15,7 @@ let newProject = function (projectName,image,source,project,language) {
 
   //add element for the new element
   span.innerHTML = `
-    <div class="language-contenaire">${objectJSON}</div>
+    <div class="language-contenaire"></div>
     <p> ${projectName}</p>
     <div class="btm-contenaire">
       <a href="${source}" id="external" class="btm-contenue"><i class="fa-solid fa-code"></i></a>

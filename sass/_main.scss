@@ -21,7 +21,7 @@ main{
      margin-bottom: 2vh;
      background: $bg-4;
      @include flex-evenly;
-   
+     border-radius: $radius;
      .image{
           img{
                height:$image-size;
@@ -95,6 +95,9 @@ main{
      display: none !important;
    }
    @media screen and (max-width : 870px){
+     body{
+          display: block;
+     }
         .profil{
              display: none;
         }

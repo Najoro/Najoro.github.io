@@ -7,6 +7,7 @@ header{
      grid-template-columns: 20% 70% 10%;
      font-size: 2vh;
      position: relative;
+     border-radius: $radius;
      img{
           display: none;
           height:70px;

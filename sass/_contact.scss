@@ -4,10 +4,9 @@ $shap-height : 20%;
      min-height: 80vh;
      background: linear-gradient(to top, $bg-1 $shap-height, transparent $shap-height) !important;
      display: flex;
-     justify-content: center;
+     justify-content: space-around;
      align-items: flex-end;
      flex-direction: column;
-     overflow: hidden;
      position: relative;
      &::after{
           content: "";
@@ -41,8 +40,7 @@ $shap-height : 20%;
           padding: 2vh 3vw;
           margin: 0 auto;
           border-radius: $radius;
-          background: $black !important;
-          border: 1px dashed $bg-3;
+          background: $bg-4!important;
           box-shadow: 0px 0px 20px  $black;
           display: flex !important;
           justify-content: center;
@@ -73,51 +71,28 @@ $shap-height : 20%;
      }
      .reseaux{
           width: 100%;
+          height: 100%;
           display: flex;
-          justify-content: center;
+          justify-content: space-around;
           align-items: center;
-          flex-wrap: wrap;
           a{
-           width: 10vw;
-           height: 10vh;
-           margin: 1rem auto;
-           font-size: 1.1vw;
-           display: flex;
-           flex-direction: column;
-           justify-content: space-evenly;
-           align-items: center;
-           background: $hover;
-           border-radius: $radius;
-           color: $black;
-           line-height: 1rem;
-           box-shadow: 0px 0px 5px  $black;
-           font-weight: bold;
-           transform-origin: top;
-           transform:rotateY(90deg);
-           transition: 1s linear;
-           @include hover-active;
-           &:hover{
-                color: $white;
-                transform: translateY(-3px) !important;
-           }
-           i{
-                transform: scale(1.5);
-           }
-           &:nth-child(1){
-               @include animation(0.4s);
-          }
-
-          &:nth-child(2){
-               @include animation(1.2s);
-          }
-
-          &:nth-child(3){
-               @include animation(1.6s);
-          }
-
-          &:nth-child(4){
-               @include animation(2.2s);
-          }
+               background:$bg-4;
+               padding: 10px 50px;
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               flex-direction: column;
+               box-shadow: 0px 0px 10px $black;
+               border-radius: $radius;
+               transition: 0.2s ease;
+               i{
+                    padding: 10px;
+                    font-size: 1.5rem;
+               }
+               &:hover{
+                    background: $hover;
+                    transform: translateY(-10px);
+               }
           }
      }
 }

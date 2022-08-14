@@ -9,7 +9,7 @@ $text: #E8FFC2;
 $white:#ddd;
 $black:#333;
 
-$radius: 0;
+$radius: 10px;
 @font-face {
      font-family: "font-1";
      src: url(../inserer/font/AkayaTelivigala-Regular.ttf);
@@ -37,17 +37,22 @@ $radius: 0;
      text-decoration: none;
 }
 body{
+     height: 100vh;
      background-color: $hover;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+
 }
 .bull{
      border-radius: 50%;
-     box-shadow: 0px 0px 20px $white;
-     background:$bg-1;
+     background:$bg-4;
      font-size: 2rem;
      font-weight: normal;
      position: fixed;
      padding: 1.2rem;
-     bottom: 10rem;
+     top: 10px;
      right: 7vw;
      z-index: 1;
      visibility: hidden;
@@ -55,9 +60,9 @@ body{
      display: flex;
      justify-content: center;
      align-items: center;
-     opacity: 0.6;
      i{
-         transform: rotate(90deg);
+         transform: rotate(90deg)translateY(2px);
+         color: $white;
      }
      &:hover{
           color: #00FFDD !important;
