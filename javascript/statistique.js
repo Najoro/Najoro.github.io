@@ -33,7 +33,6 @@ const DisplayLanguages = async function (tag, ref) {
        )}
         </h4>
         <h1>${language.nom} </h1>
-
         ${Teste(
           language.pourcentage,
           `<div class="progresseBarre">
