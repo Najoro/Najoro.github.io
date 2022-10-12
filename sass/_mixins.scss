@@ -17,12 +17,7 @@
           background: $bg-3;
      }
      &:active{
-          animation: anim 0.5s infinite;
-     }
-     @keyframes anim{
-          to{
-               transform: scale(0.8);
-          }
+          transform: scale(0.9);
      }
 }
 @mixin ligne($width , $height, $top : 0, $left : 0, $bottom : 0, $right : 0){

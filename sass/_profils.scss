@@ -1,0 +1,72 @@
+$image-size : 10vw;
+.profil{
+  grid-area: identity;
+  width: inherit;
+  height: 83vh;
+  text-align: center;
+  position: relative;
+  transform: translateY(-3vh);
+  flex-direction: column;
+  margin-right: 1vh;
+  margin-bottom: 2vh;
+  background: $bg-4;
+  @include flex-evenly;
+  border-radius: $radius;
+  .image{
+       img{
+            height:$image-size;
+            width:$image-size;
+            border-radius:50%;
+            border: 0.5vh solid $special-lettre;
+            user-select: none;
+            cursor: not-allowed;
+       }
+       h1{
+            font-family: "font-4";
+            font-size: 1vw;
+            font-weight: bold;
+            letter-spacing: 4px;
+            color: $white;
+            user-select: none;
+            cursor: not-allowed;
+       }
+  }
+  .symbol{
+       font-size: 10vh;
+       cursor: not-allowed;
+       user-select: none;
+       color: $bg-3;
+  }
+  .status{
+       position: relative;
+       font-size: 1.2rem;
+       padding: 2rem 0 0;
+       user-select: none;
+       cursor: not-allowed;
+       @include special-Letter;
+       &::after{ @include ligne(10vw, 0.1vh, 0, 50%, none, none );}
+  }
+  footer{
+       min-width: 10vw;
+       width: 100%;
+       font-size: 3vh;
+       margin: 1vh 0;
+       @include flex-evenly;
+       flex-wrap: wrap;
+
+       a{
+            width: 3vw;
+            height: 3vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 0.2vh 0.2vh $hover;
+            background: $bg-1;
+            border-radius: 50%;
+            @include hover-active;
+            i{
+                 color:$white;
+            }
+       }
+  }
+}

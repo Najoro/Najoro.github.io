@@ -227,6 +227,41 @@ main {
   border-radius: 10px;
 }
 
+.contenaire {
+  grid-area: contenary;
+  background: transparent;
+  height: auto;
+}
+
+.box-contenaire {
+  background: #0e175f;
+  border-radius: 10px;
+  margin-bottom: 1vh;
+}
+
+.desactive {
+  display: none !important;
+}
+
+@media screen and (max-width: 870px) {
+  body {
+    display: block;
+  }
+
+  .profil {
+    display: none;
+  }
+
+  main {
+    display: block;
+    width: 100%;
+  }
+
+  .box-contenaire {
+    width: 100%;
+    border-radius: 0;
+  }
+}
 .profil {
   grid-area: identity;
   width: inherit;
@@ -316,55 +351,15 @@ main {
   background: #1a8ae1;
 }
 .profil footer a:active {
-  animation: anim 0.5s infinite;
-}
-@keyframes anim {
-  to {
-    transform: scale(0.8);
-  }
+  transform: scale(0.9);
 }
 .profil footer a i {
   color: #ddd;
 }
 
-.contenaire {
-  grid-area: contenary;
-  background: transparent;
-  height: auto;
-}
-
-.box-contenaire {
-  background: #0e175f;
-  border-radius: 10px;
-  margin-bottom: 1vh;
-}
-
-.desactive {
-  display: none !important;
-}
-
-@media screen and (max-width: 870px) {
-  body {
-    display: block;
-  }
-
-  .profil {
-    display: none;
-  }
-
-  main {
-    display: block;
-    width: 100%;
-  }
-
-  .box-contenaire {
-    width: 100%;
-    border-radius: 0;
-  }
-}
 #acceuil {
   height: 80vh;
-  background: linear-gradient(95deg, #0e175f 50%, transparent 100%) !important;
+  background: linear-gradient(95deg, rgba(3, 10, 64, 0.9725490196) 50%, transparent 100%) !important;
   overflow: hidden;
   position: relative;
 }
@@ -428,12 +423,7 @@ main {
   background: #1a8ae1;
 }
 #acceuil .contenue-acceuil .btm:active {
-  animation: anim 0.5s infinite;
-}
-@keyframes anim {
-  to {
-    transform: scale(0.8);
-  }
+  transform: scale(0.9);
 }
 #acceuil .contenue-acceuil .btm:hover {
   border-bottom: none;
@@ -483,12 +473,7 @@ main {
     background: #1a8ae1;
   }
   #acceuil .contenue-acceuil .btm:active {
-    animation: anim 0.5s infinite;
-  }
-  @keyframes anim {
-    to {
-      transform: scale(0.8);
-    }
+    transform: scale(0.9);
   }
   #acceuil .contenue-acceuil .btm:hover {
     border-bottom: none;
@@ -728,8 +713,7 @@ main {
   height: 4vh;
   border-radius: 10px;
   display: flex;
-  justify-content: space-around;
-  margin: 10px;
+  justify-content: center;
   align-items: center;
   z-index: 1;
   color: black;
