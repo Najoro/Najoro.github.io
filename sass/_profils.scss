@@ -70,3 +70,8 @@ $image-size : 10vw;
        }
   }
 }
+@media screen and (max-width : 870px){
+     .profil{
+          display: none !important;
+     }
+}

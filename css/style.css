@@ -249,7 +249,7 @@ main {
   }
 
   .profil {
-    display: none;
+    display: none !important;
   }
 
   main {
@@ -382,6 +382,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 19vh 1fr 1fr;
+  grid-gap: 0.4rem;
   grid-template-areas: "h1" "h2" "btm";
 }
 #acceuil .contenue-acceuil h1 {
@@ -395,7 +396,6 @@ main {
   font-size: 10vh;
 }
 #acceuil .contenue-acceuil h2 {
-  grid-area: h2;
   font-weight: normal;
   font-family: "Inconsolata", monospace;
   font-size: 1.2vw;
@@ -439,7 +439,7 @@ main {
   #acceuil {
     margin: 0;
     padding: 0;
-    height: 75vh;
+    height: 90vh;
   }
   #acceuil .contenue-acceuil {
     height: 70vh !important;

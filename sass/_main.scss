@@ -6,37 +6,32 @@ main{
      grid-template-areas: 
           "identity contenary";
      border-radius: 10px;
-   }
-   //----------------------------------------------------------------------------
+}
 
-   //----------------------------------------------------------------------------
-   .contenaire{
+.contenaire{
      grid-area: contenary;
      background: transparent;
      height: auto;
-   }
-   .box-contenaire{
+}
+.box-contenaire{
      background: $bg-1;
      border-radius: $radius;
      margin-bottom: 1vh;
-   }
-   .desactive{
+}
+.desactive{
      display: none !important;
-   }
-   @media screen and (max-width : 870px){
-     body{
+}
+@media screen and (max-width : 870px){
+body{
+     display: block;
+}
+     main{
           display: block;
+          width: 100%;
+
      }
-        .profil{
-             display: none;
-        }
-        main{
-             display: block;
-             width: 100%;
-   
-        }
-        .box-contenaire{
-             width: 100%;
-             border-radius: 0;
-        }
-   }
+     .box-contenaire{
+          width: 100%;
+          border-radius: 0;
+     }
+}
