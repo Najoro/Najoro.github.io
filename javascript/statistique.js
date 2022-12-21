@@ -11,7 +11,7 @@ async function fetchUp() {
     .then((res1) => res1.json())
     .then((res2) => (data = res2.identiter));
 
-  // console.log(data);
+  console.log(data);
 }
 
 //function .......
