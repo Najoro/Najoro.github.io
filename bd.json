@@ -1,6 +1,12 @@
 {
   "project": [
     {
+      "name": "Cocktail",
+      "image": "url(../media/projects/Cocktails.png)",
+      "source": "https://github.com/Najoro/cocktails",
+      "project": "https://cocktails-steel.vercel.app/"
+    },
+    {
       "name": "Calculatrice",
       "image": "url(../media/projects/calculatrice.png)",
       "source": "https://github.com/Najoro/calculatrice",
@@ -23,12 +29,6 @@
       "image": "url(../media/projects/formulaire.png)",
       "source": "https://github.com/Najoro/JAVASCRIPT-evolution/tree/master/exercice/formlulaire",
       "project": "./pages/fromulaire.html"
-    },
-    {
-      "name": "Generateur de bulle",
-      "image": "url(../media/projects/bulle.png)",
-      "source": "https://github.com/Najoro/JAVASCRIPT-evolution/tree/master/exercice/formlulaire",
-      "project": "./pages/bulle.html"
     },
     {
       "name": "next project",
@@ -71,7 +71,7 @@
       },
       {
         "nom": "React",
-        "pourcentage": "10",
+        "pourcentage": "40",
         "icone": "fa-brands fa-react",
         "color": "violet"
       }
